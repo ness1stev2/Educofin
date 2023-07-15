@@ -1,0 +1,23 @@
+<!-- Mensaje de error o de completado una vez precionando el boton verificar -->
+<div id="mensaje"></div>
+<!-- IFRAME DEL CRUCIGRAMA -->
+<div id="crucigrama" [ngStyle]="{'display': display}">
+
+  <table class="table">
+
+    <tr *ngFor="let fila of filas">
+      <td *ngFor="let columna of columnas">
+        <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
+          <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}" [placeholder]="placeholder"
+            [style.background-color]="'rgb(193, 255, 177)'">
+        </ng-container>
+        <ng-container *ngIf="!placeholders[fila + '_' + columna]">
+          <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}">
+        </ng-container>
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+<input id="btnContinuar" [ngStyle]="{'display': display}" onclick="verificar();" type="button" value="Continuar">

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+  <div class="container">
+    <!--Contenerdor de todo-->
+    <div class="blueBg">
+        <!--Fondo trasero, tranparente, "caja__trasera"-->
+        <div class="box singin">
+            <h2>¿Ya tienes una cuenta?</h2>
+            <button class="singinBtn" (click)="toggleActive()">Iniciar Sesión</button>
+        </div>
+        <div class="box singup">
+            <h2>¿No tienes una cuenta?</h2>
+            <button class="singupBtn" (click)="toggleActive()">Resgistrarme</button>
+        </div>
+    </div>
+    <!--Contenedor formularios (fondo blanco)-->
+    <div class="formBx" [ngClass]="{'active': isActive, 'inactive': !isActive}">
+
+        <!--Formulario Login-->
+        <div class="form singinForm">
+            <form name="formulario" action="validarSesion.php" method="POST">
+                <img src="/assets/logoE.png" alt="logo" style="margin-bottom: 40px;">
+                <h3>Iniciar Sesión</h3>
+                <input type="text" placeholder="Correo" name="emailUser" required>
+                <input type="password" placeholder="Contraseña" name="passwordUser" required>
+                <input type="submit" value="Iniciar" name="btningresar">
+                <a href="Recuperar/recuperar.php" class="forgot">¿Olvidaste la contraseña?</a>
+            </form>
+        </div>
+
+
+        <!--Formulario Registro-->
+        <div class="form singupForm">
+            <form id="formulario" action="CreateUser.php" method="POST">
+                <h3>Resgistrarte</h3>
+                <input type="text" placeholder="No. Socio" name="socio" required>
+                <input type="text" placeholder="Nombre Completo" name="nombre_completo" required>
+                <input type="email" placeholder="Correo" name="correo" required>
+                <input type="password" placeholder="Contraseña" id="passwordUser" name="passwordUser" required>
+                <input type="submit" name="submit" value="Registrarme" id="btn-login">
+            </form>
+        </div>
+
+    </div>
+  </div>
+
+
+</div>

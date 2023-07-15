@@ -1,0 +1,76 @@
+#mensaje {
+  width: 350px;
+  font-size: 24px;
+  margin: 0 auto 21px auto;
+  text-align: center;
+}
+
+#crucigrama {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  display: none;
+}
+
+.container__actividad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  height: auto;
+}
+
+.titulo__actividad {
+  width: 65%;
+  color: var(--color-blanco);
+  background: var(--color-secundario);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.txt__actividad {
+  padding-left: 50px;
+  width: 90%;
+  font-size: 20px;
+  color: var(--color-negro);
+  text-align: justify;
+}
+
+.table {
+  background-color: white;
+  width: 100%;
+  font-size: 12px;
+}
+
+.table td,
+th {
+  padding: 0;
+}
+
+.table tbody td {
+  padding: 0;
+}
+
+
+#btnContinuar {
+  display: none;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 0 auto;
+  background-color: var(--color-primario);
+  border: 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 150px;
+}

@@ -1,0 +1,139 @@
+<div class="container__all">
+
+  <!--   <?php
+  if (isset($_REQUEST['c'])) { ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Felicidades!</strong>Sesion iniciada correctamente...
+    </div>
+  <?php } ?> -->
+
+
+  <div class="cover">
+
+    <div class="container__cover">
+
+      <div class="container__info">
+        <h1>¿Qué es el Cooperativismo?</h1>
+        <P>Módulo 1 de: <strong>
+            ?> </strong></P>
+        <a href="#"><input type="button" value="TEMARIO"></a>
+        <!-- <input type="button" value="BOTON 2" class="btn__dos"> -->
+      </div>
+      <div class="container__vector">
+        <img src="/assets/PortCurso.svg" alt="portada">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tema">
+    <div class="container__titulo">
+      <h1>Antecedentes Historicos</h1><br>
+    </div>
+  </div>
+
+  <!--PDF CON EL CONTENIDO-->
+  <div class="container__tema">
+    <div class="pdf__tema">
+      <object class="pdfview" data="/assets/Modulo1.pdf" type="application/pdf"></object>
+
+    </div>
+  </div><!--CIERRE DEL CONTAINER__TEMA, CONTENEDOR DLE PDF-->
+
+
+  <div class="row">
+    <!-- Lado izquierdo -->
+    <div class="col-6">
+      <!-- SECCION DE LA ACTIVIDAD -->
+      <section class="container__actividad">
+
+        <div class="titulo__actividad">
+          <h1>Actividad: Crucigrama</h1>
+        </div>
+
+        <div class="txt__actividad">
+          <p>
+            Con esta actividad podrás reforzar parte de lo leído en estos temas, apoyando a la retroalimentación y
+            aprendizaje de los conceptos aquí mencionados.
+          </p>
+          <h3>Horizontales</h3>
+          <ul class="sin-vinetas">
+            <li>4. Alianza Cooperativa Internacional.</li>
+            <li>5. Conferencia Latinoamericana de Cooperativas de Ahorro y Crédito.</li>
+            <li>8. Lugar donde aparecen las Cooperativas de Crédito orientado hacia los campesinos.</li>
+            <li>9. Ciudad de Edad Antigua donde comenzaron las precooperativas.</li>
+            <li>10. Precursor del Cooperativismo.</li>
+          </ul>
+          <h3>Verticales</h3>
+          <ul class="sin-vinetas">
+            <li>1. Periodista canadiense que llevó el cooperativismo a su país y América del norte.</li>
+            <li>2. País en el que se organizó la Cooperativa de Profesionales.</li>
+            <li>3. Pionero del cooperativismo mexicano, por promulgar la Primera Ley Cooperativa.</li>
+            <li>6. El trabajo cooperativo en la estructura del imperio de Anáhuac en Tenochtitlan.</li>
+            <li>7. Padre del Cooperativismo.</li>
+          </ul>
+        </div>
+        <!--BOTON PARA APARECER EL CRUCIGRAMA-->
+        <input id="btnComenzar" (click)="changeStyles('mostrarCrucigrama')" type="button" value="Comenzar">
+        <div class="mensajeAct" id="mensajeAct"></div>
+
+      </section><!--TERMINA SECCION DE LA ACTIVIDAD -->
+    </div>
+
+    <!-- Lado derecho -->
+    <div class="col-6">
+
+      <!-- Mensaje de error o de completado una vez precionando el boton verificar -->
+      <div id="mensaje"></div>
+      <!-- IFRAME DEL CRUCIGRAMA -->
+      <div id="crucigrama" [ngStyle]="{'display': display}">
+
+        <table class="table">
+
+          <tr *ngFor="let fila of filas">
+            <td *ngFor="let columna of columnas">
+              <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
+                <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}"
+                  [placeholder]="placeholder" [style.background-color]="'rgb(193, 255, 177)'">
+              </ng-container>
+              <ng-container *ngIf="!placeholders[fila + '_' + columna]">
+                <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}">
+              </ng-container>
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+      <input id="btnContinuar" [ngStyle]="{'display': display}" onclick="verificar();" type="button" value="Continuar">
+
+
+    </div>
+  </div>
+
+
+
+  <!--SECCION DE AUTOEVALUACION-->
+  <section id="evaluacionM1" class="container__evaluacion">
+    <div class="titulo__evaluacion">
+      <h1>RETROALIMENTACIÓN</h1>
+    </div>
+
+    <div class="txt__evaluacion">
+      <p>
+        A continuación, encontrarás una sencilla evaluación con la que quedará concluido tu primer módulo de Educación
+        Cooperativa y Financiera.
+        <strong>¡Éxito!</strong>
+      </p>
+    </div>
+    <input id="botonExamen" (click)="changeStyles('mostrarFormulario')" type="button" value="Comenzar Evaluación">
+
+    <div id="evaluacionuno" [ngStyle]="{'display': display2}" class="container__examen" style="width: 70%;">
+
+      <shared-formm1></shared-formm1>
+
+    </div>
+
+  </section><!--TERMINA SECCION DE AUTOEVALUACION-->
+
+</div>

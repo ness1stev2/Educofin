@@ -1,0 +1,268 @@
+header {
+  z-index: 1001;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100px;
+  transition: all 500ms;
+}
+
+.container__header {
+  max-width: 1300px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+.header-cotainer {
+  max-width: 1300px;
+}
+
+/*POSITION DEL MENU Y SU CONTENIDO*/
+header .menu {
+  /*ver espacio ocupado*/
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+header .btn {
+  color: var(--color-secundario);
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+header .menu>ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu>ul>li {
+  list-style: none;
+  position: relative;
+}
+
+/*SUBMENU*/
+/*visibilidad*/
+nav ul li ul {
+  list-style: none;
+  color: #000;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  background: #D8FEC6;
+  position: absolute;
+  top: 50px;
+  left: -5px;
+  padding: 5px 0px;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+/*mostrar sub menu al pasar por el titulo*/
+nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 40px;
+
+}
+
+/*TRIANGULO DEL SUB MENU*/
+nav ul li ul:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #D8FEC6;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+/*estilos de la etiqueta a del submenu*/
+header .menu ul li ul li a {
+  display: block;
+  color: #000;
+  padding: 6px 5px;
+  padding-left: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  transition: all 300ms ease;
+}
+
+header .menu ul li ul li a:hover {
+  background: #00BFA6;
+  color: #fff;
+  transform: scale(1.1);
+  border-radius: 8px;
+  padding-left: 30px;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header .menu ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 7px 10px;
+  border: 5px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a {
+  color: var(--color-blanco);
+  background: var(--color-primario);
+}
+
+nav {
+  height: 100%;
+}
+
+.user_activo {
+  padding: 5px 0px;
+  border: 1px solid;
+  border-color: var(--color-secundario);
+  color: var(--color-primario);
+  background: rgb(48 102 190);
+  border-radius: 20px;
+  box-shadow: 1px 1px 30px -5px #20202049;
+  cursor: pointer;
+}
+
+header .menu ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 7px 10px;
+  border: 5px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+.nav_mod {
+  height: 110px;
+  box-shadow: 1px 1px 10px 0px #00000010;
+}
+
+/*CONFIGURACIÓN DEL MENU COMPRIMIDO: COLOR DE FONDO Y PADDING*/
+header.down {
+  background: #FFF;
+  padding: 15px 80px;
+}
+
+.icon {
+  color: var(--color-secundario);
+  font-size: 20px;
+  margin: 0px 5px;
+}
+
+/*ADAPTACION A PANTALLAS*/
+@media (max-width: 1100px) {
+  header, header.down {
+    padding: 20px 10px;
+  }
+
+  header .btn {
+    display: block;
+    color: #1B5C35;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  header .menu {
+    position: fixed;
+    background: var(--color-secundario);
+    min-width: 100px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 10px 10px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+
+  header .menu ul {
+    flex-direction: column;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+
+  header .menu .active {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+}
+
+/*CLASE DEL LINK DE LA IMG DEL MENU*/
+header .brand {
+  /*ver espacio ocupado*/
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .brand img {
+  height: 80px;
+}
+
+/*CAMBIO DE TAMAÑO DEL TITULO Y PADDING TOP SEGUN LA PANTALLA*/
+@media (max-width: 480px) {
+  .container-info-cover h1 {
+    font-size: 50px;
+    width: 100%;
+  }
+
+  header .brand img {
+    height: 60px;
+  }
+
+
+}
+
+/*CAMBIO DE TAMAÑO DEL TITULO Y PADDING TOP SEGUN LA PANTALLA*/
+@media (max-width: 383px) {
+  .container-info-cover h1 {
+    font-size: 50px;
+    width: 100%;
+  }
+
+}

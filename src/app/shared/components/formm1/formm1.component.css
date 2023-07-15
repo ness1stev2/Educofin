@@ -1,0 +1,48 @@
+.content-form p{
+  font-size: 17px;
+}
+.content-form {
+   border: 2px solid rgb(230 230 230);
+   width: 100%;
+   padding: 15px 30px;
+   border-radius: 5px;
+   margin-bottom: 15px;
+ }
+
+form h3 {
+   text-align: center;
+   color: rgb(32, 33, 36);
+   font-size: 30px;
+ }
+
+form .subtitle {
+   font-size: 20px;
+   font-weight: 500;
+ }
+
+form hr {
+   margin: 30px 0;
+ }
+
+form .form-check {
+   margin-bottom: 10px;
+ }
+
+input[type="email"],
+input[type="text"] {
+   border: none;
+   border-bottom: 1px solid #dee2e6;
+   margin: 0px 0px 20px;
+ }
+
+ .form-control:focus {
+   border-left: none;
+   border-right: none;
+   border-top: none;
+   border-bottom-color: #00BFA6;
+   outline: none;
+ }
+
+ .opciones {
+   margin: 10px 0px;
+ }

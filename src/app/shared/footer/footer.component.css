@@ -1,0 +1,139 @@
+footer {
+  position: relative;
+  width: 100%;
+  background: var(--color-secundario);
+  min-height: 100px;
+  padding: 20px 50px;
+  margin-top: 60px;
+}
+
+.container__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(/assets/wave.png);
+  background-size: 1000px 100px;
+}
+
+.box__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  max-width: 350px;
+}
+
+.box__footer .logo img {
+  width: 225px;
+  padding-right: 20px;
+}
+
+.box__copyright {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box__footer h2 {
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.box__footer a {
+  margin-top: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.box__footer a:hover {
+  opacity: 0.8;
+}
+
+.box__footer a .fab {
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.box__footer a .fab:hover {
+  transform: translateY(-10px);
+}
+
+.box__copyright p {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.box__copyright hr {
+  border: none;
+  height: 3px;
+  background-color: var(--color-negro);
+}
+
+.box__footer p {
+  color: #fff;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
