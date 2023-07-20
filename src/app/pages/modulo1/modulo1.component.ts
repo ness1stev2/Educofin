@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modulo1',
@@ -6,15 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./modulo1.component.css']
 })
 export class Modulo1Component {
+
   public display: string = ""
   public display2: string = ""
 
 
-  changeStyles(flex:string) {
+  changeStyles(flex:string):void {
     // Cambiar los estilos al hacer clic en el botón
     if(flex === 'mostrarCrucigrama'){this.display = 'flex';}
 
     if(flex === 'mostrarFormulario'){this.display2 = 'flex';}
+
   }
 
   filas: number[] = Array.from({ length: 17 }, (_, index) => index + 1);

@@ -15,7 +15,7 @@
       <div class="container__info">
         <h1>¿Qué es el Cooperativismo?</h1>
         <P>Módulo 1 de: <strong>
-            ?> </strong></P>
+            Nestor Daniel Basave Davalos</strong></P>
         <a href="#"><input type="button" value="TEMARIO"></a>
         <!-- <input type="button" value="BOTON 2" class="btn__dos"> -->
       </div>
@@ -41,9 +41,9 @@
   </div><!--CIERRE DEL CONTAINER__TEMA, CONTENEDOR DLE PDF-->
 
 
-  <div class="row">
+  <div class="row" style="--bs-gutter-x: 0rem;">
     <!-- Lado izquierdo -->
-    <div class="col-6">
+    <div class="col-xl-6">
       <!-- SECCION DE LA ACTIVIDAD -->
       <section class="container__actividad">
 
@@ -51,7 +51,7 @@
           <h1>Actividad: Crucigrama</h1>
         </div>
 
-        <div class="txt__actividad">
+        <div class="txt__actividad" style="width: 90%;">
           <p>
             Con esta actividad podrás reforzar parte de lo leído en estos temas, apoyando a la retroalimentación y
             aprendizaje de los conceptos aquí mencionados.
@@ -75,38 +75,14 @@
         </div>
         <!--BOTON PARA APARECER EL CRUCIGRAMA-->
         <input id="btnComenzar" (click)="changeStyles('mostrarCrucigrama')" type="button" value="Comenzar">
-        <div class="mensajeAct" id="mensajeAct"></div>
 
-      </section><!--TERMINA SECCION DE LA ACTIVIDAD -->
+      </section>
     </div>
 
     <!-- Lado derecho -->
-    <div class="col-6">
+    <div class="col-xl-6">
 
-      <!-- Mensaje de error o de completado una vez precionando el boton verificar -->
-      <div id="mensaje"></div>
-      <!-- IFRAME DEL CRUCIGRAMA -->
-      <div id="crucigrama" [ngStyle]="{'display': display}">
-
-        <table class="table">
-
-          <tr *ngFor="let fila of filas">
-            <td *ngFor="let columna of columnas">
-              <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
-                <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}"
-                  [placeholder]="placeholder" [style.background-color]="'rgb(193, 255, 177)'">
-              </ng-container>
-              <ng-container *ngIf="!placeholders[fila + '_' + columna]">
-                <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}">
-              </ng-container>
-            </td>
-          </tr>
-
-        </table>
-
-      </div>
-      <input id="btnContinuar" [ngStyle]="{'display': display}" onclick="verificar();" type="button" value="Continuar">
-
+      <shared-crucigrama [display]="display"></shared-crucigrama>
 
     </div>
   </div>

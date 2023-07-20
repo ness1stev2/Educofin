@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { Formm1Component } from './components/formm1/formm1.component';
 import { CrucigramaComponent } from './components/crucigrama/crucigrama.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,11 +16,12 @@ import { CrucigramaComponent } from './components/crucigrama/crucigrama.componen
     HeaderComponent,
     PerfilComponent,
     Formm1Component,
-    CrucigramaComponent
+    CrucigramaComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     FooterComponent,

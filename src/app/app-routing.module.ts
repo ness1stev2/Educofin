@@ -7,11 +7,14 @@ import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'inicio', component: MainComponent },
-  { path: 'modulo1', component: Modulo1Component },
+  { path: '', component: MainComponent },
   { path: 'perfil', component: PerfilComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'cursos',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule)
+  },
+  { path: '**', redirectTo: '' },
   /*{ path: 'contact', component: ContactComponent } */
 
 ];

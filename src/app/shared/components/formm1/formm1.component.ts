@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Preguntas } from '../../interfaces/preguntas.inteface';
+
 
 @Component({
   selector: 'shared-formm1',
@@ -6,20 +8,73 @@ import { Component } from '@angular/core';
   styleUrls: ['./formm1.component.css']
 })
 export class Formm1Component {
-  
-    public respuestaSeleccionada: string;
 
-  constructor(){
-    this.respuestaSeleccionada = ""
-  }
+  respInc: boolean = false;
+  respCor: boolean = false;
+  error: number[] = [];
 
-  validarRespuesta() {
-    if (this.respuestaSeleccionada === 'a') {
-      console.log('Respuesta correcta');
-      // Realiza las acciones necesarias para una respuesta correcta
+  //Se inicializa un variable de tipo string[] para guardar las respuestas selecionadas
+  respuestasSeleccionadas: string[] = [];
+
+  public preguntas: Preguntas[] = [
+    {
+      pregunta: '1. En la época prehispánica ¿Cómo se llamaban las primeras organizaciones que vivían el cooperativismo?',
+      opciones: ['a) Tierra de barrios', 'b) Calpulli', 'c) Cooperativas'],
+      respuesta: "b) Calpulli"
+    },
+    {
+      pregunta: '2. ¿Quiénes son algunos de los primeros representantes del Cooperativismo?',
+      opciones: ['a) Tomás Moro, Tommaso Campanella y Francis Bacon', 'b) Phillippe Buchez y Louis Blanc', 'c) Francis Bacon y Louis Blanc'],
+      respuesta: "b) Phillippe Buchez y Louis Blanc"
+    },
+    {
+      pregunta: '3. ¿En qué año nació la primera Cooperativa de Producción en México?',
+      opciones: ['a) 1810', 'b) 1916', 'c) 1873'],
+      respuesta: "b) 1916"
+    },
+    {
+      pregunta: '4. En México, ¿Cuándo nacieron en su versión moderna, las Cajas?',
+      opciones: ['a) Año 2001', 'b) Año 1952', 'c) Año 1951'],
+      respuesta: "c) Año 1951"
+    },
+    {
+      pregunta: '5. ¿Cuál es uno de los objetivos del Cooperativismo?',
+      opciones: ['a) Ofrecer alternativas financieras justas a quienes forman parte de su comunidad.', 'b) Ofrecer créditos.', 'c) Combatir la injusticia entre campesinos y obreros.'],
+      respuesta: "a) Ofrecer alternativas financieras justas a quienes forman parte de su comunidad."
+    },
+    {
+      pregunta: '6. ¿Quién propone el modelo de la bandera del Cooperativismo?',
+      opciones: ['a) Guillermo Álvarez Macías', 'b) Charles Gide', 'c) Luis Blanc'],
+      respuesta: "b) Charles Gide"
+    },
+    // Agrega el resto de preguntas aquí
+  ];
+
+
+  verificarRespuestas() {
+
+    if (this.respuestasSeleccionadas.length < this.preguntas.length) {
+      console.log(' Faltan preguntas por selecionar ')
     } else {
-      console.log('Respuesta incorrecta');
-      // Realiza las acciones necesarias para una respuesta incorrecta
+      //recorremos el arreglo de respuestasSeleccionadas
+      for (let i = 0; i < this.respuestasSeleccionadas.length; i++) {
+        //Si la respuestasSeleccionadas en la posicion i es exactamente igual a el arreglo de respuestasCorrectas en la misma posicion
+        if (this.respuestasSeleccionadas[i] === this.preguntas[i].respuesta) {
+          console.log(`Respuesta correcta en la pregunta ${i + 1}`);
+          // Hacer algo si la respuesta es correcta
+          this.error[i] = 1;
+        } else {
+          console.log(`Respuesta incorrecta en la pregunta ${i + 1}`);
+          // Hacer algo si la respuesta es incorrecta
+          this.error[i] = 0;
+        }
+      }
+      console.log(this.error);
     }
+
   }
+
+
+
+
 }

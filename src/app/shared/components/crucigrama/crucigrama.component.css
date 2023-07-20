@@ -6,40 +6,29 @@
 }
 
 #crucigrama {
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
-  max-width: 700px;
+  padding: unset;
+  max-width: 740px;
   display: none;
+  JUSTIFY-CONTENT: SPACE-AROUND;
 }
 
-.container__actividad {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0px;
-  height: auto;
+.casilla::placeholder {
+  font-size: 10px;
+  font-weight: bold;
+  bottom: 15px;
+  position: absolute;
+  left: 1px;
 }
 
-.titulo__actividad {
-  width: 65%;
-  color: var(--color-blanco);
-  background: var(--color-secundario);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 50px;
-}
-
-.txt__actividad {
-  padding-left: 50px;
-  width: 90%;
+.casilla {
+  width: 30px;
+  height: 30px;
+  text-align: center;
   font-size: 20px;
-  color: var(--color-negro);
-  text-align: justify;
+  text-transform: uppercase;
+  margin-bottom: 3px;
 }
 
 .table {
