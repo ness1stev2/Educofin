@@ -1,0 +1,76 @@
+<form action="">
+  <div class="content-form">
+    <h3>AUTOEVALUACIÓN</h3>
+    <p>A continuación, encontrarás una sencilla evaluación con la que quedará concluido tu primer módulo de
+      Educación Cooperativa y Financiera. </p>
+
+
+
+    <div class="form-group">
+      <label class="subtitle">Nombre Completo *</label>
+      <input class="form-control" type="text" name="" id="" required>
+    </div>
+
+    <div class="form-group">
+      <label class="subtitle">Correo *</label>
+      <input class="form-control" type="email" name="" id="" required>
+    </div>
+
+  </div>
+
+  <!-- Con el ngFor recorremos el arreglo 'preguntas' en una variable pregunta  -->
+  <div class="content-form p-0" *ngFor="let pregunta of preguntas; let i = index" [ngClass]="{'respCor': error[i] === 1, 'respInc': error[i] === 0, 'respSelec': respSelec[i] }">
+
+    <div class="form-group">
+      <!-- imprimimos la pregunta numero 1 en el arreglo-->
+      <label class="subtitle-preg">{{ pregunta.pregunta }}</label>
+      <div class="opciones">
+        <!-- Recorremos las opciones del arreglo 'preguntas.opciones' y las asignamos en una variable llamada opcion  -->
+        <div *ngFor="let opcion of pregunta.opciones">
+          <div class="form-check">
+            <!-- name="pregunta{{ en el iterador del ngfor anterior }}" id="pregunta{{ iterador ngfor anteior }}-{{ string de la opcion }}" [(ngModel)]="llamamos a la propiedad respuestasSeleccionadas
+              en la pociion en la que se encuente" value se pone en llaves cuadradas ya que es una propiedad del elemento en el cual tomara el valor de la opcion correspondiente -->
+            <input class="form-check-input" type="radio" name="pregunta{{ i }}" id="pregunta{{ i }}-{{ opcion }}"
+            (click)="respSelec[i] = true"
+            [(ngModel)]="respuestasSeleccionadas[i]" [value]="opcion">
+            <!-- for="pregunta{{ iterador del ngfor anterior }}-{{ opcion correspondiente de este ngfor }}" -->
+            <label class="form-check-label" for="pregunta{{ i }}-{{ opcion }}">
+              {{ opcion }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- El modal se mostrará con el atributo 'showModal' como true -->
+<div class="modal" tabindex="-1" role="dialog" style="background-color: #80808096;" [ngClass]="{'d-block': showModal}">
+  <div class="modal-dialog" role="document" style="top: 30%;">
+    <div class="modal-content border-2" style="border-color: var(--color-secundario);">
+      <div class="modal-header">
+        <h5 class="modal-title">Mensaje</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cerrarPopup()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del popup aquí -->
+        <p>Revisa tus respuestas para poder continuar...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cerrarPopup()">Cerrar</button>
+        <!-- Otras acciones del popup aquí -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="col-auto">
+    <button (click)="verificarRespuestas()" type="submit" href class="btn btn-primary">Enviar Respuestas</button>
+  </div>
+</form>

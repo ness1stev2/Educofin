@@ -1,0 +1,39 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Nestor Daniel",
+      "apellidos": "Basave Davalos",
+      "nSocio": 1,
+      "email": "ne.s.tor-10@hotmail.com",
+      "contraseña": "",
+      "telefono": "3323724897",
+      "domicilio": [
+        {
+          "calle": "Malinche",
+          "numero":"117",
+          "colonia":"Ciudad Aztlan",
+          "municipio":"Tonala",
+          "codigoPostal":"45402",
+          "estado":"Jalisco"
+        }
+      ],
+      "foto": ""
+    }
+  ],
+  "calificacion": [
+    {
+      "id": 1,
+      "id_modulo": "",
+      "id_usuario": "",
+      "aprobado": 1
+    }
+  ],
+  "modulo": [
+    {
+      "id": 1,
+      "nombre": "",
+      "tema": ""
+    }
+  ]
+}

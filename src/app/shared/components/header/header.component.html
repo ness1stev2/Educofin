@@ -1,0 +1,27 @@
+<header id="header" [ngClass]="{'nav_mod': scrollDownClass}">
+
+  <div class="container__header">
+
+    <a [routerLink]="['inicio']" class="brand" id="logo">
+      <img src="assets/logoE.png" height="80" alt="logo">
+    </a>
+
+    <nav  class="menu" [ngClass]="{'active': isMenuActive}">
+      <div class="btn">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <ul>
+        <li *ngFor="let item of toolbarItems">
+          <a [routerLink]="item.url"><i [class]="item.icon"></i>{{item.label}}</a>
+        </li>
+
+      </ul>
+    </nav>
+    <div class="btn">
+      <i class="fas fa-bars menu-btn"></i>
+    </div>
+
+  </div>
+
+
+</header>

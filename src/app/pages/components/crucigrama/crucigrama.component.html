@@ -1,0 +1,27 @@
+<!-- Mensaje de error o de completado una vez precionando el boton verificar -->
+<div id="mensaje"></div>
+<!-- IFRAME DEL CRUCIGRAMA -->
+<div id="crucigrama" [ngStyle]="{'display': display}" class="col-md-8">
+
+  <table class="table">
+
+    <!-- recorremos las filas en su longitud: 17 -->
+    <tr *ngFor="let fila of filas">
+      <!-- recorremos las columnas en su longitud: 18 -->
+      <td *ngFor="let columna of columnas">
+        <!-- if -->
+        <ng-container *ngIf="enable.includes(fila + '_' + columna)">
+          <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}"
+            [style.background-color]="'rgb(193, 255, 177)'">
+        </ng-container>
+        <!-- <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
+          <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}" [placeholder]="placeholder"
+            [style.background-color]="'rgb(193, 255, 177)'">
+        </ng-container> -->
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+<input id="btnContinuar" [ngStyle]="{'display': display}" type="button" value="Continuar">

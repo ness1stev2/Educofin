@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainComponent } from './main/main.component';
-import { Modulo1Component } from './modulo1/modulo1.component';
-import { LoginComponent } from './login/login.component';
+
+import { MainComponent } from './page/main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
+import { Modulo1Component } from './page/modulo1/modulo1.component';
+import { LayoutPageComponent } from './page/layout-page/layout-page.component';
+import { CrucigramaComponent } from './components/crucigrama/crucigrama.component';
+import { Formm1Component } from './components/formm1/formm1.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,12 +16,15 @@ import { PagesRoutingModule } from './pages-routing.module';
   declarations: [
     MainComponent,
     Modulo1Component,
-    LoginComponent,
+    LayoutPageComponent,
+    CrucigramaComponent,
+    Formm1Component
   ],
   imports: [
     CommonModule,
     SharedModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule
   ],
   exports: [
     MainComponent,
