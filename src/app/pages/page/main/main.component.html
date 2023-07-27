@@ -12,9 +12,9 @@
       <h2>SAN PABLO</h2>
       <P>¡BIENVENIDO! <strong>
           <!-- {{member.nombre}} {{member.apellidos}} -->
-          Nestor Daniel Basave Davalos
+          {{usuarios[0].nombre}} {{usuarios[0].apellidos}}
         </strong></P>
-        <strong>No Socio: 860</strong>
+        <strong>No Socio: {{ usuarios[0].nSocio }} </strong>
       <!-- <input type="button" value="BOTON 1">
           <input type="button" value="BOTON 2" class="btn__dos"> -->
     </div>
@@ -35,12 +35,6 @@
 <!--START CARDS MODULOS-->
 <section id="modulos" class="modulos">
   <div class="container__modulos">
-
-    <ul>
-      <li *ngFor="let usuario of usuarios">
-        {{usuario.nombre}}
-      </li>
-    </ul>
 
     <div class="cards">
       <div class="imgbox">

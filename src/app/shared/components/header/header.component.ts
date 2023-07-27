@@ -1,5 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import { PagesService } from 'src/app/pages/service/pages.service';
 
 @Component({
   selector: 'shared-header',

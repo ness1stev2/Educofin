@@ -114,7 +114,7 @@
 .modulos {
   background-color: var(--color-secundario-desvanecido);
   width: 100%;
-  margin-bottom: 400px;
+  margin-bottom: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,12 +376,6 @@ se desplace el cuadro con el icono hacia la izquierda.*/
   }
 }
 
-/*DESAPARECER UNA SECCIÓN*/
-@media (max-width: 500px) {
-  .modulos {
-    display: none;
-  }
-}
 
 /*Animación de portada*/
 @keyframes move_vector {

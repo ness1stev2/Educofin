@@ -20,6 +20,7 @@ export class MainComponent implements OnInit{
   ngOnInit(): void {
     //traermos al usuario por medio del metodo y nos suscribimos al observable
     this.pagesService.getUser()
+    // heroes => la propiedad de esta clase sera igual a la propiedad del servicio
     .subscribe( usarios => this.usuarios = usarios );
   }
 
