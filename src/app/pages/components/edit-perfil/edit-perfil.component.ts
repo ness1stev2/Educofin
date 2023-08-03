@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Domicilio } from '../../interfaces/page.interface';
 
 @Component({
   selector: 'app-edit-perfil',
@@ -6,6 +8,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-perfil.component.css']
 })
 export class EditPerfilComponent {
+
+  public domicilio: Domicilio = {
+    calle: '',
+    numero: '',
+    colonia: '',
+    municipio: '',
+    codigoPostal: '',
+    estado: '',
+  };
+
+  public userForm = new FormGroup({
+    id: new FormControl<string>(''),
+    nombre: new FormControl<string>('', { nonNullable: true }),
+    apellidos: new FormControl(''),
+    nSocio: new FormControl(''),
+    email: new FormControl(''),
+    contraseña: new FormControl(''),
+    telefono: new FormControl(''),
+    domicilio: new FormControl<Domicilio>(this.domicilio),
+    foto: new FormControl(''),
+  })
+
+  onSubmit():void {
+    console.log({
+      formIsValid: this.userForm.valid,
+      value: this.userForm.value,
+    })
+  }
 
   public estados: string[] = [
     'Seleccione un estado',

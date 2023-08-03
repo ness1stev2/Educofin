@@ -11,8 +11,15 @@
         <i class="fas fa-times close-btn"></i>
       </div>
       <ul>
+        <!-- TODO: ALGO EN EL FOR O IF SE PUEDE MEJORAR -->
+        <strong>Bienvenido</strong>
         <li *ngFor="let item of toolbarItems">
-          <a [routerLink]="item.url"><i [class]="item.icon"></i>{{item.label}}</a>
+          <div *ngIf="!item.url; else urlist">
+            <a (click)="onLogout()"><i [class]="item.icon"></i>{{item.label}}</a>
+          </div>
+          <ng-template #urlist>
+            <a [routerLink]="item.url"><i [class]="item.icon"></i>{{item.label}}</a>
+          </ng-template>
         </li>
 
       </ul>

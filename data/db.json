@@ -21,6 +21,7 @@
       "foto": ""
     }
   ],
+
   "calificacion": [
     {
       "id": 1,
@@ -29,6 +30,7 @@
       "aprobado": 1
     }
   ],
+
   "modulo": [
     {
       "id": 1,

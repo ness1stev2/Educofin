@@ -1,28 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { PagesService } from '../../service/pages.service';
 import { Usuario } from '../../interfaces/page.interface';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'pages-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit{
+export class MainComponent{
 
-  // Se crea una propiedad usarios de tipo Usuarios[]
-  public usuarios: Usuario[] = []
 
   //Se inyecta el servicio para poder utilizarlo
-  constructor(private pagesService: PagesService) { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
-
-  // se implementa para realizar cualquier trabajo de configuración o inicialización necesario
-  ngOnInit(): void {
-    //traermos al usuario por medio del metodo y nos suscribimos al observable
-    this.pagesService.getUser()
-    // heroes => la propiedad de esta clase sera igual a la propiedad del servicio
-    .subscribe( usarios => this.usuarios = usarios );
+  get user(): Usuario | undefined{
+    return this.authService.currentUser
   }
-
 
 }

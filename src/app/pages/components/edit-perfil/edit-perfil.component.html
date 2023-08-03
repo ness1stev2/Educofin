@@ -1,25 +1,25 @@
 <div class="container">
 
-  <div class="card-perfil">
+  <form class="card-perfil" [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <!-- foto -->
-      <div class="col-3">
+      <div class="col-sm-3 col-12">
 
         <img src="assets/perfil-usuario.jpg" class="img-fluid rounded" alt="...">
-        <input class="form-control mt-3" type="file" id="formFile">
+        <input class="form-control my-3" type="file" id="formFile">
 
       </div>
       <!-- Informacion -->
-      <div class="col-9">
+      <div class="col-sm-9 col-12">
         <div class="card p-5 gap-2">
           <div class="row">
             <div class="col-6">
               <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-              <input class="form-control" type="text" placeholder="" aria-label="default input example">
+              <input class="form-control" type="text" required formControlName="nombre">
             </div>
             <div class="col-6">
               <label for="exampleFormControlInput1" class="form-label">Apellidos:</label>
-              <input class="form-control" type="text" placeholder="" aria-label="default input example">
+              <input class="form-control" type="text" required formControlName="apellidos">
             </div>
           </div>
 
@@ -27,15 +27,15 @@
 
             <div class="col-6">
               <label for="exampleFormControlInput1" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="email" class="form-control" required placeholder="name@example.com" formControlName="email">
             </div>
             <div class="col-3">
               <label for="exampleFormControlInput1" class="form-label">Número de Socio:</label>
-              <input class="form-control" type="text" placeholder="####" aria-label="default input example">
+              <input class="form-control" type="text" required placeholder="####" formControlName="nSocio">
             </div>
             <div class="col-3">
               <label for="exampleFormControlInput1" class="form-label">Telefono:</label>
-              <input class="form-control" type="text" placeholder="Numero a 10 digitos" aria-label="default input example">
+              <input class="form-control" type="text" placeholder="Numero a 10 digitos" formControlName="telefono">
             </div>
 
           </div>
@@ -43,24 +43,24 @@
           <div class="row">
             <div class="col-4">
               <label for="exampleFormControlInput1" class="form-label">Calle:</label>
-              <input class="form-control" type="text" placeholder="" aria-label="default input example">
+              <input class="form-control" type="text" placeholder="" formControlName="calle">
             </div>
             <div class="col-4">
               <label for="exampleFormControlInput1" class="form-label">Municipio:</label>
-              <input class="form-control" type="text" placeholder="" aria-label="default input example">
+              <input class="form-control" type="text" placeholder="" formControlName="municipio">
             </div>
             <div class="col-4">
               <label for="exampleFormControlInput1" class="form-label">Estado:</label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" formControlName="estado">
                 <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
               </select>
             </div>
           </div>
 
-          <button type="button" class="btn btn-primary mt-5">Guardar</button>
+          <button type="submit" class="btn btn-primary mt-5">Guardar</button>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 
 </div>

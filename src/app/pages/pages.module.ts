@@ -8,7 +8,7 @@ import { Modulo1Component } from './page/modulo1/modulo1.component';
 import { LayoutPageComponent } from './page/layout-page/layout-page.component';
 import { CrucigramaComponent } from './components/crucigrama/crucigrama.component';
 import { Formm1Component } from './components/formm1/formm1.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
 
 
@@ -26,7 +26,8 @@ import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.compon
     CommonModule,
     SharedModule,
     PagesRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MainComponent,
