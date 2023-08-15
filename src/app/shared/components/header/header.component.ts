@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Url } from '../../interfaces/url.interface';
@@ -11,14 +11,18 @@ import { Usuario } from 'src/app/pages/interfaces/page.interface';
 })
 export class HeaderComponent {
 
+  private authService = inject( AuthService );
+  public user = computed(() => this.authService.currentUser())
+  public name: string | null = localStorage.getItem('nombre')
+
   public toolbarItems: Url[] = [
     {label: 'INICIO', icon: 'icon fas fa-house-user',url: '/inicio', },
-    {label: `${this.user?.nombre} ${this.user?.apellidos}`, icon: 'icon fa-solid fa-user',url: './perfil', },
+    {label: this.name , icon: 'icon fa-solid fa-user',url: './perfil', },
     {label: 'CERRAR SESIÓN', icon: ''},
   ]
 
+
   constructor(
-    private authService: AuthService,
     public router: Router
   ) { }
 
@@ -38,15 +42,20 @@ export class HeaderComponent {
     this.isMenuActive = !this.isMenuActive;
   }
 
-  // metodo que cierra la sesion
+
   onLogout(){
     this.authService.logout();
-    this.router.navigate(['/auth/sesion'])
   }
 
-  get user(): Usuario | undefined{
+  // metodo que cierra la sesion
+  /* onLogout(){
+    this.authService.logout();
+    this.router.navigate(['/auth/sesion'])
+  } */
+
+  /* get user(): Usuario | undefined{
     return this.authService.currentUser;
-  }
+  } */
 
 
 }

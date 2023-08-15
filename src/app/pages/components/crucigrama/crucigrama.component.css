@@ -6,7 +6,6 @@
 }
 
 #crucigrama {
-  width: 70%;
   margin: 0 auto;
   padding: unset;
   max-width: 740px;
@@ -30,6 +29,17 @@
   text-transform: uppercase;
   margin-bottom: 3px;
   margin-right: 2px;
+  background-color: rgb(255 255 255);
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.casilla.has-value {
+  /* Estilos cuando el input tiene un valor */
+  /* Por ejemplo, puedes reducir la opacidad del placeholder */
+  ::placeholder {
+    opacity: 0.5;
+  }
 }
 
 .table {
@@ -63,4 +73,28 @@ th {
   color: white;
   font-size: 15px;
   margin-bottom: 150px;
+}
+
+@media (max-width: 768px) {
+  .casilla {
+    width: 30px;
+    height: 28px;
+    font-size: 9px;
+  }
+  #crucigrama{
+    max-width: 650px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .casilla {
+    width: 26px;
+    height: 25px;
+    font-size: 8px;
+  }
+  #crucigrama{
+    max-width: 650px;
+    margin-left: 100px;
+  }
 }

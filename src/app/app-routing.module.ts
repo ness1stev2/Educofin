@@ -3,19 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { PublicGuard } from './auth/guards/public.guard';
+import { isAuthenticatedGuard, isNotAuthenticatedGuard } from './auth/guards';
 
 const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
-    canActivate: [ PublicGuard ],
-    canMatch: [ PublicGuard ]
+    canActivate: [ isNotAuthenticatedGuard ]
   },
   {
     path: 'inicio',
     loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule),
-    canActivate: [ AuthGuard ],
-    canMatch: [ AuthGuard ]
+    canActivate: [ isAuthenticatedGuard ]
   },
   {
     path: '',
@@ -32,7 +31,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // ponerlo en la ruta para produccion
+  /* { useHash: false} */
+  imports: [RouterModule.forRoot(routes, )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

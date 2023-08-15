@@ -7,16 +7,14 @@
 
   <div class="container__cover">
 
-    <div  class="container__info">
+    <div class="container__info">
       <h1>EDUCOOFIN</h1>
       <h2>SAN PABLO</h2>
       <P>¡BIENVENIDO! <strong>
-          <!-- {{member.nombre}} {{member.apellidos}} -->
-          {{user?.nombre}} {{user?.apellidos}}
+          <p>Nombre: {{name}} </p>
+          <!-- <pre>{{ user() | json }}</pre> -->
         </strong></P>
-        <strong>No Socio: {{ user?.nSocio }} </strong>
-      <!-- <input type="button" value="BOTON 1">
-          <input type="button" value="BOTON 2" class="btn__dos"> -->
+      <strong>No Socio: {{nSocio}} </strong>
     </div>
     <div class="container__vector">
       <img src="/assets/imgPort.svg" alt="portada">

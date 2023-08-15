@@ -150,7 +150,11 @@
   max-width: 150px;
   cursor: pointer;
   box-shadow: 1px 1px 30px -5px #20202049;
-  transition: box-shadow 500ms;
+  transition: all 500ms;
+}
+.formBx .form form input[type="submit"]:disabled{
+  background: grey;
+
 }
 
 .formBx .form form input[type="submit"]:hover{

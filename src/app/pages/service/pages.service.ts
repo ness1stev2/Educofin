@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Usuario } from '../interfaces/page.interface';
-import { environments } from 'src/environments/environments';
+import { environment } from 'src/environments/environments';
 
 @Injectable({providedIn: 'root'})
 export class PagesService {
 
 
   // se crea una propiedad de tipo string en el cual seobtiene la url (endpoint)
-  private baseUrl: string = environments.baseUrl
+  private baseUrl: string = environment.baseUrl
 
   // se inyecta el servicio HttpClient para realizar solicitudes HTTP a servidores remotos para obtener o enviar datos
   constructor(private http: HttpClient) { }

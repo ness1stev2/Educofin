@@ -18,7 +18,8 @@ export class PublicGuard implements CanActivate, CanMatch {
   // función que devuelve un Observable<boolean> o un valor booleano.
   private checkAuthStatus(): Observable<boolean> | boolean {
 
-    return this.authService.checkAuthentication()
+    // TODO: REPARAR ESTA PARTE
+    return true /* this.authService.checkAuthentication()
       .pipe(
         // Operador tap para verificar si el usuario está autenticado
         tap( isAuthenticated => {
@@ -27,7 +28,7 @@ export class PublicGuard implements CanActivate, CanMatch {
         }),
         // el operador map para devolver el valor negado de isAuthenticated
         map( isAuthenticated => !isAuthenticated)
-      )
+      ) */
   }
 
   canMatch(

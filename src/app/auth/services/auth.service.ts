@@ -1,27 +1,115 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { Injectable, computed, inject, signal } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, catchError, map, of, tap, throwError } from 'rxjs';
 
-import { environments } from 'src/environments/environments';
+import { environment } from 'src/environments/environments';
 import { Usuario } from '../interfaces/usuario.interface';
+import { User, AuthStatus, LoginResponse, CheckTokenResponse } from '../interfaces';
+import { UserService } from './user.service';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
 
-  private baseUrl = environments.baseUrl;
-  private usuario?: Usuario
+  // readonly sirve para que incluso estando en el mismo servicio nadie lo va a poder editar
+  private readonly baseUrl: string = environment.baseUrl;
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { }
+  private _currentUser = signal<User|null>(null);
+  private _authStatus  = signal<AuthStatus>( AuthStatus.checking )
 
-  // Obtenermos el usuario
+  //! Al mundo exterior (fuera de este archivo)
+  public currentUser = computed( () => this._currentUser())
+  public authStatus = computed( () => this._authStatus())
+
+  constructor( private userService: UserService ) {
+    this.checkAuthStatus().subscribe();
+   }
+
+  private setAuthentication(user: User, token:string): boolean {
+    this._currentUser.set(user);
+    this._authStatus.set(AuthStatus.authenticated);
+    localStorage.setItem('token', token)
+    localStorage.setItem('nombre', user.name)
+    localStorage.setItem('socio', user.nSocio.toString())
+    localStorage.setItem('email', user.email)
+    console.log(token)
+
+    this.userService.updateUser(user);
+    return true
+  }
+
+
+
+  register(user: User): Observable<boolean> {
+    const url = `${this.baseUrl}/auth/register`;
+
+    return this.http.post<LoginResponse>(url, user)
+    .pipe(
+      map(({ user, token }) => this.setAuthentication( user, token )),
+      catchError(err => throwError(() => err.error.message))
+    )
+  }
+  /* register() */
+
+  login(email: string, password: string): Observable<boolean> {
+
+    const url = `${this.baseUrl}/auth/login`;
+    const body = { email, password };
+
+    return this.http.post<LoginResponse>(url, body)
+      .pipe(
+        map(({ user, token }) => this.setAuthentication( user, token )),
+        catchError(err => throwError(() => err.error.message))
+      )
+
+  }
+
+  checkAuthStatus(): Observable<boolean> {
+
+    const url = `${ this.baseUrl }/auth/check-token`;
+    const token = localStorage.getItem('token');
+
+    if( !token ) {
+      this.logout();
+      return of(false)
+    }
+    const headers = new HttpHeaders()
+      .set('Authorization', `Bearer ${ token }`);
+
+    return this.http.get<CheckTokenResponse>(url, { headers } )
+      .pipe(
+        map(({ user, token }) => this.setAuthentication( user, token )),
+        //Error
+        catchError( () => {
+          this._authStatus.set( AuthStatus.notAuthenticated )
+          return of(false)
+         })
+      )
+  }
+
+  logout() {
+    localStorage.clear()
+    localStorage.removeItem('token')
+    this._currentUser.set(null);
+    this._authStatus.set(AuthStatus.notAuthenticated)
+  }
+
+
+  //  TODO: CODIGO DE SECCIONES ANTERIORES QUE NOS PUEDE SERVIR DE REFERENCIA
+
+  /* private usuario?: Usuario */
+
+  /* constructor(private http: HttpClient) { } */
+
+  /* // Obtenermos el usuario
   get currentUser(): Usuario | undefined {
     // si el usuario no existe retornaremos undefined
     if (!this.usuario) return undefined
     // de lo contrario crearemos un clone profundo del usuario
     return structuredClone(this.usuario);
-  }
+  } */
 
-  // login es una fucion que recibe  2 parametros (email y password) y este retorna un observable de tipo Usuario
+ /*  // login es una fucion que recibe  2 parametros (email y password) y este retorna un observable de tipo Usuario
   login(email: string, password: string): Observable<Usuario> {
 
     // Se hace la peticion http a la base de datos
@@ -61,6 +149,6 @@ export class AuthService {
     this.usuario = undefined;
     // y limpiamos todo el localStorage
     localStorage.clear();
-  }
+  } */
 
 }

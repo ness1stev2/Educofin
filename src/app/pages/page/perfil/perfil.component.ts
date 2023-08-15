@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PerfilComponent {
 
+  public name: string | null = localStorage.getItem('nombre')
+  public nSocio: string | null = localStorage.getItem('socio')
+  public correo: string | null = localStorage.getItem('email')
+
 }

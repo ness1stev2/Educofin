@@ -1,19 +1,34 @@
-import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-modulo1',
   templateUrl: './modulo1.component.html',
   styleUrls: ['./modulo1.component.css']
 })
-export class Modulo1Component {
-  constructor(private router: Router){}
+export class Modulo1Component implements OnInit{
+  constructor(private router: Router, private viewportScroller: ViewportScroller) {}
+
+  ngOnInit() {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      // Desplázate al inicio de la página
+      this.viewportScroller.scrollToPosition([0, 0]);
+    });
+  }
 
   public display: string = ""
   public display2: string = ""
   public finalizadoP: Boolean = false;
   public contador: number = 10;
+  public name: string | null = localStorage.getItem('nombre')
 
+  public receivedValue: boolean = false;
+
+  receiveValue(value: boolean) {
+    this.receivedValue = value;
+  }
   finalizadoEvent(finalizado: boolean){
     this.finalizadoP = finalizado;
     console.log(this.finalizadoP);

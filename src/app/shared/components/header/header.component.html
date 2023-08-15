@@ -12,9 +12,9 @@
       </div>
       <ul>
         <!-- TODO: ALGO EN EL FOR O IF SE PUEDE MEJORAR -->
-        <strong>Bienvenido</strong>
         <li *ngFor="let item of toolbarItems">
           <div *ngIf="!item.url; else urlist">
+            <!-- TODO: Este metodo va en la etiqueta <a> -->
             <a (click)="onLogout()"><i [class]="item.icon"></i>{{item.label}}</a>
           </div>
           <ng-template #urlist>

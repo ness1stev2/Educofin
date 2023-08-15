@@ -18,14 +18,15 @@ export class AuthGuard implements CanActivate, CanMatch {
 
   // función que devuelve un Observable<boolean> o un valor booleano.
   private checkAuthStatus(): Observable<boolean> | boolean {
-    return this.authService.checkAuthentication()
+    return true
+    /* this.authService.checkAuthentication()
       .pipe(
         // Operador tap para verificar si el usuario está autenticado
         tap( isAuthenticated => {
           // Si el usuario no está autenticado, navega a la ruta './auth/login'
           if ( !isAuthenticated ) this.router.navigate(['./auth/sesion'])
         })
-      )
+      ) */
   }
 
   canMatch(

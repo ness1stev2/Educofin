@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environments } from 'src/environments/environments';
+import { environment } from 'src/environments/environments';
 
 @Component({
   selector: 'app-error404-page',
@@ -8,6 +8,6 @@ import { environments } from 'src/environments/environments';
 })
 export class Error404PageComponent {
 
-  public baseUrl = environments.baseUrl
+  public baseUrl = environment.baseUrl
 
 }

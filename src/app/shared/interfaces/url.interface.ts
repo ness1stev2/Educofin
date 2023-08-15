@@ -1,5 +1,5 @@
 export interface Url{
-  label: string;
+  label: string | null;
   icon: string;
   url?: string;
 }
