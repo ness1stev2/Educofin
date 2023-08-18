@@ -3,10 +3,9 @@ header {
   width: 100%;
   background: #fff;
   position: fixed;
-  top: 0;
-  right: 0;
   height: 100px;
   transition: all 500ms;
+  top: 0px;
 }
 
 .container__header {
@@ -23,30 +22,13 @@ header {
   max-width: 1300px;
 }
 
-/*POSITION DEL MENU Y SU CONTENIDO*/
-header .menu {
-  /*ver espacio ocupado*/
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 header .btn {
-  color: var(--color-secundario);
-  font-size: 40px;
   cursor: pointer;
   display: none;
 }
 
-header .menu>ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 header .menu>ul>li {
   list-style: none;
@@ -236,20 +218,6 @@ header.down {
   }
 }
 
-/*CLASE DEL LINK DE LA IMG DEL MENU*/
-header .brand {
-  /*ver espacio ocupado*/
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-header .brand img {
-  height: 80px;
-}
 
 /*CAMBIO DE TAMAÑO DEL TITULO Y PADDING TOP SEGUN LA PANTALLA*/
 @media (max-width: 480px) {

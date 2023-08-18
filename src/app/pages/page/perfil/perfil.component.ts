@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { User } from 'src/app/auth/interfaces';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-perfil',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
+
+  private authService = inject( AuthService );
+
+  public usuario:User = this.authService.user;
 
   public name: string | null = localStorage.getItem('nombre')
   public nSocio: string | null = localStorage.getItem('socio')

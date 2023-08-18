@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-modulo1',
@@ -9,7 +10,9 @@ import { filter } from 'rxjs';
   styleUrls: ['./modulo1.component.css']
 })
 export class Modulo1Component implements OnInit{
-  constructor(private router: Router, private viewportScroller: ViewportScroller) {}
+  constructor(private router: Router, private viewportScroller: ViewportScroller, private authService: AuthService) {}
+
+
 
   ngOnInit() {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
@@ -22,6 +25,7 @@ export class Modulo1Component implements OnInit{
   public display2: string = ""
   public finalizadoP: Boolean = false;
   public contador: number = 10;
+  public usuario = this.authService.user
   public name: string | null = localStorage.getItem('nombre')
 
   public receivedValue: boolean = false;

@@ -10,12 +10,12 @@
 
   <div class="cover">
 
-    <div class="container__cover">
+    <div class="container__cover d-flex justify-content-between">
 
       <div class="container__info">
         <h1>¿Qué es el Cooperativismo?</h1>
         <P>Módulo 1 de: <strong>
-            {{name}}</strong></P>
+            {{usuario.name}}</strong></P>
         <!-- <a href="#"><input type="button" value="TEMARIO"></a> -->
         <!-- <input type="button" value="BOTON 2" class="btn__dos"> -->
       </div>
@@ -28,7 +28,7 @@
 
   <div class="tema">
     <div class="container__titulo">
-      <h1>Antecedentes Historicos</h1><br>
+      <h1 class="text-center">Antecedentes Históricos</h1><br>
     </div>
   </div>
 
@@ -36,22 +36,22 @@
   <div class="containerss">
     <div class="d-flex justify-content-center flex-column align-items-center">
 
-      <actividadM1></actividadM1>
+     <!--  <actividadM1></actividadM1> -->
 
     </div><!--CIERRE DEL CONTAINER__TEMA, CONTENEDOR DLE PDF-->
 
 
-    <div class="row" style="--bs-gutter-x: 0rem;">
+    <div class="row" style="--bs-gutter-x: 0rem">
       <!-- Lado izquierdo -->
       <div class="col-xl-4 col-xxl-6 col-sm-12">
         <!-- SECCION DE LA ACTIVIDAD -->
-        <section class="container__actividad">
+        <section class="container__actividad d-flex flex-column align-items-center">
 
-          <div class="titulo__actividad">
+          <div class="titulo__actividad text-center">
             <h1>Actividad: Crucigrama</h1>
           </div>
 
-          <div class="txt__actividad" style="width: 90%;">
+          <div class="txt__actividad">
             <p>
               Con esta actividad podrás reforzar parte de lo leído en estos temas, apoyando a la retroalimentación y
               aprendizaje de los conceptos aquí mencionados.

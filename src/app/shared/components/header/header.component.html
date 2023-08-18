@@ -6,11 +6,11 @@
       <img src="assets/logoE.png" height="80" alt="logo">
     </a>
 
-    <nav  class="menu" (click)="toggleMenu()" [ngClass]="{'active': isMenuActive}">
+    <nav  class="menu d-flex" (click)="toggleMenu()" [ngClass]="{'active': isMenuActive}">
       <div class="btn">
         <i class="fas fa-times close-btn"></i>
       </div>
-      <ul>
+      <ul class="d-flex align-items-center justify-content-center">
         <!-- TODO: ALGO EN EL FOR O IF SE PUEDE MEJORAR -->
         <li *ngFor="let item of toolbarItems">
           <div *ngIf="!item.url; else urlist">

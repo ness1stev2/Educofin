@@ -2,7 +2,7 @@ import { Component, HostListener, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Url } from '../../interfaces/url.interface';
-import { Usuario } from 'src/app/pages/interfaces/page.interface';
+import { User } from 'src/app/auth/interfaces';
 
 @Component({
   selector: 'shared-header',
@@ -13,18 +13,22 @@ export class HeaderComponent {
 
   private authService = inject( AuthService );
   public user = computed(() => this.authService.currentUser())
-  public name: string | null = localStorage.getItem('nombre')
+  /* public name: string | null = localStorage.getItem('nombre') */
+  public usuario:User = this.authService.user;
 
   public toolbarItems: Url[] = [
     {label: 'INICIO', icon: 'icon fas fa-house-user',url: '/inicio', },
-    {label: this.name , icon: 'icon fa-solid fa-user',url: './perfil', },
+    {label: this.usuario.name , icon: 'icon fa-solid fa-user',url: './perfil', },
     {label: 'CERRAR SESIÓN', icon: ''},
   ]
 
 
+
+
   constructor(
-    public router: Router
-  ) { }
+    public router: Router,
+  ) {
+  }
 
   scrollDownClass: boolean = false;
   isMenuActive: boolean = false;

@@ -21,6 +21,11 @@
   left: 1px;
 }
 
+.respSelec{
+  box-shadow: var(--color-secundario) 0px 0px 3px 2px;
+  transition: box-shadow 0.2s ease;
+}
+
 .casilla {
   width: 34px;
   height: 34px;
@@ -32,14 +37,26 @@
   background-color: rgb(255 255 255);
   border-radius: 5px;
   border: 2px solid black;
+  position: unset;
 }
 
 .casilla.has-value {
+
   /* Estilos cuando el input tiene un valor */
   /* Por ejemplo, puedes reducir la opacidad del placeholder */
   ::placeholder {
     opacity: 0.5;
   }
+}
+
+.table small {
+  position: absolute;
+  background: none;
+  padding: 0;
+  padding-left: 3px;
+  opacity: 0.7;
+  color: var(--color-primario);
+  font-size: 12px;
 }
 
 .table {
@@ -54,6 +71,10 @@ th {
 }
 
 .table tbody td {
+  padding: 0;
+}
+
+.table .input-placeholder{
   padding: 0;
 }
 
@@ -81,7 +102,8 @@ th {
     height: 28px;
     font-size: 9px;
   }
-  #crucigrama{
+
+  #crucigrama {
     max-width: 650px;
   }
 }
@@ -93,8 +115,17 @@ th {
     height: 25px;
     font-size: 8px;
   }
-  #crucigrama{
+
+  .table small {
+    font-size: 9px;
+  }
+
+  #crucigrama {
     max-width: 650px;
     margin-left: 100px;
+  }
+
+  form{
+    overflow: auto;
   }
 }

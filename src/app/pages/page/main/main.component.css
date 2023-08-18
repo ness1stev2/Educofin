@@ -7,41 +7,26 @@
 }
 
 .cover {
-  width: 100%;
-  height: 450px;
-  margin-bottom: 100px;
-  padding-bottom: 60px;
-  font-family: "Century Gothic", Times, sans-serif;
   margin-top: 150px;
 }
 
 .container__cover {
   max-width: 1200px;
   margin: auto;
-  padding: 10px;
-  display: flex;
   justify-content: space-between;
-  position: relative;
 }
 
 .cover .container__info {
   max-width: 400px;
-  margin-top: 40px;
-  z-index: 2;
 }
 
 .cover h1 {
-  max-width: 400px;
-  font-size: 60px;
-  font-weight: 900;
+  font-size: 45px;
   color: var(--color-primario);
 }
 
 .cover h2 {
-  font-size: 60px;
-  font-weight: 900;
-  color: var(--color-primario);
-  margin-top: -25px;
+  font-size: 30px;
 }
 
 .cover p {
@@ -104,20 +89,14 @@
 }
 
 .temario {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
+  margin-top: 100px;
 }
 
 .modulos {
   background-color: var(--color-secundario-desvanecido);
-  width: 100%;
   margin-bottom: 300px;
-  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .courses {
@@ -128,28 +107,15 @@
 .container__titulo {
   width: 1200px;
   padding: 20px 0;
-  display: flex;
-  z-index: 2;
-  background-image: url(/assets/fondot2.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .container__titulo h1 {
   margin: auto;
-  max-width: 400px;
   font-size: 60px;
-  font-weight: 700;
   color: var(--color-primario);
 }
 
 .container__modulos {
-  position: relative;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   padding: 40px 0;
 }
 
@@ -171,11 +137,6 @@
   background: var(--color-secundario-desvanecido);
   width: 27%;
   height: calc(100% - 15px);
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
@@ -200,7 +161,7 @@
   padding: 28px;
 }
 
-.cards .content #moduloone {
+.cards .content .modulo-title{
   color: var(--color-primario);
 }
 
@@ -343,27 +304,17 @@ se desplace el cuadro con el icono hacia la izquierda.*/
 
 /*RESPONSIVE DESING*/
 @media (max-width:1139px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Century Gothic", Times, sans-serif;
-  }
-
   .cards {
     width: 250px;
     height: 180px;
   }
 
   .cards .content {
-    padding: 1;
+    font-size: 19px;
   }
 
   .cards .content h3 {
     font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 3px;
   }
 
   .cards .content p {
@@ -373,6 +324,9 @@ se desplace el cuadro con el icono hacia la izquierda.*/
   .cards .content a {
     font-size: .7em;
     margin-top: 5px;
+  }
+  .container__info{
+    margin-left: 40px;
   }
 }
 
@@ -392,15 +346,13 @@ se desplace el cuadro con el icono hacia la izquierda.*/
   }
 }
 
-@media screen and (max-width:990px) {
-  .container__vector img {
-      width: 600px;
-  }
-}
 
 @media screen and (max-width:950px) {
   .container__vector img {
       width: 500px;
+  }
+  .temario{
+    margin-top: 50px;
   }
 }
 
@@ -408,13 +360,10 @@ se desplace el cuadro con el icono hacia la izquierda.*/
 
   /*estilos para que la img de portada quede debajo, acomodo en columnas y elementos centrados*/
   .container__cover {
-      max-width: 100%;
       margin: auto;
       padding: 10px;
       margin-bottom: 250px;
-      display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       position: relative;
   }
@@ -422,11 +371,10 @@ se desplace el cuadro con el icono hacia la izquierda.*/
   /*informacion en columnas, y centrada*/
   .cover .container__info {
       max-width: 100%;
-      margin-top: 40px;
       margin-bottom: 30px;
-      justify-content: center;
-      align-items: center;
-      z-index: 2;
+  }
+  .temario{
+    margin-top: 320px;
   }
 
   /* BOTONES EN DISPOSITIVOS MOVILES*/
@@ -460,10 +408,6 @@ se desplace el cuadro con el icono hacia la izquierda.*/
 
   /*informacion en columnas, y centrada*/
   .cover .container__info {
-
-      margin-top: 0px;
-      margin-bottom: 30px;
-      z-index: 2;
   }
 
   /* BOTONES EN DISPOSITIVOS MOVILES*/
@@ -488,7 +432,7 @@ se desplace el cuadro con el icono hacia la izquierda.*/
   }
 
   .container__vector img {
-      width: 400px;
+      width: 380px;
   }
 
 }
@@ -497,16 +441,12 @@ se desplace el cuadro con el icono hacia la izquierda.*/
 
   /*informacion en columnas, y centrada*/
   .cover .container__info {
-
-      margin-top: 30px;
       margin-bottom: 30px;
-      z-index: 2;
   }
 }
 
 @media screen and (max-width:440) {
   .container__cover {
-      width: 100%;
       margin-top: 40px;
   }
 }

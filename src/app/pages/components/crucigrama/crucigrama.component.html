@@ -22,13 +22,15 @@
             id="fila{{fila}}C{{columna}}">
           </ng-container>
           <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
-          <input
-          class="casilla"
-          type="text" maxlength="1"
-          id="fila{{fila}}C{{columna}}"
-          [placeholder]="placeholder"
-          [formControlName]="fila + '_' + columna"
-          (blur)="checkInputValue($event)">
+            <div class="input-placeholder">
+              <small>{{placeholder}}</small>
+              <input
+              class="casilla"
+              type="text" maxlength="1"
+              id="fila{{fila}}C{{columna}}"
+              [formControlName]="fila + '_' + columna"
+              (blur)="checkInputValue($event)">
+            </div>
         </ng-container>
         </td>
       </tr>
@@ -36,7 +38,7 @@
     </table>
 
   </div>
-  <input id="btnContinuar" [ngStyle]="{'display': display}" type="submit" value="Continuar">
+  <input id="btnContinuar" [ngStyle]="{'display': display}" type="submit" value="Continuar" dis>
 
 </form>
 

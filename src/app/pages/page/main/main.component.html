@@ -1,20 +1,15 @@
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Felicidades!</strong>Sesion iniciada correctamente...
-</div>
-
 <!--PORTADA DEBAJO DEL HEADER-->
 <div class="cover">
 
-  <div class="container__cover">
+  <div class="container__cover d-flex justify-content-between">
 
     <div class="container__info">
-      <h1>EDUCOOFIN</h1>
-      <h2>SAN PABLO</h2>
-      <P>¡BIENVENIDO! <strong>
-          <p>Nombre: {{name}} </p>
-          <!-- <pre>{{ user() | json }}</pre> -->
-        </strong></P>
-      <strong>No Socio: {{nSocio}} </strong>
+      <h1 class="animate__animated animate__fadeInDown">EDUCACIÓN COOPERATIVA Y FINANCIERA</h1>
+      <h2 class="animate__animated animate__fadeIn animate__delay-1s">SAN PABLO</h2>
+      <p class="animate__animated animate__fadeInLeft animate__delay-2s"><strong>¡BIENVENIDO!</strong></p>
+      <p class="animate__animated animate__fadeInLeft animate__delay-3s"><strong>Nombre:</strong> {{name}} </p>
+
+      <p class="animate__animated animate__fadeInLeft animate__delay-4s"><strong>No Socio: </strong>{{nSocio}}</p>
     </div>
     <div class="container__vector">
       <img src="/assets/imgPort.svg" alt="portada">
@@ -24,47 +19,48 @@
 
 </div>
 
-<div class="temario">
-  <div class="container__titulo">
+<div class="temario d-flex justify-content-center align-items-center">
+  <div class="container__titulo d-flex">
     <h1>Temario</h1>
   </div>
 </div>
 
 <!--START CARDS MODULOS-->
-<section id="modulos" class="modulos">
-  <div class="container__modulos">
+<section class="modulos d-flex justify-content-center">
+  <div class="container__modulos d-flex flex-wrap justify-content-around">
 
     <div class="cards">
-      <div class="imgbox">
+      <div
+        class="imgbox d-flex justify-content-center align-items-center d-flex justify-content-center align-items-center">
         <i class="fa-solid fa-hand-point-up"></i>
       </div>
 
       <div class="content">
-        <h3 id="moduloone">MÓDULO 1</h3>
+        <h3 class="modulo-title">MÓDULO 1</h3>
         <p>Introducción al Cooperativismo</p>
-        <a routerLink="/inicio/modulo-uno">Ver Módulo</a>
+        <a routerLink="/inicio/modulo-uno" style="margin-top: 25px;">Ver Módulo</a>
       </div>
     </div>
 
     <div class="cards">
-      <div class="imgbox">
+      <div class="imgbox d-flex justify-content-center align-items-center">
         <i class="fa-solid fa-hand-peace"></i>
       </div>
 
       <div class="content">
-        <h3 id="modulotwo">MÓDULO 2</h3>
+        <h3 class="modulo-title">MÓDULO 2</h3>
         <p>Cooperativas 1 </p>
         <a href="#" style="margin-top: 40px;">Ver Módulo</a>
       </div>
     </div>
 
     <div class="cards">
-      <div class="imgbox">
+      <div class="imgbox d-flex justify-content-center align-items-center">
         <i class="fa-solid fa-people-group"></i>
       </div>
 
       <div class="content">
-        <h3 id="modulotree">MÓDULO 3</h3>
+        <h3 class="modulo-title">MÓDULO 3</h3>
         <p>Cooperativas 2</p>
         <a href="#" style="margin-top: 40px;">Ver Módulo</a>
       </div>

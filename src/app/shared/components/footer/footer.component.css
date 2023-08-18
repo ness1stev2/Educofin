@@ -1,18 +1,12 @@
 footer {
   position: relative;
-  width: 100%;
   background: var(--color-secundario);
-  min-height: 100px;
-  padding: 20px 50px;
-  margin-top: 60px;
+  padding: 20px 0px;
 }
 
 .container__footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1260px;
+  margin: 0 auto;
   margin-top: 100px;
 }
 
@@ -57,22 +51,16 @@ footer .wave {
 }
 
 .box__footer {
-  display: flex;
-  flex-direction: column;
   padding: 40px;
-  max-width: 350px;
 }
 
 .box__footer .logo img {
   width: 225px;
-  padding-right: 20px;
 }
 
 .box__copyright {
   max-width: 1200px;
   margin: auto;
-  text-align: center;
-  padding: 0px 40px;
 }
 
 .box__footer h2 {

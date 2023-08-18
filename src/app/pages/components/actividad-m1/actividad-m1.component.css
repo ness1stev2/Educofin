@@ -1,9 +1,109 @@
-.modulo1 {
-  background-color: rgb(50 179 160);
+section {
   padding: 10px 30px;
-  height: 345px;
+
+}
+
+.modulo1 img {
+  height: 400px;
+}
+
+.modulo1 {
+  background-image: url('../../../../assets/modulo1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.modulo1 h2 {
+  font-family: sans-serif;
+  font-size: 60px;
+  color: #cbe8e6;
+}
+
+.modulo1 p {
+  font-family: sans-serif;
+  font-size: 24px;
+  color: #cbe8e6;
+}
+
+.modulo1-content p:nth-child(3) {
+  background-color: #cbe8e6;
+  color: #1e9fa5;
+  padding: 0 40px;
 }
 
 img {
   height: 50%;
+}
+
+
+.objetivo_general {
+  background-color: #1e9fa5;
+  color: white;
+}
+
+.objetivo_general h2 {
+  font-size: 40px;
+}
+
+.objetivo_general p {
+  color: inherit;
+  font-size: 20px;
+}
+
+.gradient {
+  height: 150px;
+  background: linear-gradient(180deg, rgba(30,159,165,1) 0%, rgba(119,217,232,1) -40%, rgba(150,237,255,1) 0%);
+  /* background: linear-gradient(180deg, rgba(30,159,165,1) 0%, rgba(119,217,232,1) 60%, rgba(150,237,255,1) 100%); */
+}
+
+.tema {
+  background-color: #96edff;
+}
+
+.tema .bgpapel ul {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.tema .bgpapel h2 {
+  font-size: 50px;
+}
+
+.tema .bgpapel {
+  background-image: url(../../../../assets/hojaCuaderno.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 90px 60px;
+  width: 70%;
+  margin: 0 auto;
+  color: black;
+}
+
+.gradient2 {
+  height: 150px;
+  background: linear-gradient(180deg, rgba(150, 237, 255, 1) 0%, rgba(119, 217, 232, 1) 35%, rgb(245 206 214) 100%);
+}
+
+.introduccion {
+  background-color: rgb(245 206 214);
+}
+
+.introduccion .int-content {
+  padding: 170px 190px;
+  color: #376bb9;
+}
+
+.introduccion .int-content h2 {
+  font-size: 3rem;
+}
+
+.introduccion .int-content p {
+  font-size: 24px;
+  color: black;
+}
+
+.introduccion p {
+  white-space: pre-line;
 }

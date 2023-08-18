@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
-import { AuthGuard } from './auth/guards/auth.guard';
-import { PublicGuard } from './auth/guards/public.guard';
 import { isAuthenticatedGuard, isNotAuthenticatedGuard } from './auth/guards';
 
 const routes: Routes = [
@@ -33,7 +31,7 @@ const routes: Routes = [
 @NgModule({
   // ponerlo en la ruta para produccion
   /* { useHash: false} */
-  imports: [RouterModule.forRoot(routes, )],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
