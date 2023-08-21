@@ -1,23 +1,13 @@
 <div class="container__all">
 
-  <!--   <?php
-  if (isset($_REQUEST['c'])) { ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Felicidades!</strong>Sesion iniciada correctamente...
-    </div>
-  <?php } ?> -->
-
-
   <div class="cover">
 
     <div class="container__cover d-flex justify-content-between">
 
       <div class="container__info">
-        <h1>¿Qué es el Cooperativismo?</h1>
-        <P>Módulo 1 de: <strong>
-            {{usuario.name}}</strong></P>
-        <!-- <a href="#"><input type="button" value="TEMARIO"></a> -->
-        <!-- <input type="button" value="BOTON 2" class="btn__dos"> -->
+        <h1 class="animate__animated animate__fadeInDown animate__delay-1s">¿Qué es el Cooperativismo?</h1>
+        <p class="animate__animated animate__fadeIn animate__delay-2s">Módulo 1 de: <strong>
+            {{usuario.name}}</strong></p>
       </div>
       <div class="container__vector">
         <img src="/assets/PortCurso.svg" alt="portada">
@@ -32,92 +22,90 @@
     </div>
   </div>
 
-  <!--PDF CON EL CONTENIDO-->
-  <div class="containerss">
-    <div class="d-flex justify-content-center flex-column align-items-center">
+  <div class="">
 
-     <!--  <actividadM1></actividadM1> -->
+    <actividadM1></actividadM1>
 
-    </div><!--CIERRE DEL CONTAINER__TEMA, CONTENEDOR DLE PDF-->
+  </div><!--CIERRE DEL CONTAINER__TEMA, CONTENEDOR DLE PDF-->
 
 
-    <div class="row" style="--bs-gutter-x: 0rem">
-      <!-- Lado izquierdo -->
-      <div class="col-xl-4 col-xxl-6 col-sm-12">
-        <!-- SECCION DE LA ACTIVIDAD -->
-        <section class="container__actividad d-flex flex-column align-items-center">
+  <div class="row" style="--bs-gutter-x: 0rem">
+    <!-- Lado izquierdo -->
+    <div class="col-xl-4 col-xxl-6 col-sm-12">
+      <!-- SECCION DE LA ACTIVIDAD -->
+      <section class="container__actividad d-flex flex-column align-items-center">
 
-          <div class="titulo__actividad text-center">
-            <h1>Actividad: Crucigrama</h1>
-          </div>
+        <div class="titulo__actividad text-center">
+          <h1>Actividad: Crucigrama</h1>
+        </div>
 
-          <div class="txt__actividad">
-            <p>
-              Con esta actividad podrás reforzar parte de lo leído en estos temas, apoyando a la retroalimentación y
-              aprendizaje de los conceptos aquí mencionados.
-            </p>
-            <h3>Horizontales</h3>
-            <ul class="sin-vinetas">
-              <li>4. Alianza Cooperativa Internacional.</li>
-              <li>5. Conferencia Latinoamericana de Cooperativas de Ahorro y Crédito.</li>
-              <li>8. Lugar donde aparecen las Cooperativas de Crédito orientado hacia los campesinos.</li>
-              <li>9. Ciudad de Edad Antigua donde comenzaron las precooperativas.</li>
-              <li>10. Precursor del Cooperativismo.</li>
-            </ul>
-            <h3>Verticales</h3>
-            <ul class="sin-vinetas">
-              <li>1. Periodista canadiense que llevó el cooperativismo a su país y América del norte.</li>
-              <li>2. País en el que se organizó la Cooperativa de Profesionales.</li>
-              <li>3. Pionero del cooperativismo mexicano, por promulgar la Primera Ley Cooperativa.</li>
-              <li>6. El trabajo cooperativo en la estructura del imperio de Anáhuac en Tenochtitlan.</li>
-              <li>7. Padre del Cooperativismo.</li>
-            </ul>
-          </div>
-          <!--BOTON PARA APARECER EL CRUCIGRAMA-->
-          <input id="btnComenzar" (click)="changeStyles('mostrarCrucigrama')" type="button" value="Comenzar">
+        <div class="txt__actividad">
+          <p>
+            Con esta actividad podrás reforzar parte de lo leído en estos temas, apoyando a la retroalimentación y
+            aprendizaje de los conceptos aquí mencionados.
+          </p>
+          <h3>Horizontales</h3>
+          <ul class="sin-vinetas">
+            <li>4. Alianza Cooperativa Internacional.</li>
+            <li>5. Conferencia Latinoamericana de Cooperativas de Ahorro y Crédito.</li>
+            <li>8. Lugar donde aparecen las Cooperativas de Crédito orientado hacia los campesinos.</li>
+            <li>9. Ciudad de Edad Antigua donde comenzaron las precooperativas.</li>
+            <li>10. Precursor del Cooperativismo.</li>
+          </ul>
+          <h3>Verticales</h3>
+          <ul class="sin-vinetas">
+            <li>1. Periodista canadiense que llevó el cooperativismo a su país y América del norte.</li>
+            <li>2. País en el que se organizó la Cooperativa de Profesionales.</li>
+            <li>3. Pionero del cooperativismo mexicano, por promulgar la Primera Ley Cooperativa.</li>
+            <li>6. El trabajo cooperativo en la estructura del imperio de Anáhuac en Tenochtitlan.</li>
+            <li>7. Padre del Cooperativismo.</li>
+          </ul>
+        </div>
+        <!--BOTON PARA APARECER EL CRUCIGRAMA-->
+        <input id="btnComenzar" (click)="changeStyles('mostrarCrucigrama')" type="button" value="Comenzar">
 
-        </section>
-      </div>
+      </section>
+    </div>
 
-      <!-- Lado derecho -->
-      <div class="col-xl-8 col-xxl-6  col-sm-12">
+    <!-- Lado derecho -->
+    <div class="col-xl-8 col-xxl-6  col-sm-12">
 
-        <shared-crucigrama [display]="display" (mostrarRetro)="receiveValue($event)"></shared-crucigrama>
+      <shared-crucigrama [display]="display" (mostrarRetro)="receiveValue($event)"></shared-crucigrama>
 
-      </div>
+    </div>
+  </div>
+
+
+
+  <!--SECCION DE AUTOEVALUACION-->
+  <section id="evaluacionM1" [ngStyle]="{ display: receivedValue ? 'block' : 'none' }" class="container__evaluacion">
+    <div class="titulo__evaluacion">
+      <h1>RETROALIMENTACIÓN</h1>
+    </div>
+
+    <div class="txt__evaluacion">
+      <p>
+        A continuación, encontrarás una sencilla evaluación con la que quedará concluido tu primer módulo de Educación
+        Cooperativa y Financiera.
+        <strong>¡Éxito!</strong>
+      </p>
+    </div>
+    <input id="botonExamen" (click)="changeStyles('mostrarFormulario')" type="button" value="Comenzar Evaluación">
+
+    <div id="evaluacionuno" [ngStyle]="{'display': display2}" class="container__examen" style="width: 80%;">
+
+      <shared-formm1 (finalizado)="finalizadoEvent($event)"></shared-formm1>
+
+    </div>
+
+    <div class="text-center container-fluid" [ngClass]="{'finalizado': finalizadoP, 'noFinalizado': !finalizadoP }">
+      <img src="/assets/aplause.gif" alt="Aplauso gif" width="120px">
+      <h3 class="fs-2"><strong> FELICIDADES COMPLETASTE EXITOSAMENTE EL MODULO 1 </strong></h3>
+      <p class="fs-3">Tu avance ha sido guardado y aparecera en tu perfil</p>
+      <p class="fs-4">Serás redirigido al menú de inicio en: <strong>{{contador}}</strong></p>
     </div>
 
 
+  </section><!--TERMINA SECCION DE AUTOEVALUACION-->
 
-    <!--SECCION DE AUTOEVALUACION-->
-    <section id="evaluacionM1" [ngStyle]="{ display: receivedValue ? 'block' : 'none' }" class="container__evaluacion">
-      <div class="titulo__evaluacion">
-        <h1>RETROALIMENTACIÓN</h1>
-      </div>
-
-      <div class="txt__evaluacion">
-        <p>
-          A continuación, encontrarás una sencilla evaluación con la que quedará concluido tu primer módulo de Educación
-          Cooperativa y Financiera.
-          <strong>¡Éxito!</strong>
-        </p>
-      </div>
-      <input id="botonExamen" (click)="changeStyles('mostrarFormulario')" type="button" value="Comenzar Evaluación">
-
-      <div id="evaluacionuno" [ngStyle]="{'display': display2}" class="container__examen" style="width: 80%;">
-
-        <shared-formm1 (finalizado)="finalizadoEvent($event)"></shared-formm1>
-
-      </div>
-
-      <div class="text-center container-fluid" [ngClass]="{'finalizado': finalizadoP, 'noFinalizado': !finalizadoP }">
-        <img src="/assets/aplause.gif" alt="Aplauso gif" width="120px">
-        <h3 class="fs-2"><strong> FELICIDADES COMPLETASTE EXITOSAMENTE EL MODULO 1 </strong></h3>
-        <p class="fs-3">Tu avance ha sido guardado y aparecera en tu perfil</p>
-        <p class="fs-4">Serás redirigido al menú de inicio en: <strong>{{contador}}</strong></p>
-      </div>
-
-
-    </section><!--TERMINA SECCION DE AUTOEVALUACION-->
-
-  </div>
+</div>

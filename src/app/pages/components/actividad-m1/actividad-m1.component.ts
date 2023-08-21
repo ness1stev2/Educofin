@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as Waypoint from 'waypoints/lib/noframework.waypoints';
+
 
 @Component({
   selector: 'actividadM1',

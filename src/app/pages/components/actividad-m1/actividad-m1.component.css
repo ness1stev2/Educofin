@@ -8,38 +8,33 @@ section {
 }
 
 .modulo1 {
-  background-image: url('../../../../assets/modulo1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #1e9fa5;
+  padding: 150px 0;
 }
 
 .modulo1 h2 {
   font-family: sans-serif;
   font-size: 60px;
-  color: #cbe8e6;
+  color: white;
 }
 
 .modulo1 p {
   font-family: sans-serif;
   font-size: 24px;
-  color: #cbe8e6;
+  color: white;
 }
 
 .modulo1-content p:nth-child(3) {
-  background-color: #cbe8e6;
+  background-color: white;
   color: #1e9fa5;
   padding: 0 40px;
-}
-
-img {
-  height: 50%;
 }
 
 
 .objetivo_general {
   background-color: #1e9fa5;
   color: white;
+  padding: 150px 0;
 }
 
 .objetivo_general h2 {
@@ -49,11 +44,12 @@ img {
 .objetivo_general p {
   color: inherit;
   font-size: 20px;
+  max-width: 450px;
 }
 
 .gradient {
   height: 150px;
-  background: linear-gradient(180deg, rgba(30,159,165,1) 0%, rgba(119,217,232,1) -40%, rgba(150,237,255,1) 0%);
+  background: linear-gradient(180deg, rgba(30, 159, 165, 1) 0%, rgba(119, 217, 232, 1) -40%, rgba(150, 237, 255, 1) 0%);
   /* background: linear-gradient(180deg, rgba(30,159,165,1) 0%, rgba(119,217,232,1) 60%, rgba(150,237,255,1) 100%); */
 }
 
@@ -64,10 +60,15 @@ img {
 .tema .bgpapel ul {
   font-size: 25px;
   font-weight: 600;
+  padding: 0;
 }
 
 .tema .bgpapel h2 {
   font-size: 50px;
+}
+
+.tema .bgpapel ul li {
+  color: var(--color-primario);
 }
 
 .tema .bgpapel {
@@ -79,6 +80,7 @@ img {
   width: 70%;
   margin: 0 auto;
   color: black;
+  max-width: 768px;
 }
 
 .gradient2 {
@@ -91,7 +93,6 @@ img {
 }
 
 .introduccion .int-content {
-  padding: 170px 190px;
   color: #376bb9;
 }
 
@@ -104,6 +105,97 @@ img {
   color: black;
 }
 
+.introduccion {
+  padding: 50px 30px;
+}
 .introduccion p {
   white-space: pre-line;
 }
+
+.introduccion img {
+  width: -webkit-fill-available;
+}
+
+/* Extra pequeño (XS): */
+@media (max-width: 575.98px) {
+  .tema .bgpapel ul {
+    font-size: 18px;
+  }
+
+  .modulo1 img {
+    height: 300px;
+  }
+
+  .objetivo__general_text h2 {
+    font-size: 34px;
+  }
+
+  .objetivo__general_text p {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  .introduccion .int-content p {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .introduccion .int-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+}
+
+.que_es_cooperativismo{
+  background-color: #1e9fa5;
+}
+
+.que_es_cooperativismo .hojaback{
+  background-image: url(../../../../assets/hojaback.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -1px 0px;
+}
+.que_es_cooperativismo .hojasup{
+  background-image: url(../../../../assets/hojasup.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.que_es_cooperativismo .hojaback p {
+  font-size: 15px;
+  padding-right: 1.5rem;
+  padding-left: 50px
+}
+
+
+
+/* Pequeño (SM):  */
+@media (max-width: 767.98px) {
+  .objetivo_general img {
+    width: 50%;
+  }
+
+}
+
+/* Mediano (MD): */
+@media (max-width: 991.98px) {
+  .que_es_cooperativismo .hojaback h2{
+    font-size: 2.5rem;
+  }
+  .que_es_cooperativismo .hojaback p{
+    font-size: 18px;
+  }
+  .que_es_cooperativismo .hojasup h2{
+    font-size: 2.5rem;
+  }
+  .que_es_cooperativismo .hojasup p{
+    font-size: 15px;
+  }
+}
+
+/* Grande (LG): */
+@media (max-width: 1199.98px) {}
+
+/* Extra grande (XL): */
+@media (min-width: 1200px) {}

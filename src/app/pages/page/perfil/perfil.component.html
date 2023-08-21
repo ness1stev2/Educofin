@@ -4,15 +4,15 @@
         <div class="card">
           <div class="row">
             <div class="col-md-4">
-              <img src="assets/perfil-usuario.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="assets/perfil-usuario.jpg" class="img-fluid rounded-start animate__animated animate__backInDown" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{usuario.name}}</h5>
-                <p class="card-text"><strong>Número de Socio: </strong>{{usuario.nSocio}}</p>
-                <p class="card-text"><strong>Correo: </strong>{{ usuario.email }}</p>
-                <p class="card-text"><strong>Teléfono: </strong></p>
-                <p class="card-text"><strong>Domicilio: </strong></p>
+                <h5 class="card-title animate__animated animate__fadeIn animate__delay-1s">{{usuario.name}}</h5>
+                <p class="card-text animate__animated animate__fadeIn animate__delay-2s"><strong>Número de Socio: </strong>{{usuario.nSocio}}</p>
+                <p class="card-text animate__animated animate__fadeIn animate__delay-3s"><strong>Correo: </strong>{{ usuario.email }}</p>
+                <p class="card-text animate__animated animate__fadeIn animate__delay-4s"><strong>Teléfono: </strong></p>
+                <p class="card-text animate__animated animate__fadeIn animate__delay-5s"><strong>Domicilio: </strong></p>
                 <p class="card-text"><small class="text-muted"></small></p>
                 <button type="button" class="btn btn-warning mt-4" routerLink="/inicio/edit">Editar informacion</button>
               </div>
@@ -22,7 +22,7 @@
     </div>
 
 
-  <div class="row modulos">
+  <div class="row modulos card-text animate__animated animate__fadeIn">
 
     <div class="col-md-4 col-sm-12">
       <div class="card-completado bg-verdebajito p-4 mb-3 mb-md-0 text-center rounded">
