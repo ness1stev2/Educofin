@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 @Component({
   selector: 'app-modulo1',
   templateUrl: './modulo1.component.html',
-  styleUrls: ['./modulo1.component.css']
+  styleUrls: ['./modulo1.component.scss']
 })
 export class Modulo1Component implements OnInit{
   constructor(private router: Router, private viewportScroller: ViewportScroller, private authService: AuthService) {}
@@ -26,7 +26,6 @@ export class Modulo1Component implements OnInit{
   public finalizadoP: Boolean = false;
   public contador: number = 10;
   public usuario = this.authService.user
-  public name: string | null = localStorage.getItem('nombre')
 
   public receivedValue: boolean = false;
 

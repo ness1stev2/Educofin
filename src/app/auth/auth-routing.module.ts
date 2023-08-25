@@ -8,14 +8,8 @@ const routes: Routes = [
     path: '',
     component: LayoutPageComponent,
     children: [
-      {
-        path: 'sesion',
-        component: LoginPageComponent
-      },
-      {
-        path: '**',
-        redirectTo: 'session'
-      }
+      { path: 'sesion', component: LoginPageComponent },
+      { path: '**', redirectTo: 'sesion' }
     ]
   }
 

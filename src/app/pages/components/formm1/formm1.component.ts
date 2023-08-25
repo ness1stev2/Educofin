@@ -5,7 +5,7 @@ import { Preguntas } from '../../interfaces/preguntas.inteface';
 @Component({
   selector: 'shared-formm1',
   templateUrl: './formm1.component.html',
-  styleUrls: ['./formm1.component.css']
+  styleUrls: ['./formm1.component.scss']
 })
 export class Formm1Component {
 

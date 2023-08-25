@@ -1,10 +1,11 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Modulo1Component } from './page/modulo1/modulo1.component';
 import { LayoutPageComponent } from './page/layout-page/layout-page.component';
 import { MainComponent } from './page/main/main.component';
 import { PerfilComponent } from './page/perfil/perfil.component';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
+import { Error404PageComponent } from '../shared/pages/error404-page/error404-page.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,6 @@ const routes: Routes = [
       {
         path: 'modulo-uno',
         component: Modulo1Component,
-        pathMatch: 'full'
       },
       {
         path: 'perfil',
@@ -27,13 +27,13 @@ const routes: Routes = [
       {
         path: 'edit',
         component: EditPerfilComponent
-      },
-      {
-        path: '**',
-        redirectTo: 'inicio'
       }
     ]
-  }
+  },
+  {
+    path: '404',
+    component: Error404PageComponent
+  },
 ]
 
 @NgModule({

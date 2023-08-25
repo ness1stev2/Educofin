@@ -5,7 +5,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrls: ['./perfil.component.scss']
 })
 export class PerfilComponent {
 

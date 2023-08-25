@@ -5,7 +5,7 @@ import { letterValidator } from '../../interfaces/custom-validators';
 @Component({
   selector: 'shared-crucigrama',
   templateUrl: './crucigrama.component.html',
-  styleUrls: ['./crucigrama.component.css']
+  styleUrls: ['./crucigrama.component.scss']
 })
 export class CrucigramaComponent {
   myForm: FormGroup;

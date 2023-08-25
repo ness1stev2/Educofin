@@ -6,25 +6,19 @@ import { isAuthenticatedGuard, isNotAuthenticatedGuard } from './auth/guards';
 const routes: Routes = [
   {
     path: 'auth',
+    canActivate: [ isNotAuthenticatedGuard ],
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
-    canActivate: [ isNotAuthenticatedGuard ]
   },
   {
     path: 'inicio',
+    canActivate: [ isAuthenticatedGuard ],
     loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule),
-    canActivate: [ isAuthenticatedGuard ]
   },
-  {
-    path: '',
-    redirectTo: 'inicio',
-    pathMatch: 'full'
-  },
+  { path: '**', redirectTo: 'auth' },
   {
     path: '404',
     component: Error404PageComponent
   },
-  { path: '**', redirectTo: '404' },
-  /*{ path: 'contact', component: ContactComponent } */
 
 ];
 

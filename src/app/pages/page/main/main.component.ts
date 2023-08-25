@@ -4,20 +4,19 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { User } from 'src/app/auth/interfaces';
 
 @Component({
   selector: 'pages-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit{
 
-  public name: string | null = localStorage.getItem('nombre')
-  public nSocio: string | null = localStorage.getItem('socio')
+  public usuario:User = this.authService.user;
 
   private router = inject( Router);
   private vpScroller = inject ( ViewportScroller )
-  public user = computed(() => this.authService.currentUser())
 
   constructor(public authService: AuthService) {}
 

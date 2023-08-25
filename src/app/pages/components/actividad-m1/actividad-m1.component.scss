@@ -1,0 +1,857 @@
+section {
+  padding: 10px 30px;
+
+}
+
+
+
+.modulo1 {
+  background-color: #1e9fa5;
+  padding: 100px 0;
+
+  .modulo1-content {
+    img {
+      margin: 30px 0;
+      width: 80%;
+      height: 40px;
+    }
+  }
+
+  .dotsesq {
+    background-image: url(../../../../assets/dotsesq.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 400px;
+    position: absolute;
+    right: 0px;
+    top: 700px;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  h2 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: white;
+  }
+
+  p {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+
+  p:nth-child(3) {
+    background-color: white;
+    color: #1e9fa5;
+    padding: 0 40px;
+  }
+}
+
+.objetivo_general {
+  background-color: #1e9fa5;
+  color: white;
+  padding: 100px 0;
+
+  img {
+    height: 260px;
+    max-width: 570px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    color: inherit;
+    font-size: 15px;
+    max-width: 450px;
+    padding: 0 15px;
+  }
+}
+
+.tema {
+  background-color: #80ded9;
+  padding: 80px 0 30px;
+
+  .bgpapel {
+    background-image: url(../../../../assets/hojaCuaderno.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 40px;
+    width: 80%;
+    margin: 0 auto;
+    color: black;
+    height: 540px;
+    max-width: 950px;
+    background-position-x: -60px;
+
+    ul {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 0;
+
+      li {
+        color: var(--color-primario);
+      }
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+  }
+}
+
+.gradient2 {
+  height: 150px;
+  background: rgb(128, 222, 217);
+  background: linear-gradient(180deg, rgba(128, 222, 217, 1) 0%, rgba(177, 215, 216, 1) 30%, rgba(245, 206, 214, 1) 100%);
+}
+
+.gradient {
+  height: 150px;
+  background: rgb(245, 206, 214);
+  background: linear-gradient(180deg, rgba(245, 206, 214, 1) 0%, rgba(219, 200, 208, 1) 15%, rgba(30, 159, 165, 1) 100%);
+}
+
+.introduccion {
+  background-color: rgb(245 206 214);
+  padding: 50px 30px;
+
+  p {
+    white-space: pre-line;
+  }
+
+  img {
+    width: -webkit-fill-available;
+    max-width: 450px;
+    position: relative;
+    right: -15px;
+  }
+
+  .int-content {
+    color: #376bb9;
+    margin: 0 auto;
+    max-width: 1400px;
+
+    h2 {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: black;
+    }
+  }
+}
+
+.que_es_cooperativismo {
+  background-color: #1e9fa5;
+
+  .hojasup {
+    background-image: url(../../../../assets/hojasup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0px 90px;
+    max-width: 770px;
+
+    h2 {
+      font-size: 22px;
+      padding: 40px 18px 0;
+    }
+
+    p {
+      padding: 0 20px 0 50px;
+    }
+  }
+
+  .hojaback {
+    background-image: url(../../../../assets/hojaback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 590px;
+    margin: 50px 0;
+
+    p {
+      font-size: 16px;
+      padding-right: 15px;
+      padding-left: 50px
+    }
+  }
+}
+
+.edades {
+  background-color: #B3DEE5;
+
+  .edad-antigua {
+    background-image: url(../../../../assets/hoja-edad-antigua.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -130px;
+    max-width: 837px;
+    margin: 0 auto;
+
+    .antigua-text {
+      padding: 190px 10px 60px 15px;
+
+      h2 {}
+
+      p {}
+    }
+  }
+
+  .edad-media {
+    background-image: url(../../../../assets/hoja-edad-media.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -130px;
+    max-width: 837px;
+    margin: 0 auto;
+
+    .media-text {
+      padding: 130px 10px 110px 15px;
+    }
+  }
+
+  .edad-moderna {
+    background-image: url(../../../../assets/hoja-edad-moderna.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -130px;
+    max-width: 837px;
+    margin: 0 auto;
+
+    .moderna-text {
+      padding: 130px 10px 75px 15px;
+
+    }
+  }
+}
+
+.linea_tiempo {
+  background-color: #B3DEE5;
+  color: #376bb9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  p {
+    font-size: 20px;
+  }
+
+  .linea-abajo-turqueza {
+    background-image: url(../../../../assets/flecha-turqueza-abajo.svg);
+    background-repeat: no-repeat;
+    width: -webkit-fill-available;
+    height: 200px;
+  }
+
+  .linea-abajo-azul {
+    background-image: url(../../../../assets/flecha-azul-abajo.svg);
+    background-repeat: no-repeat;
+    width: -webkit-fill-available;
+    height: 200px;
+  }
+
+  .primera-cooperativa {
+    .anio-1844 {
+      background-image: url(../../../../assets/1844.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .fredereick-w-raiffeisen {
+    .anio-1864 {
+      background-image: url(../../../../assets/1864.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .juan-b-godin {
+    .anio-1877 {
+      background-image: url(../../../../assets/1877.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .alianza-aci {
+    .anio-1895 {
+      background-image: url(../../../../assets/1877.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .federacion-nacional-sueca {
+    .anio-1899 {
+      background-image: url(../../../../assets/1877.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+    }
+  }
+
+  .alphonse-desjardins {
+    .anio-1900 {
+      background-image: url(../../../../assets/1877.svg);
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 100px;
+    }
+  }
+
+}
+
+.info-adicional {
+  background-image: url(../../../../assets/back-info-adicional.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -570px;
+
+  .title-info {
+    background-image: url(../../../../assets/title-info-add.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 330px;
+    padding: 10px;
+    margin: 30px auto;
+  }
+
+  .info-add-hoja {
+    background-image: url(../../../../assets/info-add-hoja.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    max-width: 695px;
+    margin-bottom: 60px;
+    padding: 40px 10px 10px;
+    .text-content {
+      h2 {
+        font-size: 2.3rem;
+      }
+      p{
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.coop_america {
+  background-color: #1e9fa5;
+  background-image: url(../../../../assets/mundo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+
+  p{
+    font-weight: bold;
+  }
+
+  .title-coop-america {
+    background-image: url(../../../../assets/cinta-coop-america.svg);
+    background-repeat: no-repeat;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+
+  .hoja1,
+  .hoja2,
+  .hoja3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hoja1 {
+    background-image: url(../../../../assets/hoja-izq.svg);
+
+    p {
+      padding: 30px 20px;
+    }
+  }
+
+  .hoja2 {
+    background-image: url(../../../../assets/hoja-der.svg);
+
+    p {
+      padding: 20px 25px;
+    }
+  }
+
+  .hoja3 {
+    background-image: url(../../../../assets/hoja-abajo.svg);
+    max-width: 550px;
+    margin: 0 auto;
+
+    p {
+      padding: 30px 17px;
+    }
+  }
+
+  .flecha-derecha,
+  .fecha-abajo {
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+  }
+
+  .flecha-derecha {
+    background-image: url(../../../../assets/flecha-derecha.svg);
+  }
+
+  .fecha-abajo {
+    background-image: url(../../../../assets/flecha-abajo.svg);
+    margin: 0 auto;
+  }
+
+  .arcoiris {
+    background-image: url(../../../../assets/arcoiris.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 128px;
+    position: relative;
+    right: 30px;
+    top: 11px;
+  }
+}
+
+.coop_mexico {
+  background-image: url(../../../../assets/hoja-naranja.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 15px;
+
+  p{
+    font-weight: bold;
+  }
+
+  .img-piramides,
+  .img-templos {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inf-add-mx,
+  .card-inf-prehispanica,
+  .card-precolombino,
+  .card-colonial {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .inf-add-mx {
+    background-image: url(../../../../assets/info-add-mx.svg);
+    font-size: 1.4rem;
+  }
+
+  .card-inf-prehispanica {
+    background-image: url(../../../../assets/hoja-inf-mx.svg);
+    max-width: 550px;
+    height: auto;
+    margin: 20px auto;
+    padding: 130px 20px 40px;
+  }
+
+  .card-precolombino {
+    background-image: url(../../../../assets/hoja-cuad-inf-mx.svg);
+    padding: 50px 30px 10px;
+    max-width: 376px;
+  }
+
+  .card-colonial {
+    background-image: url(../../../../assets/hoja-azul-inf-mx.svg);
+    padding: 50px 25px 0;
+    max-width: 376px;
+  }
+
+}
+
+.elias_calles {
+  background-image: url(../../../../assets/hoja-naranja-vert.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  p{
+    font-weight: bold;
+  }
+  .hoja-cuaderno,
+  .epoca-pos {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hoja-cuaderno {
+    background-image: url(../../../../assets/hoja-pluraco-cuad.svg);
+    padding: 100px 20px 20px;
+    margin: 30px 0;
+  }
+
+  .epoca-pos {
+    background-image: url(../../../../assets/pres-hoja-azul.svg);
+    padding: 25px 15px;
+    margin: 30px 0;
+    color: white;
+  }
+
+  .cinta-precidente {}
+
+
+}
+
+.cronologia {
+  background-color: #80ded9;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  p{
+    font-size: 18px;
+  }
+
+  table tbody {
+    tr:not(:last-child) td {
+      margin-bottom: 10px;
+    }
+
+    .espace {
+      margin-bottom: 5px;
+      display: flex;
+      .año {
+        color: white;
+        background-color: #6d9dc5;
+        border-radius: 20px 0 0 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+      }
+
+      .desc {
+        background-color: white;
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+/* Extra pequeño (XS): */
+@media (min-width: 575.98px) {
+
+  .info-adicional {
+    background-position-x: -360px;
+
+    .title-info {
+      width: 440px;
+      padding: 20px;
+    }
+
+    .info-add-hoja {
+      height: 385px;
+
+      .text-content {
+        padding: 60px 40px 0;
+
+        p {
+          margin-top: 35px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .que_es_cooperativismo {
+    .hojaback {
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .hojasup {
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .tema {
+    .bgpapel {
+      height: 340px;
+      background-position-x: 0px;
+      padding: 80px 40px;
+
+      ul {
+        font-size: 18px;
+        list-style-type: none;
+      }
+    }
+  }
+
+  .modulo1 img {
+    height: 360px;
+  }
+
+  .objetivo__general_text {
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 80%;
+    }
+
+    .int-content {
+      p {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* Pequeño (SM):  */
+@media (min-width: 767.98px) {
+
+  .info-adicional {
+    background-position-x: -200px;
+
+    .info-add-hoja {
+      .text-content {
+        padding: 60px 90px 0;
+      }
+    }
+  }
+
+  .edades {
+    .edad-antigua {
+      background-position-x: unset;
+
+      .antigua-text {
+        padding: 110px 10px 30px 85px;
+      }
+    }
+
+    .edad-media {
+      background-position-x: unset;
+
+      .media-text {
+        padding: 70px 10px 65px 45px;
+      }
+    }
+
+    .edad-moderna {
+      background-position-x: unset;
+
+      .moderna-text {
+        padding: 60px 10px 20px 60px;
+      }
+    }
+  }
+
+  .objetivo_general img {
+    width: 80%;
+    height: 400px;
+  }
+
+  .tema {
+    padding: 50px 0;
+
+    .bgpapel {
+      background-position-x: 0;
+      padding: 80px 110px;
+
+      h2 {
+        font-size: 40px;
+      }
+
+      ul {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .que_es_cooperativismo {
+    .hojaback {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .hojasup {
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        padding: 0 35px;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .introduccion {
+    .int-content {
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 20px;
+        padding: 0 80px;
+      }
+    }
+  }
+
+}
+
+/* Mediano (MD): */
+@media (min-width: 991.98px) {
+
+  .linea_tiempo {
+
+    .linea-abajo-turqueza,
+    .linea-abajo-azul {
+      height: 300px;
+    }
+  }
+
+  .tema {
+    .bgpapel {
+      height: 550px;
+      padding: 140px 110px;
+
+      h2 {
+        font-size: 60px;
+      }
+
+      ul {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .que_es_cooperativismo .hojaback {
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .que_es_cooperativismo .hojasup {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .objetivo_general {
+
+    h2 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .modulo1 {
+    img {
+      height: 400px;
+    }
+
+    h2 {
+      font-size: 80px;
+    }
+
+    p {
+      font-size: 35px;
+    }
+  }
+
+}
+
+/* Grande (LG): */
+@media (min-width: 1199.98px) {
+  .que_es_cooperativismo {
+    .hojasup {
+      padding: 130px 20px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .introduccion {
+    .int-content {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .objetivo_general {
+    h2 {
+      font-size: 52px;
+    }
+
+    p {
+      font-size: 21px;
+    }
+  }
+
+
+}
+
+/* Extra grande (XL): */
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .info-adicional {
+    background-position-x: unset;
+  }
+}

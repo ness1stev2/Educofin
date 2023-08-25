@@ -7,7 +7,7 @@ import { User } from 'src/app/auth/interfaces';
 @Component({
   selector: 'shared-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
 
@@ -17,7 +17,7 @@ export class HeaderComponent {
   public usuario:User = this.authService.user;
 
   public toolbarItems: Url[] = [
-    {label: 'INICIO', icon: 'icon fas fa-house-user',url: '/inicio', },
+    {label: 'INICIO', icon: 'icon fas fa-house-user',url: './', },
     {label: this.usuario.name , icon: 'icon fa-solid fa-user',url: './perfil', },
     {label: 'CERRAR SESIÓN', icon: ''},
   ]

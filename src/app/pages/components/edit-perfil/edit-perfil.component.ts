@@ -5,7 +5,7 @@ import { Domicilio } from '../../interfaces/page.interface';
 @Component({
   selector: 'app-edit-perfil',
   templateUrl: './edit-perfil.component.html',
-  styleUrls: ['./edit-perfil.component.css']
+  styleUrls: ['./edit-perfil.component.scss']
 })
 export class EditPerfilComponent {
 
