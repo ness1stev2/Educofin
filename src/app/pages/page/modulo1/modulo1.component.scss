@@ -73,6 +73,51 @@
   margin-top: 150px;
   background-image: url(/assets/fondot2.png);
   background-size: cover;
+
+  .container__info {
+    max-width: 400px;
+    margin-top: 40px;
+  }
+
+  h1 {
+    max-width: 400px;
+    font-size: 53px;
+    font-weight: 900;
+    color: var(--color-primario);
+  }
+
+  h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #1B5C35;
+    margin-top: -25px;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #373737;
+  }
+
+  input[type="button"] {
+    padding: 10px 40px;
+    margin-top: 40px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: var(--color-blanco);
+    background: var(--color-primario);
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    cursor: pointer;
+    transition: box-shadow 500ms;
+  }
+
+  input[type="button"]:hover {
+    box-shadow: 1px 1px 30px -5px #20202095;
+  }
+
 }
 
 .container__cover {
@@ -81,73 +126,8 @@
   padding: 10px;
 }
 
-.cover .container__info {
-  max-width: 400px;
-  margin-top: 40px;
-}
-
-.cover h1 {
-  max-width: 400px;
-  font-size: 53px;
-  font-weight: 900;
-  color: var(--color-primario);
-}
-
-.cover h2 {
-  font-size: 60px;
-  font-weight: 900;
-  color: #1B5C35;
-  margin-top: -25px;
-}
-
-.cover p {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #373737;
-}
-
 /*----------------- BOTONES -------------------*/
 
-/*BOTON 1 ESTILOS*/
-.cover input[type="button"] {
-  padding: 10px 40px;
-  margin-top: 40px;
-  margin-right: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  border: none;
-  color: var(--color-blanco);
-  background: var(--color-primario);
-  border-radius: 20px;
-  box-shadow: 1px 1px 30px -5px #20202049;
-  cursor: pointer;
-  transition: box-shadow 500ms;
-}
-
-.cover input[type="button"]:hover {
-  box-shadow: 1px 1px 30px -5px #20202095;
-}
-
-
-/* ESTILOS BOTON 2*/
-.cover input[type="button"].btn__dos {
-  padding: 10px 40px;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 600;
-  border: 1px solid;
-  border-color: var(--color-secundario);
-  color: var(--color-blanco);
-  background: rgb(48 102 190 / 50%);
-  border-radius: 20px;
-  box-shadow: 1px 1px 30px -5px #20202049;
-  cursor: pointer;
-  transition: box-shadow 500ms;
-}
-
-.cover input[type="button"].btn__dos:hover {
-  box-shadow: 1px 1px 30px -5px #20202095;
-}
 
 .container__vector img {
   width: 600px;
@@ -400,13 +380,11 @@
 
 /*Estilos del texto de la actividad*/
 .txt__evaluacion {
-  width: 100%;
-  font-size: 2rem;
+  font-size: 1.9rem;
   padding: 0px 40px;
   color: var(--color-negro);
   margin: auto;
   text-align: center;
-  max-width: 1100px;
 }
 
 /*BOTON DEL COMENZAR ACTIVIDAD*/
@@ -430,9 +408,9 @@
 /*EXAMEN*/
 #evaluacionuno {
   display: none;
-  width: 100%;
   margin: 0 auto;
   max-width: 800px;
+  padding: 0 20px;
 }
 
 #evaluacionM1 {
@@ -494,14 +472,6 @@
   /*Adaptación del texto y titulo de la evaluacion*/
   .container__evaluacion {
     width: 100%;
-  }
-
-  .txt__evaluacion {
-    width: 850px;
-  }
-
-  .txt__evaluacion p {
-    font-size: 18px;
   }
 
 }
@@ -595,14 +565,6 @@
   .titulo__evaluacion {
     font-size: 45px;
     width: 400px;
-  }
-
-  .txt__evaluacion {
-    width: 450px;
-  }
-
-  .txt__evaluacion p {
-    font-size: 15px;
   }
 
 }
@@ -709,14 +671,6 @@
   .titulo__evaluacion {
     font-size: 40px;
     width: 380px;
-  }
-
-  .txt__evaluacion {
-    width: 380px;
-  }
-
-  .txt__evaluacion p {
-    font-size: 14px;
   }
 }
 
@@ -847,14 +801,6 @@
 
   .titulo__evaluacion h1 {
     font-size: 25px;
-  }
-
-  .txt__evaluacion {
-    width: 300px;
-  }
-
-  .txt__evaluacion p {
-    font-size: 12px;
   }
 
   .container__evaluacion input[type="button"] {

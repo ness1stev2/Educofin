@@ -4,6 +4,28 @@ section {
 }
 
 
+$base-image-path: '../../../../assets/';
+
+@mixin custom-background($image-name, $background-position: unset, $max-width: none) {
+  @if $background-position !=unset {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $background-position;
+  }
+
+  @else {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @if $max-width !=none {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  background-image: url(#{$base-image-path}#{$image-name});
+}
+
 
 .modulo1 {
   background-color: #1e9fa5;
@@ -18,9 +40,7 @@ section {
   }
 
   .dotsesq {
-    background-image: url(../../../../assets/dotsesq.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include custom-background("dotsesq.png");
     width: 180px;
     height: 400px;
     position: absolute;
@@ -78,16 +98,11 @@ section {
   padding: 80px 0 30px;
 
   .bgpapel {
-    background-image: url(../../../../assets/hojaCuaderno.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include custom-background("hojaCuaderno.png", center, 950px);
     padding: 120px 40px;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     color: black;
-    height: 540px;
-    max-width: 950px;
-    background-position-x: -60px;
 
     ul {
       font-size: 20px;
@@ -152,12 +167,13 @@ section {
 .que_es_cooperativismo {
   background-color: #1e9fa5;
 
+  p {
+    font-size: 18px;
+  }
+
   .hojasup {
-    background-image: url(../../../../assets/hojasup.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 40px 0px 90px;
-    max-width: 770px;
+    @include custom-background("hojasup.png", center);
+    padding: 60px 0px;
 
     h2 {
       font-size: 22px;
@@ -170,14 +186,10 @@ section {
   }
 
   .hojaback {
-    background-image: url(../../../../assets/hojaback.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 590px;
+    @include custom-background("hojaback.png", center, 590px);
     margin: 50px 0;
 
     p {
-      font-size: 16px;
       padding-right: 15px;
       padding-left: 50px
     }
@@ -187,30 +199,20 @@ section {
 .edades {
   background-color: #B3DEE5;
 
+  p {
+    font-size: 18px;
+  }
+
   .edad-antigua {
-    background-image: url(../../../../assets/hoja-edad-antigua.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: -130px;
-    max-width: 837px;
-    margin: 0 auto;
+    @include custom-background("hoja-edad-antigua.png", top, 837px);
 
     .antigua-text {
       padding: 190px 10px 60px 15px;
-
-      h2 {}
-
-      p {}
     }
   }
 
   .edad-media {
-    background-image: url(../../../../assets/hoja-edad-media.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: -130px;
-    max-width: 837px;
-    margin: 0 auto;
+    @include custom-background("hoja-edad-media.png", top, 837px);
 
     .media-text {
       padding: 130px 10px 110px 15px;
@@ -218,16 +220,10 @@ section {
   }
 
   .edad-moderna {
-    background-image: url(../../../../assets/hoja-edad-moderna.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: -130px;
-    max-width: 837px;
-    margin: 0 auto;
+    @include custom-background("hoja-edad-moderna.png", top, 837px);
 
     .moderna-text {
       padding: 130px 10px 75px 15px;
-
     }
   }
 }
@@ -242,108 +238,80 @@ section {
     font-size: 20px;
   }
 
-  .linea-abajo-turqueza {
-    background-image: url(../../../../assets/flecha-turqueza-abajo.svg);
+  .linea-abajo-turqueza,
+  .linea-abajo-azul {
     background-repeat: no-repeat;
     width: -webkit-fill-available;
+
+  }
+
+  .linea-abajo-turqueza {
+    background-image: url(../../../../assets/flecha-turqueza-abajo.svg);
     height: 200px;
   }
 
   .linea-abajo-azul {
     background-image: url(../../../../assets/flecha-azul-abajo.svg);
-    background-repeat: no-repeat;
-    width: -webkit-fill-available;
     height: 200px;
   }
 
-  .primera-cooperativa {
-    .anio-1844 {
-      background-image: url(../../../../assets/1844.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-      margin: 0 auto;
-    }
+  .anio-1844,
+  .anio-1864,
+  .anio-1877,
+  .anio-1895,
+  .anio-1899,
+  .anio-1900 {
+    width: 337px;
+    height: 100px;
+
   }
 
-  .fredereick-w-raiffeisen {
-    .anio-1864 {
-      background-image: url(../../../../assets/1864.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-      margin: 0 auto;
-    }
+  .anio-1844 {
+    @include custom-background("1844.svg", unset);
   }
 
-  .juan-b-godin {
-    .anio-1877 {
-      background-image: url(../../../../assets/1877.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-      margin: 0 auto;
-    }
+  .anio-1864 {
+    @include custom-background("1864.svg", unset);
   }
 
-  .alianza-aci {
-    .anio-1895 {
-      background-image: url(../../../../assets/1877.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-      margin: 0 auto;
-    }
+  .anio-1877 {
+    @include custom-background("1877.svg", unset);
   }
 
-  .federacion-nacional-sueca {
-    .anio-1899 {
-      background-image: url(../../../../assets/1877.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-    }
+  .anio-1895 {
+    @include custom-background("1877.svg", unset);
   }
 
-  .alphonse-desjardins {
-    .anio-1900 {
-      background-image: url(../../../../assets/1877.svg);
-      background-repeat: no-repeat;
-      width: 337px;
-      height: 100px;
-    }
+  .anio-1899 {
+    @include custom-background("1877.svg", unset);
+  }
+
+  .anio-1900 {
+    @include custom-background("1877.svg", unset);
   }
 
 }
 
 .info-adicional {
-  background-image: url(../../../../assets/back-info-adicional.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: -570px;
+  @include custom-background("back-info-adicional.jpg", center);
 
   .title-info {
-    background-image: url(../../../../assets/title-info-add.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 30px auto;
+    @include custom-background("title-info-add.svg", center);
     width: 330px;
     padding: 10px;
-    margin: 30px auto;
   }
 
   .info-add-hoja {
-    background-image: url(../../../../assets/info-add-hoja.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    max-width: 695px;
+    @include custom-background("info-add-hoja.svg", center, 695px);
     margin-bottom: 60px;
     padding: 40px 10px 10px;
     .text-content {
       h2 {
         font-size: 2.3rem;
       }
-      p{
+
+      p {
         font-weight: bold;
       }
     }
@@ -352,52 +320,35 @@ section {
 
 .coop_america {
   background-color: #1e9fa5;
-  background-image: url(../../../../assets/mundo.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  @include custom-background("mundo.svg", center);
   overflow: hidden;
 
   p{
-    font-weight: bold;
+    font-size: 18px
   }
 
   .title-coop-america {
-    background-image: url(../../../../assets/cinta-coop-america.svg);
-    background-repeat: no-repeat;
-    max-width: 600px;
-    margin: 0 auto;
+    @include custom-background("cinta-coop-america.svg", center, 400px);
+    margin: 25px auto;
     font-size: 1.4rem;
   }
 
-  .hoja1,
-  .hoja2,
-  .hoja3 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
   .hoja1 {
-    background-image: url(../../../../assets/hoja-izq.svg);
-
+    @include custom-background("hoja-izq.svg", center);
     p {
       padding: 30px 20px;
     }
   }
 
   .hoja2 {
-    background-image: url(../../../../assets/hoja-der.svg);
-
+    @include custom-background("hoja-der.svg", center);
     p {
       padding: 20px 25px;
     }
   }
 
   .hoja3 {
-    background-image: url(../../../../assets/hoja-abajo.svg);
-    max-width: 550px;
-    margin: 0 auto;
-
+    @include custom-background("hoja-abajo.svg", center, 550px);
     p {
       padding: 30px 17px;
     }
@@ -420,9 +371,7 @@ section {
   }
 
   .arcoiris {
-    background-image: url(../../../../assets/arcoiris.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include custom-background("arcoiris.svg");
     width: 100vw;
     height: 128px;
     position: relative;
@@ -432,14 +381,8 @@ section {
 }
 
 .coop_mexico {
-  background-image: url(../../../../assets/hoja-naranja.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include custom-background("hoja-naranja.svg");
   padding: 80px 15px;
-
-  p{
-    font-weight: bold;
-  }
 
   .img-piramides,
   .img-templos {
@@ -456,56 +399,40 @@ section {
   }
 
   .inf-add-mx {
+    @include custom-background("info-add-mx.svg");
     background-image: url(../../../../assets/info-add-mx.svg);
     font-size: 1.4rem;
   }
 
   .card-inf-prehispanica {
-    background-image: url(../../../../assets/hoja-inf-mx.svg);
-    max-width: 550px;
-    height: auto;
-    margin: 20px auto;
+    @include custom-background("hoja-inf-mx.svg", unset, 550px);
     padding: 130px 20px 40px;
   }
 
   .card-precolombino {
-    background-image: url(../../../../assets/hoja-cuad-inf-mx.svg);
+    @include custom-background("hoja-cuad-inf-mx.svg", unset, 376px);
     padding: 50px 30px 10px;
-    max-width: 376px;
   }
 
   .card-colonial {
-    background-image: url(../../../../assets/hoja-azul-inf-mx.svg);
+    @include custom-background("hoja-azul-inf-mx.svg", unset, 376px);
     padding: 50px 25px 0;
-    max-width: 376px;
   }
 
 }
 
 .elias_calles {
-  background-image: url(../../../../assets/hoja-naranja-vert.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  p{
-    font-weight: bold;
-  }
-  .hoja-cuaderno,
-  .epoca-pos {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  @include custom-background("hoja-naranja-vert.svg");
 
   .hoja-cuaderno {
-    background-image: url(../../../../assets/hoja-pluraco-cuad.svg);
+    @include custom-background("hoja-pluraco-cuad.svg", unset, 725px);
     padding: 100px 20px 20px;
-    margin: 30px 0;
   }
 
   .epoca-pos {
-    background-image: url(../../../../assets/pres-hoja-azul.svg);
+    @include custom-background("pres-hoja-azul.svg");
+
     padding: 25px 15px;
-    margin: 30px 0;
     color: white;
   }
 
@@ -518,7 +445,8 @@ section {
   background-color: #80ded9;
   padding-top: 30px;
   padding-bottom: 50px;
-  p{
+
+  p {
     font-size: 18px;
   }
 
@@ -530,6 +458,7 @@ section {
     .espace {
       margin-bottom: 5px;
       display: flex;
+
       .año {
         color: white;
         background-color: #6d9dc5;
@@ -551,6 +480,82 @@ section {
   }
 }
 
+.simbolos {
+  background-color: #1e9fa5;
+
+  .bandera-top {
+    max-width: 170px;
+    margin: 0 auto;
+  }
+
+  .simbolos-title {
+    @include custom-background("cinta-simbolos.svg", unset, 306px);
+    padding: 40px 0;
+    font-size: 40px;
+  }
+
+  .bandera {
+    @include custom-background("cinta-labandera.svg", unset, 306px);
+    padding: 80px 0 53px;
+    font-size: 40px;
+  }
+
+  .hoja-cuad-bandera {
+    @include custom-background("hoja-cuad-bandera.svg", unset, 620px);
+    padding: 60px 15px;
+    font-weight: bolder;
+
+  }
+
+  .hoja-bottom-bandera {
+    @include custom-background("hoja-bottom-bandera.svg", center);
+    padding: 150px 15px 100px;
+    font-weight: bold;
+
+    ul {
+      margin: 30px 0;
+
+      li {
+        padding: 10px;
+        color: white;
+        width: fit-content;
+      }
+    }
+  }
+
+  .bandera-bottom {
+    max-width: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.sig-pinos {
+  background-color: #1e9fa5;
+
+  .hoja-colores,
+  .los-pinos {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hoja-colores {
+    @include custom-background("hoja-bottom-bandera.svg", center, 615px);
+    padding: 50px;
+    font-weight: bold;
+  }
+
+
+  .los-pinos {
+    @include custom-background("hoja-back-lgbt.svg", center);
+
+    .text-desc {
+      padding: 50px 40px 80px 40px;
+      background-color: white;
+    }
+  }
+}
+
 
 /* Extra pequeño (XS): */
 @media (min-width: 575.98px) {
@@ -564,7 +569,6 @@ section {
     }
 
     .info-add-hoja {
-      height: 385px;
 
       .text-content {
         padding: 60px 40px 0;
@@ -713,6 +717,8 @@ section {
     }
 
     .hojasup {
+      max-height: 660px;
+
       h2 {
         font-size: 27px;
       }
@@ -847,7 +853,13 @@ section {
 }
 
 /* Extra grande (XL): */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .que_es_cooperativismo{
+    .hojasup{
+      padding: 70px 20px;
+    }
+  }
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {

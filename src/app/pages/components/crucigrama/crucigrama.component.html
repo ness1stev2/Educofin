@@ -1,10 +1,7 @@
 <form [formGroup]="myForm" (ngSubmit)="onSave()" autocomplete="off" >
 
-  <!-- TODO: REVISAR ESTOS COMENTARIOS -->
-  <!-- Mensaje de error o de completado una vez precionando el boton verificar -->
-  <!-- <div id="mensaje"></div> -->
-  <!-- IFRAME DEL CRUCIGRAMA -->
-  <div id="crucigrama" [ngStyle]="{'display': display}" >
+
+  <div id="crucigrama" class="justify-content-start" [ngStyle]="{'display': display}" >
 
     <table class="table">
 
@@ -38,7 +35,7 @@
     </table>
 
   </div>
-  <input id="btnContinuar" [ngStyle]="{'display': display}" type="submit" value="Continuar" dis>
+  <input id="btnContinuar" class="justify-content-center align-items-center fw-bold" [ngStyle]="{'display': display}" type="submit" value="Continuar">
 
 </form>
 
