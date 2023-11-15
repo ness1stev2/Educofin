@@ -45,7 +45,7 @@ export class AuthService {
 
 
   register(user: User): Observable<boolean> {
-    const url = `${this.baseUrl}/auth/register`;
+    const url = `${this.baseUrl}/users/register`;
 
     return this.http.post<LoginResponse>(url, user)
       .pipe(
@@ -53,11 +53,11 @@ export class AuthService {
         catchError(err => throwError(() => err.error.message))
       )
   }
-  /* register() */
 
   login(email: string, password: string): Observable<boolean> {
 
-    const url = `${this.baseUrl}/auth/login`;
+    const url = `${this.baseUrl}/users/login`;
+    console.log(url)
     const body = { email, password };
 
     return this.http.post<LoginResponse>(url, body)
@@ -70,7 +70,7 @@ export class AuthService {
 
   checkAuthStatus(): Observable<boolean> {
 
-    const url = `${this.baseUrl}/auth/check-token`;
+    const url = `${this.baseUrl}/users/check-token`;
     const token = localStorage.getItem('token');
 
     if (!token) {

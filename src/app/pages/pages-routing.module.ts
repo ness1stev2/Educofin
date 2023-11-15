@@ -6,6 +6,7 @@ import { MainComponent } from './page/main/main.component';
 import { PerfilComponent } from './page/perfil/perfil.component';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
 import { Error404PageComponent } from '../shared/pages/error404-page/error404-page.component';
+import { Modulo2Component } from './page/modulo2/modulo2.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: 'modulo-uno',
         component: Modulo1Component,
+      },
+      {
+        path: 'modulo-dos',
+        component: Modulo2Component,
       },
       {
         path: 'perfil',

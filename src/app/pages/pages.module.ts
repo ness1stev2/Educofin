@@ -11,6 +11,7 @@ import { CrucigramaComponent } from './components/crucigrama/crucigrama.componen
 import { Formm1Component } from './components/formm1/formm1.component';
 import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.component';
 import { ActividadM1Component } from './components/actividad-m1/actividad-m1.component';
+import { Modulo2Component } from './page/modulo2/modulo2.component';
 
 
 
@@ -22,7 +23,8 @@ import { ActividadM1Component } from './components/actividad-m1/actividad-m1.com
     CrucigramaComponent,
     Formm1Component,
     EditPerfilComponent,
-    ActividadM1Component
+    ActividadM1Component,
+    Modulo2Component
   ],
   imports: [
     CommonModule,

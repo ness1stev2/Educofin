@@ -160,6 +160,7 @@ $base-image-path: '../../../../assets/';
     p {
       font-size: 18px;
       color: black;
+      text-align: justify;
     }
   }
 }
@@ -169,6 +170,7 @@ $base-image-path: '../../../../assets/';
 
   p {
     font-size: 18px;
+    text-align: justify
   }
 
   .hojasup {
@@ -181,7 +183,7 @@ $base-image-path: '../../../../assets/';
     }
 
     p {
-      padding: 0 20px 0 50px;
+      padding: 0 20px;
     }
   }
 
@@ -190,8 +192,7 @@ $base-image-path: '../../../../assets/';
     margin: 50px 0;
 
     p {
-      padding-right: 15px;
-      padding-left: 50px
+      padding: 0 15px 0 25px;
     }
   }
 }
@@ -201,13 +202,14 @@ $base-image-path: '../../../../assets/';
 
   p {
     font-size: 18px;
+    text-align: justify;
   }
 
   .edad-antigua {
     @include custom-background("hoja-edad-antigua.png", top, 837px);
 
     .antigua-text {
-      padding: 190px 10px 60px 15px;
+      padding: 145px 15px 35px 15px
     }
   }
 
@@ -236,6 +238,7 @@ $base-image-path: '../../../../assets/';
 
   p {
     font-size: 20px;
+    text-align: justify;
   }
 
   .linea-abajo-turqueza,
@@ -305,7 +308,7 @@ $base-image-path: '../../../../assets/';
   .info-add-hoja {
     @include custom-background("info-add-hoja.svg", center, 695px);
     margin-bottom: 60px;
-    padding: 40px 10px 10px;
+    padding: 25px 50px 10px 25px;
     .text-content {
       h2 {
         font-size: 2.3rem;
@@ -313,6 +316,7 @@ $base-image-path: '../../../../assets/';
 
       p {
         font-weight: bold;
+        text-align: justify;
       }
     }
   }
@@ -324,7 +328,8 @@ $base-image-path: '../../../../assets/';
   overflow: hidden;
 
   p{
-    font-size: 18px
+    font-size: 18px;
+    text-align: justify;
   }
 
   .title-coop-america {
@@ -337,6 +342,7 @@ $base-image-path: '../../../../assets/';
     @include custom-background("hoja-izq.svg", center);
     p {
       padding: 30px 20px;
+      text-align: justify;
     }
   }
 
@@ -344,6 +350,7 @@ $base-image-path: '../../../../assets/';
     @include custom-background("hoja-der.svg", center);
     p {
       padding: 20px 25px;
+      text-align: justify;
     }
   }
 
@@ -351,6 +358,7 @@ $base-image-path: '../../../../assets/';
     @include custom-background("hoja-abajo.svg", center, 550px);
     p {
       padding: 30px 17px;
+      text-align: justify;
     }
   }
 
@@ -384,6 +392,10 @@ $base-image-path: '../../../../assets/';
   @include custom-background("hoja-naranja.svg");
   padding: 80px 15px;
 
+  p{
+    text-align: justify;
+  }
+
   .img-piramides,
   .img-templos {
     height: 100%;
@@ -406,7 +418,7 @@ $base-image-path: '../../../../assets/';
 
   .card-inf-prehispanica {
     @include custom-background("hoja-inf-mx.svg", unset, 550px);
-    padding: 130px 20px 40px;
+    padding: 50px 20px 1px;
   }
 
   .card-precolombino {
@@ -423,10 +435,13 @@ $base-image-path: '../../../../assets/';
 
 .elias_calles {
   @include custom-background("hoja-naranja-vert.svg");
+  p{
+    text-align: justify
+  }
 
   .hoja-cuaderno {
     @include custom-background("hoja-pluraco-cuad.svg", unset, 725px);
-    padding: 100px 20px 20px;
+    padding: 60px 20px 20px;
   }
 
   .epoca-pos {
@@ -435,9 +450,6 @@ $base-image-path: '../../../../assets/';
     padding: 25px 15px;
     color: white;
   }
-
-  .cinta-precidente {}
-
 
 }
 
@@ -448,6 +460,7 @@ $base-image-path: '../../../../assets/';
 
   p {
     font-size: 18px;
+    text-align: justify;
   }
 
   table tbody {
@@ -482,6 +495,9 @@ $base-image-path: '../../../../assets/';
 
 .simbolos {
   background-color: #1e9fa5;
+  p{
+    text-align: justify;
+  }
 
   .bandera-top {
     max-width: 170px;
@@ -511,6 +527,7 @@ $base-image-path: '../../../../assets/';
     @include custom-background("hoja-bottom-bandera.svg", center);
     padding: 150px 15px 100px;
     font-weight: bold;
+    text-align: justify;
 
     ul {
       margin: 30px 0;
@@ -533,6 +550,8 @@ $base-image-path: '../../../../assets/';
 .sig-pinos {
   background-color: #1e9fa5;
 
+
+
   .hoja-colores,
   .los-pinos {
     background-repeat: no-repeat;
@@ -552,6 +571,9 @@ $base-image-path: '../../../../assets/';
     .text-desc {
       padding: 50px 40px 80px 40px;
       background-color: white;
+      p{
+        text-align: justify;
+      }
     }
   }
 }
@@ -571,26 +593,18 @@ $base-image-path: '../../../../assets/';
     .info-add-hoja {
 
       .text-content {
-        padding: 60px 40px 0;
+        padding: 0px 60px 0 20px;
 
         p {
           margin-top: 35px;
           font-size: 18px;
+          text-align: justify;
         }
       }
     }
   }
 
   .que_es_cooperativismo {
-    .hojaback {
-      h2 {
-        font-size: 27px;
-      }
-
-      p {
-        font-size: 18px;
-      }
-    }
 
     .hojasup {
       h2 {
@@ -599,19 +613,7 @@ $base-image-path: '../../../../assets/';
 
       p {
         font-size: 18px;
-      }
-    }
-  }
-
-  .tema {
-    .bgpapel {
-      height: 340px;
-      background-position-x: 0px;
-      padding: 80px 40px;
-
-      ul {
-        font-size: 18px;
-        list-style-type: none;
+        text-align: justify;
       }
     }
   }
@@ -628,12 +630,14 @@ $base-image-path: '../../../../assets/';
     p {
       font-size: 16px;
       width: 80%;
+      text-align: justify;
     }
 
     .int-content {
       p {
         font-size: 15px;
         font-weight: 500;
+        text-align: justify;
       }
 
       h2 {
@@ -652,7 +656,7 @@ $base-image-path: '../../../../assets/';
 
     .info-add-hoja {
       .text-content {
-        padding: 60px 90px 0;
+        padding: 0px 50px 0 20px;
       }
     }
   }
@@ -693,14 +697,14 @@ $base-image-path: '../../../../assets/';
 
     .bgpapel {
       background-position-x: 0;
-      padding: 80px 110px;
+      padding: 45px 110px;
 
       h2 {
-        font-size: 40px;
+        font-size: 35px;
       }
 
       ul {
-        font-size: 20px;
+        font-size: 17px;
       }
     }
   }
@@ -739,6 +743,7 @@ $base-image-path: '../../../../assets/';
       p {
         font-size: 20px;
         padding: 0 80px;
+        text-align: justify;
       }
     }
   }
@@ -758,15 +763,14 @@ $base-image-path: '../../../../assets/';
 
   .tema {
     .bgpapel {
-      height: 550px;
-      padding: 140px 110px;
+      padding: 110px 110px;
 
       h2 {
         font-size: 60px;
       }
 
       ul {
-        font-size: 28px;
+        font-size: 24px;
       }
     }
   }
@@ -779,6 +783,7 @@ $base-image-path: '../../../../assets/';
 
     p {
       font-size: 18px;
+      text-align: justify;
     }
   }
 

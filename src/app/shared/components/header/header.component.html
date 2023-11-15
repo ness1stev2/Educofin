@@ -3,14 +3,14 @@
   <div class="container__header">
 
     <a [routerLink]="['/inicio']" class="brand" id="logo">
-      <img src="assets/logoE.png" height="80" alt="logo">
+      <img src="assets/logoE.png" height="60" alt="logo">
     </a>
 
     <nav  class="menu d-flex" (click)="toggleMenu()" [ngClass]="{'active': isMenuActive}">
       <div class="btn">
         <i class="fas fa-times close-btn"></i>
       </div>
-      <ul class="d-flex align-items-center justify-content-center">
+      <ul class="d-flex align-items-center justify-content-center m-0">
         <!-- TODO: ALGO EN EL FOR O IF SE PUEDE MEJORAR -->
         <li *ngFor="let item of toolbarItems">
           <div *ngIf="!item.url; else urlist">

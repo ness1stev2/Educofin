@@ -1,5 +1,5 @@
 
 // Variables de entorno
 export const environment = {
-  baseUrl: 'https://educobackend.up.railway.app'
+  baseUrl: 'http://localhost:3000'
 }

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Error404PageComponent } from './pages/error404-page/error404-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MantenimientoComponent } from './pages/mantenimiento/mantenimiento.component';
 
 
 
@@ -15,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent,
     PerfilComponent,
     Error404PageComponent,
+    MantenimientoComponent,
   ],
   imports: [
     CommonModule,

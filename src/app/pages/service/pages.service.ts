@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environments';
 export class PagesService {
 
 
-  // se crea una propiedad de tipo string en el cual seobtiene la url (endpoint)
+  // se crea una propiedad de tipo string en el cual se obtiene la url (endpoint)
   private baseUrl: string = environment.baseUrl
 
   // se inyecta el servicio HttpClient para realizar solicitudes HTTP a servidores remotos para obtener o enviar datos
@@ -20,14 +20,14 @@ export class PagesService {
   getUser():Observable<Usuario[]> {
     // y retornara una peticion de la base de datos
     // en este caso obtiene el arreglo de los Usuarios
-    return this.http.get<Usuario[]>(`${ this.baseUrl }/usuarios`)
+    return this.http.get<Usuario[]>(`${ this.baseUrl }/users`)
   }
 
   // Con este medetodo obtenemos un usuario de la tabla Usuarios por medio del ID como parametro
   // este metodo retorna un Observable y retornara un Usuario o Indefinido
   getUserById( id: string ): Observable<Usuario | undefined>{
     // Hacemos una peticion http pasandole parametros como la baseUrl y el ID
-    return this.http.get<Usuario>(`${ this.baseUrl }/usuarios/${ id }`)
+    return this.http.get<Usuario>(`${ this.baseUrl }/users/${ id }`)
     .pipe(
       // Si exite un error lo cacha y regresa un observable de undefined
       catchError( error => of(undefined))
@@ -39,7 +39,7 @@ export class PagesService {
   // este metodo retorna un Observable de tipo Usuario
   addUser( user:Usuario ) : Observable<Usuario>{
     // Hacemos una peticion http (post) para agregar un Usuario
-    return this.http.post<Usuario>(`${ this.baseUrl }/usuarios`, user)
+    return this.http.post<Usuario>(`${ this.baseUrl }/users`, user)
   }
 
   // Metodo para actualizar un usuario que recibira un parametro de tipo Usuario
@@ -49,7 +49,7 @@ export class PagesService {
     if( !user.id ) throw Error('User id is required')
 
     // Hacemos la peticion http (Patch) para actualizar los datos mandados
-    return this.http.patch<Usuario>(`${ this.baseUrl }/usuarios/${ user.id }`, user)
+    return this.http.patch<Usuario>(`${ this.baseUrl }/users/${ user.id }`, user)
   }
 
 
@@ -58,7 +58,7 @@ export class PagesService {
   deleteHeroById( id:string ) : Observable<Boolean> {
 
     // Hacemos la peticion http (delete) para eliminar al usuario que coinsida con el id
-    return this.http.delete(`${ this.baseUrl }/usuarios/${ id }`)
+    return this.http.delete(`${ this.baseUrl }/users/${ id }`)
     .pipe(
       // Si existiera un error en la peticion retornamos un nuevo observable con valor de false
       catchError( err => of(false)),

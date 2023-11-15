@@ -1,0 +1,418 @@
+.fuente-justificada-tmñ {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.modulo2 {
+  margin: 70px 0;
+
+  .modulo-dos {
+    background-image: url(../../../../assets/img-modulo2/Recurso1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .info {
+      text-align: center;
+      width: 310px;
+      display: inline-block;
+      position: absolute;
+      top: 30%;
+      right: 10%;
+
+      @media (min-width: 768px) {
+        width: 500px;
+      }
+
+      h1 {
+        font-size: 60px;
+        color: white;
+
+        @media (min-width: 768px) {
+          font-size: 80px;
+        }
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .objetivo-general {
+    .info {
+      background-image: url(../../../../assets/img-modulo2/Recurso2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #3765ae;
+      height: 990px;
+
+      .bg {
+        background-image: url(../../../../assets/img-modulo2/bg-hoja-objetivo-general.webp);
+        background-repeat: no-repeat;
+        background-size: 75%;
+        height: 600px;
+        max-width: 1340px;
+
+        .objetivo-general-container {
+          width: 70%;
+          height: inherit;
+
+          .info2 {
+            max-width: 600px;
+
+            img {
+              max-width: inherit;
+            }
+
+            p {
+              font-size: 1.4rem;
+
+              @media (max-width: 576px) {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .tema {
+        background-image: url(../../../../assets/img-modulo2/hoja-diagonal.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        ;
+        position: relative;
+        bottom: 190px;
+        height: 580px;
+        width: 85%;
+        max-width: 990px;
+        color: #3765ae;
+
+        .info3 {
+          width: inherit;
+          padding-top: 170px;
+
+          h2 {
+            font-size: 3rem;
+
+            @media (max-width: 576px) {
+              font-size: 2rem;
+            }
+          }
+
+          ul {
+            @media (max-width: 576px) {
+              font-size: 1.2rem;
+            }
+
+            font-size: 1.4rem;
+            padding-left: 20px;
+            margin-top: 20px;
+
+            li {
+              margin-bottom: 10px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .introduccion {
+    background-image: url(../../../../assets/img-modulo2/Recurso8.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    @media (max-width: 576px) {
+      padding: 70px 20px;
+    }
+
+    .intro-info {
+      background-image: url(../../../../assets/img-modulo2/Recurso6.svg);
+      background-repeat: no-repeat;
+      @media (max-width: 576px) {
+        background-position: center;
+        padding: 20px;
+      }
+
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 115px 90px 10px 75px;
+      background-size: cover;
+      color: #3765ae;
+      p{
+        @extend .fuente-justificada-tmñ;
+      }
+    }
+  }
+
+  .que-es-una-cooperativa{
+    background-image: url(../../../../assets/img-modulo2/Recurso9.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1200px;
+
+    @media (max-width: 768px) {
+      background-position: center;
+    }
+    @media (min-width: 768px){
+      padding: 40px 60px 40px 100px;
+    }
+    padding: 40px 60px;
+    @media (max-width: 576px) {
+      margin: 20px;
+      padding: 40px 30px;
+    }
+    margin: 20px auto;
+    .info{
+      img{
+        max-width: 650px;
+      }
+      p{
+        text-align: justify;
+      }
+    }
+  }
+
+  .florencio-eguia-villaseñor{
+    background-color: #6d9dc6;
+
+    #florencio{
+      width: 100%;
+    }
+    .florencio{
+      background-image: url(../../../../assets/img-modulo2/hoja-florencio.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 25px;
+      @media (max-width: 768px){
+        background-position-x: center;
+      }
+      #img-title{
+        max-width: 600px;
+      }
+      p{
+        @extend .fuente-justificada-tmñ;
+        color: #3765ae;
+      }
+    }
+
+    .hoja-naranja{
+      display: flex;
+      img{
+        width: 100%;
+      }
+    }
+    .florencio-buzon{
+      display: flex;
+      img{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .principios-cooperativos{
+    background-color: #119da5;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    .bg{
+      @extend .fuente-justificada-tmñ;
+      background-image: url(../../../../assets/img-modulo2/hoja-doblada_1.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #3765ae;
+      padding: 40px 10%;
+      max-width: 1000px;
+      @media (max-width: 576px) {
+        background-position: center;
+      }
+      img{
+        max-width: 570px
+      }
+    }
+  }
+
+
+  .siete-principios{
+    background-color: #119da5;
+    color: #3765ae;
+    padding: 50px 20px;
+    .bg{
+      background-image: url(../../../../assets/img-modulo2/hoja-vertical.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 25px;
+      @media (max-width: 992px) {
+        background-position: unset;
+      }
+      @media (max-width: 576px) {
+        background-repeat: unset;
+        background-size: unset;
+      }
+      .image{
+        width: 30%;
+        text-align: center;
+        background-image: url(../../../../assets/img-modulo2/banda-vertical-amarilla.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fadfb6;
+        img{
+          width: 95%;
+          max-width: 190px;
+        }
+      }
+      .desc{
+        padding: 20px;
+        p{
+          @extend .fuente-justificada-tmñ;
+        }
+      }
+    }
+  }
+
+  .valores-del-cooperativismo{
+    background-color: white;
+    padding: 40px 20px;
+    .valores{
+      border-radius: 0 0 30px 30px;
+      overflow: hidden;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #377bc6;
+      text-align: center;
+      h1{
+        background-color: #edc798;
+        padding: 15px;
+      }
+      p{
+        @extend .fuente-justificada-tmñ;
+        background-color: #fadfb6;
+        padding: 20px;
+      }
+    }
+
+    table{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .capsula{
+      border-radius: 70px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      color: #3765ae;
+      .image{
+        background-color: #6d9dc5;
+        width: 30%;
+        text-align: center;
+        img{
+          width: 70%;
+        }
+      }
+      .desc{
+        background-color: #ededed;
+        padding: 20px;
+        p{
+          @extend .fuente-justificada-tmñ;
+        }
+      }
+    }
+    #img-mundo{
+      width: 80%;
+      text-align: center;
+      min-width: 340px;
+    }
+  }
+
+
+  .tipos-de-financieras{
+    background-color: #8acdcf;
+    color: #3765ae;
+    padding: 40px 20px;
+    .socap-sofipo-sofom{
+      background-image: url(../../../../assets/img-modulo2/hoja-ovalda.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 80px 20px 0;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 0 0 60px 60px;
+      p{
+        @extend .fuente-justificada-tmñ;
+      }
+      img{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    .socap{
+      background-image: url(../../../../assets/img-modulo2/hoja-xl-ovalada.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 0px 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 135px;
+      h1{
+        background-color: #6d9dc5;
+        color: white;
+        padding: 10px 30px;
+      }
+      p{
+        @extend .fuente-justificada-tmñ;
+      }
+      #caja-de-ahorros{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      #dividen{
+        width: 97%;
+      }
+    }
+  }
+
+
+  .animated-element, .backInDown-element, .pulseElements, .flash-element, .backInLeft-element,
+  .backInRight-element{
+    /* Estilos iniciales */
+    opacity: 0;
+  }
+
+  .base-animation {
+    opacity: 1;
+  }
+  .animated {
+    @extend .base-animation;
+    animation: backInLeft 3s ease-in-out;
+  }
+
+  .flash {
+    @extend .base-animation;
+    animation: flash 2s ease-in-out;
+  }
+
+  .backInDown {
+    @extend .base-animation;
+    animation: backInDown 2s ease-in-out;
+  }
+  .backInLeft {
+    @extend .base-animation;
+    animation: backInLeft 2s ease-in-out;
+  }
+
+  .backInRight {
+    @extend .base-animation;
+    animation: backInRight 3s ease-in-out;
+  }
+
+}
