@@ -1,0 +1,86 @@
+<form [formGroup]="myForm2" (ngSubmit)="onSave()" autocomplete="off" >
+
+
+  <div id="crucigrama" class="justify-content-start" [ngStyle]="{'display': display}" >
+
+    <table class="table">
+
+      <!-- recorremos las filas en su longitud: 17 -->
+      <tr *ngFor="let fila of filas">
+        <!-- recorremos las columnas en su longitud: 18 -->
+        <td *ngFor="let columna of columnas">
+          <!-- if -->
+          <ng-container *ngIf="enable.includes(fila + '_' + columna)">
+            <input
+            [formControlName]="fila + '_' + columna"
+            class="casilla"
+            type="text"
+            maxlength="1"
+            id="fila{{fila}}C{{columna}}">
+          </ng-container>
+          <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
+            <div class="input-placeholder">
+              <small>{{placeholder}}</small>
+              <input
+              class="casilla"
+              type="text" maxlength="1"
+              id="fila{{fila}}C{{columna}}"
+              [formControlName]="fila + '_' + columna"
+              (blur)="checkInputValue($event)">
+            </div>
+        </ng-container>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+  <input id="btnContinuar" class="justify-content-center align-items-center fw-bold" [ngStyle]="{'display': display}" type="submit" value="Continuar">
+
+</form>
+
+  <!-- El modal se mostrará con el atributo 'showModal' como true -->
+  <div class="modal" tabindex="-1" role="dialog" style="background-color: #80808096;" [ngClass]="{'d-block': showModal}">
+    <div class="modal-dialog" role="document" style="top: 30%;">
+      <div class="modal-content border-2" style="border-color: var(--color-secundario);">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensaje</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cerrarPopup()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del popup aquí -->
+          <p>Revisa tus respuestas para poder continuar...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cerrarPopup()">Cerrar</button>
+          <!-- Otras acciones del popup aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- El modal se mostrará con el atributo 'showModal' como true -->
+  <div class="modal" tabindex="-1" role="dialog" style="background-color: #80808096;" [ngClass]="{'d-block': showModalfinished}">
+    <div class="modal-dialog" role="document" style="top: 30%;">
+      <div class="modal-content border-2" style="border-color: var(--color-secundario);">
+        <div class="modal-header">
+          <h5 class="modal-title">¡Felicidades!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cerrarPopup()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del popup aquí -->
+          <p>Has contestado el crucigrama correctamente</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cerrarPopup()">Cerrar</button>
+          <!-- Otras acciones del popup aquí -->
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+.retroalimentacion{
+  margin: 100px 0;
+  input[type="text"]{
+    border: none;
+    border-bottom: black 1px solid;
+  }
+  small{
+    background: #d2d2d2;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    height: fit-content;
+    text-align: center;
+  }
+}

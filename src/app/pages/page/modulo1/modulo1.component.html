@@ -72,7 +72,15 @@
       <!-- Lado derecho -->
       <div class="col-xl-6  col-sm-12">
 
-        <shared-crucigrama [display]="display" (mostrarRetro)="receiveValue($event)"></shared-crucigrama>
+        <shared-crucigrama
+        [display]="display"
+        (mostrarRetro)="receiveValue($event)"
+        [columnas]="columnas"
+        [filas]="filas"
+        [placeholders]="placeholders"
+        [enable]="enable"
+
+        ></shared-crucigrama>
 
       </div>
     </div>

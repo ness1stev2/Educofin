@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 93.04 231.24">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #6d9dc5;
+        stroke-dasharray: 0 10;
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-2 {
+        stroke: #3765ae;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-6 {
+        fill: #8acdcf;
+      }
+
+      .cls-7 {
+        fill: #b3dee5;
+      }
+
+      .cls-8 {
+        fill: #119da4;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" x="18.18" y="18.18" width="45.81" height="194.88" rx="21.86" ry="21.86"/>
+    </clipPath>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <path class="cls-1" d="m80.17,57.91v-16.83c0-21.55-17.53-39.08-39.08-39.08S2,19.53,2,41.08v149.07c0,21.55,17.53,39.08,39.08,39.08s39.08-17.53,39.08-39.08v-78.22c6.33-2.2,10.88-8.2,10.88-15.27v-23.48c0-7.08-4.55-13.07-10.88-15.27Z"/>
+      <g class="cls-5">
+        <rect class="cls-8" x="-9.71" y="-7.53" width="98.73" height="115.11" rx="17.01" ry="17.01" transform="translate(89.68 10.37) rotate(90)"/>
+        <rect class="cls-8" x="-1.72" y="16.84" width="82.75" height="66.38"/>
+        <rect class="cls-7" x="-10.69" y="124.73" width="100.69" height="115.11" rx="17.01" ry="17.01" transform="translate(221.94 142.63) rotate(90)"/>
+        <rect class="cls-7" x="-1.72" y="148.12" width="82.75" height="68.33"/>
+        <rect class="cls-6" x="-9.13" y="57.87" width="97.58" height="115.11" rx="17.01" ry="17.01" transform="translate(155.09 75.77) rotate(90)"/>
+        <rect class="cls-6" x="-1.72" y="82.82" width="82.75" height="65.22"/>
+        <path class="cls-3" d="m41.08,229.24c-21.55,0-39.08-17.53-39.08-39.08V41.08C2,19.53,19.53,2,41.08,2s39.08,17.53,39.08,39.08v149.07c0,21.55-17.53,39.08-39.08,39.08Z"/>
+      </g>
+      <rect class="cls-4" x="18.18" y="18.18" width="45.81" height="194.88" rx="21.86" ry="21.86"/>
+      <polygon class="cls-2" points="53.99 73.18 53.99 73.27 41.46 84.71 53.99 96.57 53.99 96.66 74.86 96.66 74.86 73.18 53.99 73.18"/>
+    </g>
+  </g>
+</svg>

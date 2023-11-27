@@ -1,4 +1,3 @@
-
 @media (max-width: 650px) {
   #mensaje {
     width: 300px;
@@ -62,7 +61,8 @@
 
 
 }
-*{
+
+* {
 
   font-family: "Century Gothic", Times, sans-serif;
 }
@@ -810,12 +810,14 @@
   }
 }
 
-.noFinalizado{
+.noFinalizado {
   display: none;
 }
-.finalizado{
+
+.finalizado {
   display: block;
-  margin: 150px 0 30px;
+  position: fixed;
+  top: 30vh;
   background-color: var(--color-secundario);
   padding: 0px 0 35px;
   color: white;

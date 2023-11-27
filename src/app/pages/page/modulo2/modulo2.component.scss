@@ -5,6 +5,7 @@
 
 .modulo2 {
   margin: 70px 0;
+  overflow-x: hidden;
 
   .modulo-dos {
     background-image: url(../../../../assets/img-modulo2/Recurso1.webp);
@@ -34,7 +35,7 @@
         }
       }
 
-      img{
+      img {
         width: 100%;
       }
     }
@@ -125,6 +126,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0;
+
     @media (max-width: 576px) {
       padding: 70px 20px;
     }
@@ -132,9 +134,10 @@
     .intro-info {
       background-image: url(../../../../assets/img-modulo2/Recurso6.svg);
       background-repeat: no-repeat;
+
       @media (max-width: 576px) {
         background-position: center;
-        padding: 20px;
+        padding: 140px 20px;
       }
 
       max-width: 640px;
@@ -142,13 +145,14 @@
       padding: 115px 90px 10px 75px;
       background-size: cover;
       color: #3765ae;
-      p{
+
+      p {
         @extend .fuente-justificada-tmñ;
       }
     }
   }
 
-  .que-es-una-cooperativa{
+  .que-es-una-cooperativa {
     background-image: url(../../../../assets/img-modulo2/Recurso9.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,57 +161,70 @@
     @media (max-width: 768px) {
       background-position: center;
     }
-    @media (min-width: 768px){
+
+    @media (min-width: 768px) {
       padding: 40px 60px 40px 100px;
     }
+
     padding: 40px 60px;
+
     @media (max-width: 576px) {
       margin: 20px;
       padding: 40px 30px;
     }
+
     margin: 20px auto;
-    .info{
-      img{
+
+    .info {
+      img {
         max-width: 650px;
       }
-      p{
+
+      p {
         text-align: justify;
       }
     }
   }
 
-  .florencio-eguia-villaseñor{
+  .florencio-eguia-villaseñor {
     background-color: #6d9dc6;
 
-    #florencio{
+    #florencio {
       width: 100%;
     }
-    .florencio{
+
+    .florencio {
       background-image: url(../../../../assets/img-modulo2/hoja-florencio.svg);
       background-repeat: no-repeat;
       background-size: cover;
       padding: 50px 25px;
-      @media (max-width: 768px){
+
+      @media (max-width: 768px) {
         background-position-x: center;
       }
-      #img-title{
+
+      #img-title {
         max-width: 600px;
       }
-      p{
+
+      p {
         @extend .fuente-justificada-tmñ;
         color: #3765ae;
       }
     }
 
-    .hoja-naranja{
+    .hoja-naranja {
       display: flex;
-      img{
+
+      img {
         width: 100%;
       }
     }
-    .florencio-buzon{
+
+    .florencio-buzon {
       display: flex;
-      img{
+
+      img {
         width: 100%;
         margin: 0 auto;
         max-width: 400px;
@@ -215,12 +232,13 @@
     }
   }
 
-  .principios-cooperativos{
+  .principios-cooperativos {
     background-color: #119da5;
     padding: 50px 20px;
     display: flex;
     justify-content: center;
-    .bg{
+
+    .bg {
       @extend .fuente-justificada-tmñ;
       background-image: url(../../../../assets/img-modulo2/hoja-doblada_1.svg);
       background-repeat: no-repeat;
@@ -228,114 +246,135 @@
       color: #3765ae;
       padding: 40px 10%;
       max-width: 1000px;
+
       @media (max-width: 576px) {
         background-position: center;
       }
-      img{
+
+      img {
         max-width: 570px
       }
     }
   }
 
 
-  .siete-principios{
+  .siete-principios {
     background-color: #119da5;
     color: #3765ae;
     padding: 50px 20px;
-    .bg{
+
+    .bg {
       background-image: url(../../../../assets/img-modulo2/hoja-vertical.svg);
       background-repeat: no-repeat;
       background-size: cover;
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 25px;
+
       @media (max-width: 992px) {
         background-position: unset;
       }
+
       @media (max-width: 576px) {
         background-repeat: unset;
         background-size: unset;
       }
-      .image{
+
+      .image {
         width: 30%;
         text-align: center;
         background-image: url(../../../../assets/img-modulo2/banda-vertical-amarilla.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #fadfb6;
-        img{
+
+        img {
           width: 95%;
           max-width: 190px;
         }
       }
-      .desc{
+
+      .desc {
         padding: 20px;
-        p{
+
+        p {
           @extend .fuente-justificada-tmñ;
         }
       }
     }
   }
 
-  .valores-del-cooperativismo{
+  .valores-del-cooperativismo {
     background-color: white;
     padding: 40px 20px;
-    .valores{
+
+    .valores {
       border-radius: 0 0 30px 30px;
       overflow: hidden;
       max-width: 700px;
       margin: 0 auto;
       color: #377bc6;
       text-align: center;
-      h1{
+
+      h1 {
         background-color: #edc798;
         padding: 15px;
       }
-      p{
+
+      p {
         @extend .fuente-justificada-tmñ;
         background-color: #fadfb6;
         padding: 20px;
       }
     }
 
-    table{
+    table {
       max-width: 1100px;
       margin: 0 auto;
     }
-    .capsula{
+
+    .capsula {
       border-radius: 70px;
       overflow: hidden;
       margin-bottom: 20px;
       color: #3765ae;
-      .image{
+
+      .image {
         background-color: #6d9dc5;
         width: 30%;
         text-align: center;
-        img{
+
+        img {
           width: 70%;
         }
       }
-      .desc{
+
+      .desc {
         background-color: #ededed;
         padding: 20px;
-        p{
+
+        p {
           @extend .fuente-justificada-tmñ;
         }
       }
     }
-    #img-mundo{
+
+    #img-mundo {
       width: 80%;
       text-align: center;
       min-width: 340px;
+      max-width: 700px;
+      margin: 0 auto;
     }
   }
 
 
-  .tipos-de-financieras{
+  .tipos-de-financieras {
     background-color: #8acdcf;
     color: #3765ae;
     padding: 40px 20px;
-    .socap-sofipo-sofom{
+
+    .socap-sofipo-sofom {
       background-image: url(../../../../assets/img-modulo2/hoja-ovalda.svg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -343,17 +382,19 @@
       max-width: 800px;
       margin: 0 auto;
       border-radius: 0 0 60px 60px;
-      p{
+
+      p {
         @extend .fuente-justificada-tmñ;
       }
-      img{
+
+      img {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
       }
     }
 
-    .socap{
+    .socap {
       background-image: url(../../../../assets/img-modulo2/hoja-xl-ovalada.svg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -362,28 +403,134 @@
       margin: 0 auto;
       overflow: hidden;
       border-radius: 135px;
-      h1{
+
+      h1 {
         background-color: #6d9dc5;
         color: white;
         padding: 10px 30px;
       }
-      p{
+
+      p {
         @extend .fuente-justificada-tmñ;
       }
-      #caja-de-ahorros{
+
+      #caja-de-ahorros {
+
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
       }
-      #dividen{
+
+      #dividen {
         width: 97%;
+      }
+
+      ul {
+        font-size: 1.2rem;
+      }
+
+      #termometro {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
+      }
+    }
+
+    .sofipo {
+      background-image: url(../../../../assets/img-modulo2/hoja-xl-ovalada.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 0px 15px;
+      max-width: 1000px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 135px;
+
+      h1,
+      h2 {
+        background-color: #6d9dc5;
+        color: white;
+        padding: 10px 30px;
+      }
+
+      p {
+        @extend .fuente-justificada-tmñ;
+      }
+
+      .link-conducef {
+        background-color: #119da4;
+        color: white;
+        padding: 19px 41px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: relative;
+        width: 100%;
+        display: block;
+      }
+
+      #condusef {
+        @extend .link-conducef;
+        border-radius: 30px 0 0 30px;
+        left: 50px;
+      }
+
+      #cnbv {
+        @extend .link-conducef;
+        border-radius: 0 30px 30px 0;
+        right: 48px;
+
+      }
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
       }
     }
   }
 
+  .tabla-comparativa {
+    background-color: #8acdcf;
 
-  .animated-element, .backInDown-element, .pulseElements, .flash-element, .backInLeft-element,
-  .backInRight-element{
+    .bg {
+      background-image: url(../../../../assets/img-modulo2/hoja-xl-ovalada.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 0px 15px;
+      max-width: 1000px;
+      overflow: hidden;
+      border-radius: 135px;
+      margin: 0px auto;
+
+      #tabla {
+        width: 95%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .ilustracion {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .actividad2-crucigrama {
+    .bg {}
+  }
+
+
+  .animated-element,
+  .backInDown-element,
+  .pulse-element,
+  .flash-element,
+  .backInLeft-element,
+  .backInRight-element,
+  .fadeInDown-element,
+  .backInUp-element,
+  .flip-element,
+  .rotateOut-element {
     /* Estilos iniciales */
     opacity: 0;
   }
@@ -391,6 +538,7 @@
   .base-animation {
     opacity: 1;
   }
+
   .animated {
     @extend .base-animation;
     animation: backInLeft 3s ease-in-out;
@@ -401,10 +549,16 @@
     animation: flash 2s ease-in-out;
   }
 
+  .pulse {
+    @extend .base-animation;
+    animation: pulse 2s ease-in-out;
+  }
+
   .backInDown {
     @extend .base-animation;
     animation: backInDown 2s ease-in-out;
   }
+
   .backInLeft {
     @extend .base-animation;
     animation: backInLeft 2s ease-in-out;
@@ -413,6 +567,40 @@
   .backInRight {
     @extend .base-animation;
     animation: backInRight 3s ease-in-out;
+  }
+
+  .fadeInDown {
+    @extend .base-animation;
+    animation: fadeInDown 2s ease-in-out;
+  }
+
+  .backInUp {
+    @extend .base-animation;
+    animation: backInUp 2s ease-in-out;
+  }
+
+  .flip {
+    @extend .base-animation;
+    animation: flip 2s ease-in-out;
+  }
+
+  .rotateOut {
+    @extend .base-animation;
+    animation: rotateOut 2s ease-in-out;
+  }
+
+  /* .noFinalizado {
+    display: none;
+  } */
+
+  .finalizado {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 30vh;
+    background-color: var(--color-secundario);
+    padding: 0px 0 35px;
+    color: white;
   }
 
 }

@@ -84,7 +84,8 @@
 
   <section class="que-es-una-cooperativa">
     <div class="info">
-      <img src="assets/img-modulo2/que-es-una-cooperativa.svg" alt="">
+      <img src="assets/img-modulo2/que-es-una-cooperativa.svg" alt="" class="flash-element"
+        (window:scroll)="onScrollFlash()">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
           <img src="assets/img-modulo2/7.svg" alt="" class="backInLeft-element" (window:scroll)="onScrollBackInLeft()">
@@ -119,11 +120,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4">
-            <img id="florencio" src="assets/img-modulo2/florencio.png" alt="">
+            <img id="florencio" src="assets/img-modulo2/florencio.png" alt="" class="fadeInDown-element"
+              (window:scroll)="onScrollFadeInDown()">
           </div>
           <div class="px-lg-5 col-12 col-md-6 col-lg-8">
-            <img id="img-title" src="assets/img-modulo2/florencio-title.svg" alt="">
-            <p>
+            <img id="img-title" src="assets/img-modulo2/florencio-title.svg" alt="" class="backInRight-element">
+            <p class="backInRight-element">
               Su pasión para promover el ahorro, la
               ayuda mutua y la Educación
               Cooperativa y Financiera, fueron su
@@ -147,11 +149,11 @@
         <div class="row">
           <div class="hoja-naranja col-12 col-lg-7">
 
-            <img src="assets/img-modulo2/florencio-hoja-naranja.svg" alt="">
+            <img src="assets/img-modulo2/florencio-hoja-naranja.svg" alt="" class="fadeInDown-element">
 
           </div>
           <div class="florencio-buzon col-12 col-lg-5">
-            <img src="assets/img-modulo2/florencio-buzon.svg" alt="">
+            <img src="assets/img-modulo2/florencio-buzon.svg" alt="" class="backInRight-element">
           </div>
         </div>
       </div>
@@ -166,8 +168,9 @@
     <div class="bg">
       <div class="container">
 
-        <img src="assets/img-modulo2/principios-cooperativos.svg" alt="">
-        <p>Los Principios Cooperativos son las directrices mediante las cuales, las
+        <img src="assets/img-modulo2/principios-cooperativos.svg" alt="" class="flash-element">
+        <p class="backInUp-element" (window:scroll)="onScrollBackInUp()">Los Principios Cooperativos son las directrices
+          mediante las cuales, las
           Cooperativas ponen en práctica sus valores.
           La construcción del pensamiento Cooperativo no surge de manera
           espontánea; en realidad ha sido un cúmulo de experiencias de
@@ -177,7 +180,7 @@
           clase trabajadora, así como mantenerse actualizados para replantear los
           Principios Cooperativos, de manera que continúen vigentes
         </p>
-        <p>
+        <p class="backInUp-element">
           La nueva Declaración de Identidad Cooperativa adoptada en 1995, por
           la II Asamblea General de la ACI, mantiene la esencia de un sistema de
           principios y valores que demostró ser eficiente a través de la historia y
@@ -188,7 +191,7 @@
           cada uno:
         </p>
 
-        <img src="assets/img-modulo2/manos.svg" alt="">
+        <img src="assets/img-modulo2/manos.svg" alt="" class="pulse-element" (window:scroll)="onScrollpulse()">
 
       </div>
     </div>
@@ -201,38 +204,46 @@
       <table>
         <tbody>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin1.svg" alt=""></td>
-            <td class="desc">
-              <h1>1. Adhesión voluntaria y abierta</h1>
-              <p>Las Cooperativas son organizaciones voluntarias,
-                abiertas a todas las personas que quieran utilizar sus
-                servicios y que deseen aceptar las responsabilidades
-                de la afiliación, sin discriminación social, de género,
-                racial, política, religiosa o discapacidad.</p>
+            <td class="image"><img src="assets/img-modulo2/pin1.svg" alt="" class="flip-element"
+                (window:scroll)="onScrollFlip()"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+                <h1>1. Adhesión voluntaria y abierta</h1>
+                <p>Las Cooperativas son organizaciones voluntarias,
+                  abiertas a todas las personas que quieran utilizar sus
+                  servicios y que deseen aceptar las responsabilidades
+                  de la afiliación, sin discriminación social, de género,
+                  racial, política, religiosa o discapacidad.</p>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin2.svg" alt=""></td>
-            <td class="desc">
-              <h1>2. Gestión democrática de los miembros</h1>
-              <p>Las Cooperativas son organizaciones democráticas
-                controladas por sus integrantes, que participan
-                activamente en el establecimiento de sus políticas y en
-                la toma de decisiones. Todos los Socios que
-                desempeñan la función de delegados seleccionados
-                son representantes de todos los miembros presentes,
-                ausentes y disidentes.</p>
+            <td class="image"><img src="assets/img-modulo2/pin2.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>2. Gestión democrática de los miembros</h1>
+                <p>Las Cooperativas son organizaciones democráticas
+                  controladas por sus integrantes, que participan
+                  activamente en el establecimiento de sus políticas y en
+                  la toma de decisiones. Todos los Socios que
+                  desempeñan la función de delegados seleccionados
+                  son representantes de todos los miembros presentes,
+                  ausentes y disidentes.</p>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin3.svg" alt=""></td>
-            <td class="desc">
-              <h1>3. Participación económica de los
-                miembros</h1>
-              <p>Los Socios contribuyen de forma equitativa al capital
-                de la Cooperativa y lo controlan democráticamente.
-                Los miembros destinan los beneficios a cualquiera de
-                las siguientes finalidades:</p>
+            <td class="image"><img src="assets/img-modulo2/pin3.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>3. Participación económica de los
+                  miembros</h1>
+                <p>Los Socios contribuyen de forma equitativa al capital
+                  de la Cooperativa y lo controlan democráticamente.
+                  Los miembros destinan los beneficios a cualquiera de
+                  las siguientes finalidades:</p>
                 <ul>
                   <li>Desarrollar su Cooperativa, por ejemplo, mediante la
                     constitución de reservas.</li>
@@ -241,53 +252,67 @@
                   <li>Apoyar otras actividades aprobadas por su
                     membresía.</li>
                 </ul>
+
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin4.svg" alt=""></td>
-            <td class="desc">
-              <h1>4. Autonomía e independencia</h1>
-              <p>Las Cooperativas son organizaciones autónomas de
-                ayuda mutua gestionadas por sus miembros. Si se llega
-                a un acuerdo con organizaciones externas, incluidos los
-                gobiernos o se aumenta su capital de fuentes externas,
-                deberá hacerse de forma que se asegure el control
-                democrático de sus Socios y se mantenga la
-                autonomía de la Cooperativa.</p>
+            <td class="image"><img src="assets/img-modulo2/pin4.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>4. Autonomía e independencia</h1>
+                <p>Las Cooperativas son organizaciones autónomas de
+                  ayuda mutua gestionadas por sus miembros. Si se llega
+                  a un acuerdo con organizaciones externas, incluidos los
+                  gobiernos o se aumenta su capital de fuentes externas,
+                  deberá hacerse de forma que se asegure el control
+                  democrático de sus Socios y se mantenga la
+                  autonomía de la Cooperativa.</p>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin5.svg" alt=""></td>
-            <td class="desc">
-              <h1>5. Educación, formación e información</h1>
-              <p>Las Cooperativas ofrecen educación y/o capacitación
-                a Socios, Directores, Consejeros, Empleados y
-                Funcionarios para que puedan contribuir de forma
-                efectiva al desarrollo en las mismas. Por otro lado,
-                informan al público en general sobre la naturaleza y los
-                beneficios de la Cooperación.
+            <td class="image"><img src="assets/img-modulo2/pin5.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>5. Educación, formación e información</h1>
+                <p>Las Cooperativas ofrecen educación y/o capacitación
+                  a Socios, Directores, Consejeros, Empleados y
+                  Funcionarios para que puedan contribuir de forma
+                  efectiva al desarrollo en las mismas. Por otro lado,
+                  informan al público en general sobre la naturaleza y los
+                  beneficios de la Cooperación.
                 </p>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin6.svg" alt=""></td>
-            <td class="desc">
-              <h1>6. Cooperación entre Cooperativas</h1>
-              <p>Las Cooperativas sirven de forma más efectiva a sus
-                integrantes y fortalecen el movimiento cooperativo
-                trabajando con estructuras locales, regionales,
-                nacionales e internacionales.
+            <td class="image"><img src="assets/img-modulo2/pin6.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>6. Cooperación entre Cooperativas</h1>
+                <p>Las Cooperativas sirven de forma más efectiva a sus
+                  integrantes y fortalecen el movimiento cooperativo
+                  trabajando con estructuras locales, regionales,
+                  nacionales e internacionales.
                 </p>
+              </div>
             </td>
           </tr>
           <tr>
-            <td class="image"><img src="assets/img-modulo2/pin7.svg" alt=""></td>
-            <td class="desc">
-              <h1>7. Interés por la comunidad</h1>
-              <p>Las Cooperativas trabajan para el desarrollo sostenible
-                de sus comunidades a través de políticas aprobadas
-                por sus miembros.
+            <td class="image"><img src="assets/img-modulo2/pin7.svg" alt="" class="flip-element"></td>
+            <td>
+              <div class="desc backInRight-element" (window:scroll)="onScrollBackInRight()">
+
+                <h1>7. Interés por la comunidad</h1>
+                <p>Las Cooperativas trabajan para el desarrollo sostenible
+                  de sus comunidades a través de políticas aprobadas
+                  por sus miembros.
                 </p>
+              </div>
             </td>
           </tr>
 
@@ -299,7 +324,7 @@
   <section class="valores-del-cooperativismo">
     <div class="bg">
 
-      <div class="valores">
+      <div class="valores fadeInDown-element">
         <h1 class="m-0">VALORES DEL COOPERATIVISMO</h1>
         <p class="m-0">Son virtudes o cualidades que caracterizan a una Cooperativa, se consideran
           positivos y de gran importancia, que rigen la organización y que, sin fines de
@@ -311,8 +336,8 @@
         <tbody>
           <tr>
             <div class="capsula mt-4">
-              <td class="image"><img src="assets/img-modulo2/ayuda.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/ayuda.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Ayuda Mutua</h1>
                 <p>Es uno de los valores principales, pues las
                   Cooperativas nacen con la firme misión de generar
@@ -323,8 +348,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/responsabilidad.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/responsabilidad.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Responsabilidad</h1>
                 <p>La responsabilidad como valor moral es la
                   capacidad de respuesta de las personas ante un
@@ -337,8 +362,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/democracia.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/democracia.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Democracia</h1>
                 <p>Se refiere a que en la Cooperativa se toman las
                   decisiones por las personas en mayoría en completa
@@ -352,8 +377,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/igualdad.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/igualdad.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Igualdad</h1>
                 <p>Establece que nadie puede ser tratado de modo
                   discriminado o privilegiado a pesar de que algunos
@@ -365,8 +390,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/equidad.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/equidad.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Equidad</h1>
                 <p>Trato justo a las personas, dando a cada cual lo que
                   le pertenece independientemente de su cargo,
@@ -376,8 +401,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/solidaridad.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/solidaridad.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Solidaridad</h1>
                 <p>Es el sentimiento y la actitud de unidad o ayuda de
                   manera desinteresada o sin esperar nada a cambio,
@@ -388,8 +413,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/honestidad.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/honestidad.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Honestidad</h1>
                 <p>Está vinculada con la decencia y se conoce
                   también como probidad y es opuesta a cualquier
@@ -399,8 +424,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/transparencia.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/transparencia.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Transparencia</h1>
                 <p>La Cooperativa es una Sociedad transparente
                   dirigida por sus propios integrantes, no persigue el
@@ -412,8 +437,8 @@
           </tr>
           <tr>
             <div class="capsula">
-              <td class="image"><img src="assets/img-modulo2/compromiso.svg" alt=""></td>
-              <td class="desc">
+              <td class="image backInLeft-element"><img src="assets/img-modulo2/compromiso.svg" alt=""></td>
+              <td class="desc backInRight-element">
                 <h1>Compromiso con los demás</h1>
                 <p>La Cooperativa es una Sociedad transparente
                   dirigida por sus propios integrantes, no persigue el
@@ -426,7 +451,9 @@
         </tbody>
       </table>
 
-      <img id="img-mundo" src="assets/img-modulo2/circulo.svg" alt="">
+      <div class="d-flex">
+        <img id="img-mundo" src="assets/img-modulo2/circulo.svg" alt="" class="rotateOut-element" (window:scroll)="onScrollRotateOut()">
+      </div>
     </div>
 
   </section>
@@ -437,7 +464,7 @@
     <div class="socap-sofipo-sofom mb-5">
 
       <div class="row">
-        <div class="col-12 col-sm-7 d-flex flex-column">
+        <div class="col-12 col-sm-7 d-flex flex-column backInLeft-element">
           <img src="assets/img-modulo2/tipos-de-sociedades.svg" alt="" class="mt-5 m-sm-0">
           <p>Algunas de las Entidades que
             integran el sector financiero son las
@@ -445,7 +472,7 @@
             las cuales se menciona un breve
             contexto de cada una de ellas.</p>
         </div>
-        <div class="col-12 col-sm-5 d-flex">
+        <div class="col-12 col-sm-5 d-flex backInRight-element">
           <img src="assets/img-modulo2/caja-fuerte.svg" alt="">
         </div>
       </div>
@@ -454,212 +481,259 @@
 
 
     <div class="socap">
-      <h1>Sociedad Cooperativa de Ahorro y Préstamo (SOCAP)</h1>
+      <h1 class="backInLeft-element">Sociedad Cooperativa de Ahorro y Préstamo (SOCAP)</h1>
 
 
 
-        <div class="row py-2">
+      <div class="row py-2">
 
-          <div class="col-12 col-md-6 px-5">
-            <p>Son instituciones financieras
-              orientadas al sector social, no
-              tienen fines de lucro, realizan
-              operaciones de ahorro y préstamo
-              y únicamente ofrecen sus servicios
-              a sus Socios.
-              Pueden encontrarse bajo el
-              nombre de Caja, Caja Popular,
-              Cooperativa, Caja de Ahorro, Caja
-              Solidaria, Caja Comunitaria,
-              Cooperativa de Ahorro y Crédito,
-              Cooperativa de Ahorro y Préstamo,
-              etc.
-              Se clasifican por nivel de operación
-              y éste depende del monto total de
-              activos con que
-              cuenten.Entendiéndose por activos
-              todos los bienes y derechos de una
-              Institución Financiera susceptibles
-              de ser valorados en dinero.</p>
-          </div>
-          <div class="col-12 col-md-6 px-5 mb-3 m-md-0 d-flex">
-            <img id="caja-de-ahorros" src="assets/img-modulo2/caja-de-ahorros.svg" alt="">
-          </div>
-
-          <img id="dividen" src="assets/img-modulo2/dinero-creciendo.svg" alt="">
+        <div class="col-12 col-md-6 px-5 flash-element">
+          <p>Son instituciones financieras
+            orientadas al sector social, no
+            tienen fines de lucro, realizan
+            operaciones de ahorro y préstamo
+            y únicamente ofrecen sus servicios
+            a sus Socios.
+            Pueden encontrarse bajo el
+            nombre de Caja, Caja Popular,
+            Cooperativa, Caja de Ahorro, Caja
+            Solidaria, Caja Comunitaria,
+            Cooperativa de Ahorro y Crédito,
+            Cooperativa de Ahorro y Préstamo,
+            etc.
+            Se clasifican por nivel de operación
+            y éste depende del monto total de
+            activos con que
+            cuenten.Entendiéndose por activos
+            todos los bienes y derechos de una
+            Institución Financiera susceptibles
+            de ser valorados en dinero.</p>
+        </div>
+        <div class="col-12 col-md-6 px-5 mb-3 m-md-0 d-flex pulse-element">
+          <img id="caja-de-ahorros" src="assets/img-modulo2/caja-de-ahorros.svg" alt="">
         </div>
 
+        <img id="dividen" src="assets/img-modulo2/dinero-creciendo.svg" alt="" class="backInLeft-element">
+
+        <div class="row p-5">
+          <div class="col-12 col-md-8 backInLeft-element">
+            <p>
+              Las SOCAP’S cuyos activos rebasan
+              los 2.5 millones de UDIS, requieren la
+              autorización de la CNBV y se
+              clasifican de la siguiente manera:
+            </p>
+            <ul>
+
+              <li>NIVEL I: Monto de activos totales
+                iguales o inferiores a 10 millones de
+                UDIS.</li>
+              <li>NIVEL II: Monto de activos totales
+                superiores a 10 millones e iguales o
+                inferiores a 50 millones de UDIS.</li>
+              <li>NIVEL III: Monto de activos totales
+                superiores a 50 millones e iguales o
+                inferiores a 250 millones de UDIS.</li>
+              <li>NIVEL IV: Monto de activos totales
+                superiores a 250 millones de UDIS.</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 d-flex backInRight-element">
+            <img id="termometro" src="assets/img-modulo2/termometro.svg" alt="">
+          </div>
+        </div>
+      </div>
+
 
 
     </div>
 
-    <div class="dividen">
-
-      <div class="col">
-        <h2>Se dividen en:</h2>
-        <p>Básicas: Tienen menos de 2.5 millones de UDIS en activos, por lo que no
-          requieren autorización de la Comisión Nacional
-          Bancaria y de Valores. Tienen permitido realizar
-          operaciones limitadas de ahorro y préstamo y no
-          cuentan con el beneficio del Seguro de Depósito.</p>
-
-        <p>Autorizadas: Cumplieron con los requisitos de
-          la Comisión Nacional Bancaria y de
-          Valores para realizar operaciones de
-          crédito y ahorro con sus Socios.
-          Además, cuentan con un Seguro de
-          Depósito hasta por una cantidad
-          equivalente a 25,000 UDIS, por
-          ahorrador.</p>
-      </div>
-      <div class="col">
-        <img src="" alt="">
-      </div>
 
 
-    </div>
-
-    <div class="socap">
-
-
-      <div class="col-6">
-        <p>Las SOCAP’S cuyos activos rebasan
-          los 2.5 millones de UDIS, requieren la
-          autorización de la CNBV y se
-          clasifican de la siguiente manera:
-        </p>
-        <ul>
-          <li>•NIVEL I: Monto de activos totales
-            iguales o inferiores a 10 millones de
-            UDIS.</li>
-          <li>•NIVEL II: Monto de activos totales
-            superiores a 10 millones e iguales o
-            inferiores a 50 millones de UDIS.</li>
-          <li>•NIVEL III: Monto de activos totales
-            superiores a 50 millones e iguales o
-            inferiores a 250 millones de UDIS.</li>
-          <li>•NIVEL IV: Monto de activos totales
-            superiores a 250 millones de UDIS</li>
-        </ul>
-
-      </div>
-      <div class="col-6">
-        <img src="" alt="">
-      </div>
-
-    </div>
 
     <div class="sofipo">
-      <h1>Sociedad Financiera Popular (SOFIPO)</h1>
-      <p>Son Entidades constituidas como
-        Sociedades Anónimas de Capital
-        Variable (SOFIPO) y están
-        facultadas para prestar servicios a
-        sus clientes, en los términos de la Ley
-        de Ahorro y Crédito Popular.
-        A diferencia de las Sociedades
-        Cooperativas de Ahorro y
-        Préstamo, las Sociedades
-        Financieras Populares su
-        clasificación es de la siguiente
-        manera:
-      </p>
+      <h1 class="backInLeft-element">Sociedad Financiera Popular (SOFIPO)</h1>
 
-      <ul>
-        <li>NIVEL I: Monto de activos totales
-          iguales o inferiores a 15 millones de
-          UDIS.</li>
-        <li>NIVEL II: Monto de activos totales
-          superiores a 15 millones e iguales o
-          inferiores a 50 millones de UDIS.</li>
-        <li>NIVEL III: Monto de activos totales
-          superiores a 50 millones e iguales o
-          inferiores a 280 millones de UDIS.</li>
-        <li>NIVEL IV: Monto de activos totales
-          superiores a 280 millones de UDIS.</li>
-      </ul>
 
-      <img src="" alt="">
-      <div class="liga">www.condusef.gob.mx</div>
+      <div class="row p-5">
+        <div class="col-12 col-md-8 backInLeft-element">
+          <p>Son Entidades constituidas como
+            Sociedades Anónimas de Capital
+            Variable (SOFIPO) y están
+            facultadas para prestar servicios a
+            sus clientes, en los términos de la Ley
+            de Ahorro y Crédito Popular.
+            A diferencia de las Sociedades
+            Cooperativas de Ahorro y
+            Préstamo, las Sociedades
+            Financieras Populares su
+            clasificación es de la siguiente
+            manera:
+          </p>
 
-      <h2>Sociedades Financieras de Objeto Múltiple (SOFOM)</h2>
+          <ul>
+            <li>NIVEL I: Monto de activos totales
+              iguales o inferiores a 15 millones de
+              UDIS.</li>
+            <li>NIVEL II: Monto de activos totales
+              superiores a 15 millones e iguales o
+              inferiores a 50 millones de UDIS.</li>
+            <li>NIVEL III: Monto de activos totales
+              superiores a 50 millones e iguales o
+              inferiores a 280 millones de UDIS.</li>
+            <li>NIVEL IV: Monto de activos totales
+              superiores a 280 millones de UDIS.</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 d-flex flex-column">
+          <img src="assets/img-modulo2/socap.svg" class="mb-5 backInRight-element" alt="">
+          <a id="condusef" href="www.condusef.gob.mx" class="text-center text-md-start backInRight-element">www.condusef.gob.mx</a>
+        </div>
+      </div>
 
-      <p>Son Sociedades Anónimas que se
-        clasifican en reguladas y no
-        reguladas, cuyo objeto principal es
-        el otorgamiento de crédito,
-        arrendamiento o factoraje
-        financiero (préstamos anticipados)
-        a pequeñas y medianas empresas,
-        así como, a personas físicas.
-        Se dedican a otorgar distintos tipos
-        de créditos para el público en
-        general, pero a diferencia de una
-        SOCAP, éstas no pueden abrir
-        cuentas de ahorro</p>
+      <h2 class="backInLeft-element">Sociedades Financieras de Objeto Múltiple (SOFOM)</h2>
 
-      <div class="liga"></div>
+      <div class="row p-5">
+        <div class="col-12 col-md-8 mb-5">
+          <p class="backInLeft-element">Son Sociedades Anónimas que se
+            clasifican en reguladas y no
+            reguladas, cuyo objeto principal es
+            el otorgamiento de crédito,
+            arrendamiento o factoraje
+            financiero (préstamos anticipados)
+            a pequeñas y medianas empresas,
+            así como, a personas físicas.
+            Se dedican a otorgar distintos tipos
+            de créditos para el público en
+            general, pero a diferencia de una
+            SOCAP, éstas no pueden abrir
+            cuentas de ahorro</p>
+          <a id="cnbv" href="www.gob.mx/cnbv" class="backInLeft-element">www.gob.mx/cnbv</a>
+        </div>
+        <div class="col-12 col-md-4 backInRight-element">
+          <img src="assets/img-modulo2/sofom.svg" alt="">
+        </div>
+      </div>
 
-      <img src="" alt="">
     </div>
 
 
   </section>
 
 
-  <section class="tabla-comparativa">
-    <h1>Tabla comparativa</h1>
+  <section class="tabla-comparativa mb-5 pb-5">
+    <div class="bg d-flex flex-column">
 
-    <p>Tabla comparativa de sociedades financieras</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Sociedades Financiera</th>
-          <th>SOCAP</th>
-          <th>SOFIPO</th>
-          <th>SOFOM</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Enfoque</td>
-          <td>Comisión Nacional Bancaria y de Valores (CNBV)</td>
-          <td>Comisión Nacional Bancaria y de Valores (CNBV)</td>
-          <td>Comisión Nacional Bancaria y de Valores (CNBV)</td>
-        </tr>
-        <tr>
-          <td>Tipos de usuario</td>
-          <td>Operaciones de ahorro y préstamo</td>
-          <td>Operaciones de ahorro y préstamo</td>
-          <td>Operaciones de ahorro y préstamo, arrendamiento y factoraje financiero</td>
-        </tr>
-        <tr>
-          <td>Tipos de operaciones</td>
-          <td>
-            <ul>
-              <li>•Ahorro</li>
-              <li>•Depósito a la vista</li>
-              <li>•Plazo fijo </li>
-              <li>•Crédito</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>•Ahorro</li>
-              <li>•Depósito a la vista</li>
-              <li>•Plazo fijo </li>
-              <li>•Crédito</li>
-            </ul>
-          </td>
-          <td>Crédito</td>
-        </tr>
-    </table>
+      <img id="tabla" src="assets/img-modulo2/tabla comparativa.svg" alt="" class="flash-element">
 
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+      <div class="row">
+        <div class="d-flex col-12 col-md-6">
+          <img class="ilustracion backInLeft-element" src="assets/img-modulo2/billetera.svg" alt="">
+        </div>
+        <div class="d-flex col-12 col-md-6">
+          <img class="ilustracion backInRight-element" src="assets/img-modulo2/pilares.svg" alt="">
+        </div>
+        <div class="d-flex col-12 col-md-6">
+          <img class="ilustracion backInLeft-element" src="assets/img-modulo2/frasco.svg" alt="">
+        </div>
+        <div class="d-flex col-12 col-md-6">
+          <img class="ilustracion backInRight-element" src="assets/img-modulo2/dinero en mano.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
   </section>
 
+  <div class="actividad2-crucigrama">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-xl-6">
+
+          <h1>Actividad: Crucigrama</h1>
+
+          <h2>Horizontales</h2>
+
+          <ul>
+            <li>
+              1. Es un valor Cooperativo, las decisiones son tomadas por
+              mayoría de votos.
+            </li>
+            <li>
+              5. Asociación que está centrada en las personas que a ella
+              pertenecen, es controlada por sus integrantes, quienes las
+              dirigen para dar respuesta a las necesidades y objetivos de
+              carácter económico, social y cultural comunes.
+            </li>
+            <li>
+              6. Es un valor Cooperativo, las decisiones son tomadas por
+              mayoría de votos.
+            </li>
+            <li>
+              7. No tienen fines de lucro, realizan operaciones de ahorro y
+              préstamo y únicamente ofrecen sus servicios a sus Socios.
+            </li>
+            <li>
+              8. Nadie puede ser tratado de modo preferente en la
+              Cooperativa a pesar de que algunos sean más antiguos como
+              Socios o desempeñen algún cargo como consejeros,
+              funcionarios o colaboradores
+            </li>
+            <li>
+              9. Directrices mediante las cuales una Cooperativa ponen en
+              práctica sus valores.
+            </li>
+            <li>
+              10. Virtud de una Cooperativa, que la convierte en el mejor modelo
+              económico para alcanzar una sociedad más justa y sostenible.
+            </li>
+
+          </ul>
+
+          <h2>Verticales</h2>
+
+          <ul>
+            <li>
+              2. Las Cooperativas son organizaciones independientes,
+              gestionadas por sus miembros.
+            </li>
+            <li>
+              3. Es una sociedad con fines de lucro especializada para prestar
+              servicios de depósitos y crédito al público en general.
+            </li>
+            <li>
+              4. La adhesión a la causa de los demás haciéndonos unos con
+              ellos hasta correr una misma suerte.
+            </li>
+
+          </ul>
+
+          <input id="btnComenzar" (click)="changeStyles('mostrarCrucigrama')" type="button" value="Comenzar"
+            class="mb-5">
+
+        </div>
+        <div class="col-lg-12 col-xl-6">
+
+          <div class="bg">
+
+            <app-crucigrama-act2 [display]="display" [columnas]="columnas" [filas]="filas" [placeholders]="placeholders"
+              [enable]="enable" (finalizado)="finalizadoEvent($event)"></app-crucigrama-act2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="text-center" [ngClass]="{'finalizado': finalizadoP, 'noFinalizado': !finalizadoP }">
+    <img src="/assets/aplause.gif" alt="Aplauso gif" width="120px">
+    <h3 class="fs-2"><strong> FELICIDADES COMPLETASTE EXITOSAMENTE EL MODULO 2 </strong></h3>
+    <p class="fs-3">Tu avance ha sido guardado y aparecera en tu perfil</p>
+    <p class="fs-4">Serás redirigido al menú de inicio en: <strong>{{contador}}</strong></p>
+  </div>
+
 </div>
+
