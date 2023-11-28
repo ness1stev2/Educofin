@@ -2,82 +2,72 @@
   <div class="container">
     <h2>RETROALIMENTACIÓN.</h2>
 
-    <p>
+    <p id="introduccion">
       Completa la frase, en la parte inferior de la hoja encontrarás las palabras
       que forman las respuestas.
     </p>
 
+    <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
 
-    <p>Una Sociedad Cooperativa se diferencia de una empresa tradicional por su forma de organización y administración,
-      se
-      integra por personas físicas llamadas <input type="text" name="" id="" alt="socios">, con base en intereses
-      comunes y en los
-      principios de solidaridad, esfuerzo propio y ayuda mutua, se componen como elementos intrínsecos de la Sociedad
-      Cooperativa,
-      así como los <input type="text" name="" id="" alt="valores y principios cooperativos"> por los que se rigen y
-      constituyen la base filosófica del Movimiento Cooperativo,
-      apoyados en <input type="text" name="" id="" alt="reglas y normas">, que son los Estatutos que estriban el
-      desarrollo y crecimiento desde
-      la toma de decisiones solidarias, donde cada miembro tiene voz, así como voto en la <input type="text" name=""
-        id="" alt="asamblea general">, con el
-      propósito de satisfacer necesidades colectivas que son administradas y vigiladas por su <input type="text" name=""
-        id="" alt="gobierno corporativo">. <br><br>
-      La <input type="text" name="" id="" alt="ley general de sociedades cooperativas"> tiene por objeto regular la
-      constitución, organización, funcionamiento y extinción de las
-      Sociedades Cooperativas y sus Organismos en que libremente se agrupen, así como los derechos de los Socios.
-      <br><br>
-      <input type="text" name="" id="" alt="lrascap"> regula las operaciones de las Sociedades Cooperativas de Ahorro y
-      Préstamo; protegiendo los
-      intereses de sus Socios ahorradores; y establece los términos en que el Estado ejercerá las facultades de
-      supervisión, regulación
-      y sanción, en términos de la Ley. <br><br>
-      El Consejo de <input type="text" name="" id="" alt="administracion"> es el Órgano Ejecutivo de la Asamblea General
-      que tendrá la representación de
-      la Sociedad Cooperativa. <br><br>
-      El Consejo de <input type="text" name="" id="" alt="vigilancia"> es el Órgano encargado de supervisar el
-      funcionamiento interno de la Sociedad
-      Cooperativa, así como el cumplimiento de sus estatutos y demás normatividad que le es aplicable. <br><br>
-      El <input type="text" name="" id="" alt="director"> o Gerente General es la persona contratada por el Consejo de
-      Administración para que en
-      forma profesional y especializada ejecute los acuerdos tomados por este Órgano de Gobierno y la Asamblea General,
-      así
-      como los planes y estrategias de la Sociedad.
-    </p>
+      <p>Estado del formulario: <b>{{respForm.status }}</b> </p>
+      <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p>
+
+
+      <p>Una Sociedad Cooperativa se diferencia de una empresa tradicional por su forma de organización y administración,
+        se
+        integra por personas físicas llamadas <input type="text" name="" id="" alt="socios" formControlName="resp1" style="width: 60px;">, con base
+        en intereses
+        comunes y en los
+        principios de solidaridad, esfuerzo propio y ayuda mutua, se componen como elementos intrínsecos de la Sociedad
+        Cooperativa,
+        así como los <input type="text" name="" id="" alt="valores y principios cooperativos" formControlName="resp2"> por los
+        que se rigen y
+        constituyen la base filosófica del Movimiento Cooperativo,
+        apoyados en <input type="text" name="" id="" alt="reglas y normas" formControlName="resp3">, que son los Estatutos que
+        estriban el
+        desarrollo y crecimiento desde
+        la toma de decisiones solidarias, donde cada miembro tiene voz, así como voto en la <input type="text" name=""
+          id="" alt="asamblea general" formControlName="resp4">, con el
+        propósito de satisfacer necesidades colectivas que son administradas y vigiladas por su <input type="text" name=""
+          id="" alt="gobierno corporativo" formControlName="resp5">. <br><br>
+        La <input type="text" name="" id="" alt="ley general de sociedades cooperativas" formControlName="resp6"> tiene por objeto regular la
+        constitución, organización, funcionamiento y extinción de las
+        Sociedades Cooperativas y sus Organismos en que libremente se agrupen, así como los derechos de los Socios.
+        <br><br>
+        <input type="text" name="" id="" alt="lrascap" formControlName="resp7"> regula las operaciones de las Sociedades Cooperativas de Ahorro y
+        Préstamo; protegiendo los
+        intereses de sus Socios ahorradores; y establece los términos en que el Estado ejercerá las facultades de
+        supervisión, regulación
+        y sanción, en términos de la Ley. <br><br>
+        El Consejo de <input type="text" name="" id="" alt="administracion" formControlName="resp8"> es el Órgano Ejecutivo de la Asamblea General
+        que tendrá la representación de
+        la Sociedad Cooperativa. <br><br>
+        El Consejo de <input type="text" name="" id="" alt="vigilancia" formControlName="resp9"> es el Órgano encargado de supervisar el
+        funcionamiento interno de la Sociedad
+        Cooperativa, así como el cumplimiento de sus estatutos y demás normatividad que le es aplicable. <br><br>
+        El <input type="text" name="" id="" alt="director" formControlName="resp10"> o Gerente General es la persona contratada por el Consejo de
+        Administración para que en
+        forma profesional y especializada ejecute los acuerdos tomados por este Órgano de Gobierno y la Asamblea General,
+        así
+        como los planes y estrategias de la Sociedad.
+      </p>
+      <button type="submit" [disabled]="!respForm.valid">Submit</button>
+    </form>
 
     <h3>RESPUESTAS:</h3>
 
-    <div class="row">
+    <div class="row gap-2">
+      <small [ngClass]="{'success': respForm.controls.resp1.valid}" >Socios</small>
+      <small [ngClass]="{'success': respForm.controls.resp7.valid}" >LRASCAP</small>
+      <small [ngClass]="{'success': respForm.controls.resp10.valid}">Director</small>
+      <small [ngClass]="{'success': respForm.controls.resp9.valid}" >Vigilancia</small>
+      <small [ngClass]="{'success': respForm.controls.resp8.valid}" >Administracion</small>
+      <small [ngClass]="{'success': respForm.controls.resp3.valid}" >Reglas y Normas</small>
+      <small [ngClass]="{'success': respForm.controls.resp4.valid}" >Asamblea General</small>
+      <small [ngClass]="{'success': respForm.controls.resp5.valid}" >gobierno corporativo</small>
+      <small [ngClass]="{'success': respForm.controls.resp2.valid}" >Valores y Principios Cooperativos</small>
+      <small [ngClass]="{'success': respForm.controls.resp6.valid}" >Ley General de Sociedades Cooperativas</small>
 
-      <div class="col">
-        <small>Administracion</small>
-      </div>
-      <div class="col">
-        <small>Valores y Principios Cooperativos</small>
-      </div>
-      <div class="col">
-        <small>Asamblea General</small>
-      </div>
-      <div class="col">
-        <small>Socios</small>
-      </div>
-      <div class="col">
-        <small>Ley General de Sociedades Cooperativas</small>
-      </div>
-      <div class="col">
-        <small>Director</small>
-      </div>
-      <div class="col">
-        <small>Gobierno Corporativo</small>
-      </div>
-      <div class="col">
-        <small>LRASCAP</small>
-      </div>
-      <div class="col">
-        <small>Vigilancia</small>
-      </div>
-      <div class="col">
-        <small>Reglas y Normas</small>
-      </div>
     </div>
   </div>
 </div>
