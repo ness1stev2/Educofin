@@ -1,0 +1,287 @@
+.modulo3 {
+  margin: 70px 0;
+  overflow-x: hidden;
+
+  @mixin bg-image($image, $position) {
+    background-image: url('../../../../assets/img-modulo3/' + $image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $position;
+  }
+
+  .inicio-m3 {
+    @include bg-image('bg-inicio-modulo3.svg', top);
+    height: 50vh;
+    text-align: center;
+
+    @media (min-width: 576px) {
+      padding: 40px;
+      text-align: end;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+      padding: 0 25px;
+      color: white;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  .objetivo-general {
+    @include bg-image('bg-objetivo-general.webp', 0 -600px);
+    display: flex;
+    align-items: center;
+    color: #3765ae;
+    padding: 40px 0;
+
+    @media (max-width: 1400px) {
+      background-position: bottom;
+    }
+
+    img {
+      max-width: 500px;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        max-width: 400px;
+      }
+    }
+
+    .obj-gen-img {
+      @media (max-width: 768px) {
+        background-color: white;
+        padding: 20px;
+        border-radius: 30px;
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      padding: 0 25px;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .introduccion {
+    @include bg-image('bg-introduccion.svg', top);
+    color: #296bb5;
+    padding: 40px 0;
+
+    .hoja-circulo {
+      @include bg-image('hoja-circulo.svg', top);
+      background-size: contain;
+      padding: 80px 70px;
+      overflow: hidden;
+
+      img {
+        max-width: 200px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+    }
+  }
+
+
+  .elementos-sociedad-cooperativa {
+    .bg-so-coops {
+      @include bg-image('bg-socops.svg', top);
+      background-size: contain;
+    }
+  }
+
+  .legislacion-socaps {
+    @include bg-image('back-legis-socoop.svg', top);
+    padding: 40px 0;
+    color: #296bb5;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0 25px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+      padding: 0 25px;
+    }
+
+    hr {
+      border: 2px solid #008e93;
+    }
+
+    .tabla {
+      @include bg-image('hoja-tabla.svg', top);
+      padding: 40px 5px;
+
+      @media (min-width: 768px) {
+        padding: 60px;
+      }
+
+      max-width: 1100px;
+      margin: 0 auto;
+
+      table {
+        width: 100%;
+
+        th {
+          @media (min-width: 768px) {
+            font-size: 2rem;
+          }
+
+          font-size: 1.2rem;
+        }
+
+        tr {
+          td:first-child {
+            width: 40%;
+          }
+
+          td:last-child {
+            width: 60%;
+          }
+
+          td {
+            text-align: center;
+
+            @media (min-width: 768px) {
+              font-size: 1.2rem;
+            }
+
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  }
+
+
+  .estructura-socoops {
+    background-color: #029da4;
+    color: #029da4;
+    padding: 20px;
+
+    .hoja-inclinada {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+
+      @media (max-width: 576px) {
+        padding: 50px 10px;
+      }
+
+      padding: 70px 50px;
+
+
+      img {
+        width: 100%;
+        max-width: 1022px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+    }
+  }
+
+  .asamblea-general {
+    background-color: #029da4;
+    text-align: justify;
+    padding: 40px 0;
+
+    .intro {
+      font-size: 1.2rem;
+      color: #029da4;
+      padding: 25px;
+    }
+
+    .hoja-top {
+      @include bg-image('hoja-top.svg', top);
+      padding: 80px 40px;
+    }
+
+    .block {
+      color: white;
+      font-size: 1.2rem;
+      padding: 20px 30px;
+      margin: 25px 0;
+    }
+
+    .verde {
+      background-color: #029da4;
+    }
+
+    .azul {
+      background-color: #477ec0;
+    }
+  }
+
+  .consejo-administracion {
+    background-color: #029da4;
+
+    .hoja-right {
+      @include bg-image('hojaR.svg', center);
+      padding: 20px 20px 20px 0;
+      @media (min-width: 992px) {
+        padding-right: 70px;
+      }
+      @media (min-width: 1400px) {
+        padding-right: 90px;
+      }
+      h1 {
+        background-color: #029da4;
+        color: white;
+        padding: 20px;
+        width: 90%;
+        font-size: 1.5rem;
+        border-radius: 0 50px 50px 0;
+      }
+      p{
+        font-size: 1.2rem;
+        color:#029da4;
+        padding: 20px;
+      }
+    }
+  }
+
+  .consejo-vigilacion{
+    background-color: #029da4;
+
+    .hoja-right{
+      @include bg-image('hoja-left.svg', center);
+      padding: 0 20px 20px 20px;
+      @media (min-width: 992px) {
+        padding-left: 70px;
+      }
+      @media (min-width: 1400px) {
+        padding-left: 90px;
+      }
+    }
+  }
+
+
+
+}
