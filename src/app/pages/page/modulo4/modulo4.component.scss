@@ -1,0 +1,148 @@
+@mixin bg-image($image, $position, $size: cover) {
+  background-image: url('../../../../assets/img-modulo4/' + $image);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+.modulo4 {
+
+  h2,
+  h3 {
+    font-size: 2.2rem;
+    @media (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
+
+  p,
+  ul {
+    font-size: 1.2rem;
+    @media (max-width: 767px) {
+      font-size: 1rem;
+    }
+    text-align: justify;
+  }
+
+  .inicio {
+    @include bg-image('bg-inicio-m4.svg', top);
+    text-align: center;
+
+
+    @media (min-width: 576px) {
+      padding: 70px 40px;
+      ;
+      text-align: end;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+      padding: 0 25px;
+      color: white;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  .objetivo-general {
+    @include bg-image('cpsp-objgen.webp', left, contain);
+    background-color: #5D98A1;
+    color: #336699;
+    padding: 50px 0;
+
+    .tema {
+      background-image: url('../../../../assets/img-modulo4/hoja-inclinada.svg');
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: right;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+
+      @media (max-width: 767px) {
+        align-items: center;
+      }
+
+      .objetivo {
+        background-color: #eff1f2;
+        text-align: end;
+        border-radius: 13px;
+        padding: 10px;
+        margin-bottom: 30px;
+        @media (max-width: 576px) {
+          text-align: center;
+        }
+      }
+      ul{
+        text-align: end;
+        list-style: none;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          text-align: start;
+        }
+      }
+
+      .img-introduccion {
+        width: 100%;
+        max-width: 650px;
+      }
+    }
+
+  }
+
+  .inicio-presente{
+    background-color: #5D98A1;
+    padding: 50px 0;
+    img{
+      width: 100%;
+    }
+    .img-inicios{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .linea-tiempo{
+    padding: 50px 0;
+    @include bg-image('bg-lineatiempo.svg', top);
+    .lista-linea{
+      color: #336699;
+      @include bg-image('lista-linea.svg', top);
+      padding: 160px 80px 50px;
+      @media (max-width: 576px) {
+        padding: 50px 20px 15px;
+      }
+      .ano{
+        font-size: 2.2;
+      }
+    }
+    .vertical-line {
+      width: 8px;
+      height: 80px;
+      background-color: white;
+      border: none;
+      margin-right: 15px;
+    }
+  }
+
+  .actualidad{
+    padding: 50px 0;
+    img{
+      width: 100%;
+    }
+    .img-recepcion{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

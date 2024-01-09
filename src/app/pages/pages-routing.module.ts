@@ -8,6 +8,7 @@ import { EditPerfilComponent } from './components/edit-perfil/edit-perfil.compon
 import { Error404PageComponent } from '../shared/pages/error404-page/error404-page.component';
 import { Modulo2Component } from './page/modulo2/modulo2.component';
 import { Modulo3Component } from './page/modulo3/modulo3.component';
+import { Modulo4Component } from './page/modulo4/modulo4.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'modulo-tres',
         component: Modulo3Component,
+      },
+      {
+        path: 'modulo-cuatro',
+        component: Modulo4Component,
       },
       {
         path: 'perfil',

@@ -53,25 +53,29 @@
     }
 
     .obj-gen-img {
-      @media (max-width: 768px) {
-        background-color: white;
-        padding: 20px;
-        border-radius: 30px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    .tema {
+      background-color: #b1dadf;
+      border-radius: 30px;
+      padding: 20px;
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        padding: 0 25px;
       }
-    }
 
-    h2 {
-      font-size: 3rem;
-      font-weight: 700;
-      padding: 0 25px;
-    }
+      ul {
+        list-style-type: none;
 
-    ul {
-      list-style-type: none;
-
-      li {
-        font-size: 1.5rem;
-        text-decoration: none;
+        li {
+          font-size: 1.5rem;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -83,16 +87,30 @@
 
     .hoja-circulo {
       @include bg-image('hoja-circulo.svg', top);
-      background-size: contain;
-      padding: 80px 70px;
+      padding: 0 30px 100px;
+      max-width: 970px;
+      margin: 0 auto;
       overflow: hidden;
 
+      @media (min-width: 992px) {
+        padding: 0px 150px 120px;
+      }
+
+
+      h2 {
+        font-size: 2.5rem;
+
+        @media (min-width: 576px) {
+          font-size: 3rem;
+        }
+      }
+
       img {
-        max-width: 200px;
+        max-width: 170px;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-align: justify;
       }
     }
@@ -100,9 +118,47 @@
 
 
   .elementos-sociedad-cooperativa {
-    .bg-so-coops {
-      @include bg-image('bg-socops.svg', top);
-      background-size: contain;
+    @include bg-image('back-socap.svg', top);
+    padding: 50px 0 60px;
+    max-width: 1120px;
+    margin: 60px auto;
+
+    .body {
+      width: 100%;
+      max-width: 880px;
+      color: #296bb5;
+      text-align: justify;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    .row {
+      gap: 10px;
+      justify-content: center;
+
+      .hexagon {
+        width: 25%;
+        min-height: 310px;
+        background-color: #029da4;
+        color: white;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        padding: 25px;
+        box-sizing: border-box;
+        text-align: center;
+
+        p {
+          line-height: 15px;
+          text-align: justify;
+        }
+      }
     }
   }
 
@@ -134,8 +190,6 @@
       @media (min-width: 768px) {
         padding: 60px;
       }
-
-      max-width: 1100px;
       margin: 0 auto;
 
       table {
@@ -245,12 +299,15 @@
     .hoja-right {
       @include bg-image('hojaR.svg', center);
       padding: 20px 20px 20px 0;
+
       @media (min-width: 992px) {
         padding-right: 70px;
       }
+
       @media (min-width: 1400px) {
         padding-right: 90px;
       }
+
       h1 {
         background-color: #029da4;
         color: white;
@@ -259,29 +316,62 @@
         font-size: 1.5rem;
         border-radius: 0 50px 50px 0;
       }
-      p{
+
+      p {
         font-size: 1.2rem;
-        color:#029da4;
+        color: #029da4;
         padding: 20px;
       }
     }
   }
 
-  .consejo-vigilacion{
+  .consejo-vigilacion {
     background-color: #029da4;
 
-    .hoja-right{
+    .hoja-right {
       @include bg-image('hoja-left.svg', center);
       padding: 0 20px 20px 20px;
+
       @media (min-width: 992px) {
         padding-left: 70px;
       }
+
       @media (min-width: 1400px) {
         padding-left: 90px;
       }
     }
   }
 
+  .animated-element,
+  .fade-in-left,
+  .fade-in-right,
+  .jackInTheBox {
+    /* Estilos iniciales */
+    opacity: 0;
+  }
 
+  .base-animation {
+    opacity: 1;
+  }
+
+  .animated {
+    @extend .base-animation;
+    animation: backInLeft 1s ease-in-out;
+  }
+
+  .fadeInLeft {
+    @extend .base-animation;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+
+  .fadeInRight {
+    @extend .base-animation;
+    animation: fadeInRight 1s ease-in-out;
+  }
+
+  .jackInTheBox {
+    @extend .base-animation;
+    animation: jackInTheBox 3s ease-in-out;
+  }
 
 }

@@ -1,7 +1,7 @@
 <div class="modulo3">
 
   <section class="inicio-m3 d-flex">
-    <div class="container">
+    <div class="container animated-element" (window:scroll)="onScrollAnimated()">
       <h1 class="title">Módulo 3</h1>
       <img src="assets/img-modulo3/cooperativas 2.svg" class="subtitle" alt="">
     </div>
@@ -12,14 +12,14 @@
     <div class="container">
       <div class="row justify-content-center align-items-center mb-5">
         <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
-          <img class="obj-gen-img" src="assets/img-modulo3/objetivo-general.svg" alt="">
+          <img class="obj-gen-img fade-in-left" (window:scroll)="onScrollFadeInLeft()" src="assets/img-modulo3/objetivo-general.svg" alt="">
         </div>
-        <div class="col-12 col-md-6 pt-5 d-flex justify-content-center">
-          <img src="assets/img-modulo3/og-engranajes.svg" alt="">
+        <div class="col-12 col-md-6 pt-5 pt-md-0 d-flex justify-content-center">
+          <img class="fade-in-right" (window:scroll)="onScrollFadeInRight()" src="assets/img-modulo3/og-engranajes.svg" alt="">
         </div>
       </div>
 
-      <div class="ms-md-5 pt-5 text-center text-md-start">
+      <div class="tema ms-md-5 pt-5 text-center text-md-start fade-in-left">
         <h2>TEMA</h2>
         <ul>
           <li>• Elementos que las integran</li>
@@ -38,10 +38,10 @@
 
   <section class="introduccion">
     <div class="container">
-      <div class="hoja-circulo">
+      <div class="hoja-circulo jackInTheBox" (window:scroll)="onScrollJackInTheBox()">
         <div class="row justify-content-center">
 
-          <img class="d-none d-md-block" src="assets/img-modulo3/intro-monedas.svg" alt="">
+          <img class="" src="assets/img-modulo3/intro-monedas.svg" alt="">
 
           <h2>INTRODUCCIÓN</h2>
           <p>
@@ -69,6 +69,8 @@
             (LRASCAP) normando su funcionamiento y
             velando por los derechos de los Socios.
           </p>
+
+
         </div>
 
 
@@ -79,8 +81,82 @@
 
   <section class="elementos-sociedad-cooperativa">
     <div class="container">
-      <div class="bg-so-coops">
-        <img src="assets/img-modulo3/og-engranajes.svg" alt="">
+
+      <div class="body">
+        <h2>ELEMENTOS DE UNA SOCIEDAD COOPERATIVA</h2>
+        <p>Una Sociedad Cooperativa se diferencia de una
+          empresa tradicional por su forma de organización y
+          administración, se integra por personas físicas llamadas
+          Socios, con intereses comunes de solidaridad, esfuerzo
+          propio y ayuda mutua, éstos se componen como sus
+          elementos intrínsecos. <br><br>
+          También se apoyan en los Valores y Principios
+          Cooperativos por los que se rigen y constituyen la base
+          filosófica del Movimiento Cooperativo con Reglas y
+          Normas, como son las Bases Constitutivas que
+          contribuyen en el desarrollo y crecimiento en la toma
+          de decisiones solidarias, donde cada miembro tiene
+          voz, así como voto en la Asamblea General, con el
+          propósito de cubrir necesidades colectivas que son
+          administradas y vigiladas por el Gobierno Corporativo.<br><br>
+          <b>A continuación, se describen los elementos de una
+            Sociedad Cooperativa:</b>
+        </p>
+
+      </div>
+      <div class="row">
+        <div class="hexagon">
+          <h2>Socios</h2>
+          <p>Grupo de personas que
+            comparten intereses y
+            objetivos en común,
+            deciden organizarse
+            para conformar una
+            Sociedad Cooperativa. </p>
+        </div>
+        <div class="hexagon">
+          <h2>Asamblea General</h2>
+          <p>Es el máximo órgano de
+            Gobierno de las Sociedades
+            Cooperativas, integrada
+            por Socios, quienes toman
+            las decisiones importantes
+            en forma democrática.</p>
+        </div>
+        <div class="hexagon">
+          <h2>Reglas y Normas</h2>
+          <p>Son importantes para el buen
+            funcionamiento de la
+            Organización y sobre todo,
+            para prevenir los conflictos
+            que se pueden generar entre
+            los miembros.
+            Las Cooperativas deben
+            contar con sus propios Bases
+            Constitutivas aprobadas y
+            formalizadas.</p>
+        </div>
+        <div class="hexagon">
+          <h2>Principios y Valores Cooperativos</h2>
+          <p>Conjunto de lineamientos éticos
+            para orientar la participación en la
+            Sociedad y guías del buen
+            comportamiento de los Socios que
+            se deben practicar en el día a día
+            y es lo que diferencia a una
+            Sociedad Cooperativa de una
+            empresa tradicional.</p>
+        </div>
+        <div class="hexagon">
+          <h2>Gobierno Corporativo</h2>
+          <p>Encargados de administrar y
+            vigilar el buen funcionamiento
+            de la Cooperativa. Las tres
+            figuras principales son: el
+            Consejo de Administración, el
+            Consejo de Vigilancia y el
+            Director o Gerente General.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -376,25 +452,25 @@
 
     <div class="container">
       <div class="hoja-top">
-          <h1>GOBIERNO CORPORATIVO:
-            CONSEJO DE ADMINISTRACIÓN
-          </h1>
-          <p>El Director o Gerente General es la persona contratada por el Consejo de Administración
-            para que en forma profesional y especializada ejecute los acuerdos tomados por este
-            órgano de gobierno y la Asamblea, así como los planes y estrategias de la Sociedad. <br><br>
-            El Director o Gerente General de las Sociedades Cooperativas de Ahorro y Préstamo,
-            deberá contar con conocimientos básicos en materia financiera y administrativa, que la
-            propia Sociedad Cooperativa establezca en sus bases constitutivas.<br><br>
-            No debe tener parentesco por consanguinidad hasta el primer grado, afinidad hasta el
-            segundo grado, o civil con alguno de los miembros del Consejo de Administración o de
-            Vigilancia de la Cooperativa.<br><br>
-            También, asistir, con voz, pero sin voto, a las sesiones del Consejo de Administración y de los
-            comités de la Cooperativa, representar a la Cooperativa en los actos que determinen las
-            Bases Constitutivas</p>
+        <h1>GOBIERNO CORPORATIVO:
+          CONSEJO DE ADMINISTRACIÓN
+        </h1>
+        <p>El Director o Gerente General es la persona contratada por el Consejo de Administración
+          para que en forma profesional y especializada ejecute los acuerdos tomados por este
+          órgano de gobierno y la Asamblea, así como los planes y estrategias de la Sociedad. <br><br>
+          El Director o Gerente General de las Sociedades Cooperativas de Ahorro y Préstamo,
+          deberá contar con conocimientos básicos en materia financiera y administrativa, que la
+          propia Sociedad Cooperativa establezca en sus bases constitutivas.<br><br>
+          No debe tener parentesco por consanguinidad hasta el primer grado, afinidad hasta el
+          segundo grado, o civil con alguno de los miembros del Consejo de Administración o de
+          Vigilancia de la Cooperativa.<br><br>
+          También, asistir, con voz, pero sin voto, a las sesiones del Consejo de Administración y de los
+          comités de la Cooperativa, representar a la Cooperativa en los actos que determinen las
+          Bases Constitutivas</p>
 
-            <img src="assets/img-modulo3/two-img-fin.svg" alt="">
-        </div>
+        <img src="assets/img-modulo3/two-img-fin.svg" alt="">
       </div>
+    </div>
 
   </section>
 
