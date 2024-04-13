@@ -1,0 +1,59 @@
+<div class="retroalimentacion">
+  <div class="container">
+    <h2>RETROALIMENTACIÓN.</h2>
+
+    <p id="introduccion">
+      Completa la frase, en la parte inferior de la hoja encontrarás las palabras
+      que forman las respuestas.
+    </p>
+
+    <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
+
+      <p>Estado del formulario: <b>{{respForm.status }}</b> </p>
+      <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p>
+
+
+      <p>Ante la necesidad de apoyar a la comunidad, tras observar la necesidad de mejorar las condiciones
+        de vida y de combatir la usura, el <input type="text" name="" id="" alt="socios" formControlName="resp1"
+          style="width: 60px;">(1914-2011) con
+        visión y compromiso inicio un gran proyecto, enseñando la importancia del ahorro y ayuda mutua,
+        dando como resultado a una de las mejores Cooperativas del país. <br><br>
+
+        A través de la Cultura del <input type="text" name="" id="" alt="valores y principios cooperativos" formControlName="resp2">,
+        se busca que las personas tomen conciencia de la importancia de hacer buen uso de sus finanzas. <input type="text" name="" id=""alt="reglas y normas" formControlName="resp3">
+        no solo es tener la capacidad de asegurar la calidad de vida en aspectos de bienestar, educación, recreación, vivienda,
+        sino también anticiparse a una crisis de pérdida de empleo, iliquidez, o calamidad de entrada, implica una disciplina de
+        aporte periódico, generalmente mensual, el cual da derechos como socio permitirá acceder a promociones y servicios.
+        <br><br>
+
+        <input type="text" name="" id="" alt="asamblea general" formControlName="resp4"> es una operación financiera en la que se
+        presta una cantidad de dinero y se genera un compromiso a pagar la cantidad solicitada en un plazo definido.
+        <br><br>
+
+        La <input type="text" name="" id="" alt="gobierno corporativo" formControlName="resp5"> es un factor importante de Caja Popular San Pablo, da la capacidad
+        de interrelacionar y equilibrar las fuerzas para proteger los intereses de los Socios, contribuyendo a
+        la calidad de vida.
+        <br><br>
+
+        Definimos la <input type="text" name="" id="" alt="ley general de sociedades cooperativas" formControlName="resp6"> como un
+        conjunto de criterios o fórmulas, con las que se rige la conducta humana. Pueden ser éstas de carácter voluntario o pueden
+        ser obligatorias.
+        <br><br>
+
+      </p>
+      <button type="submit" [disabled]="!respForm.valid">Submit</button>
+    </form>
+
+    <h3>RESPUESTAS:</h3>
+
+    <div class="row gap-2">
+      <small [ngClass]="{'success': respForm.controls.resp1.valid}">Presbítero José Guadalupe Pineda Velásquez</small>
+      <small [ngClass]="{'success': respForm.controls.resp3.valid}">Ahorrar</small>
+      <small [ngClass]="{'success': respForm.controls.resp4.valid}">Crédito</small>
+      <small [ngClass]="{'success': respForm.controls.resp5.valid}">Gobernabilidad</small>
+      <small [ngClass]="{'success': respForm.controls.resp2.valid}">Ahorro</small>
+      <small [ngClass]="{'success': respForm.controls.resp6.valid}">Normatividad</small>
+    </div>
+
+  </div>
+</div>

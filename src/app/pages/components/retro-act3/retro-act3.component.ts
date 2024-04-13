@@ -9,6 +9,7 @@ import { formM3Validator } from '../../validators/form-m3.validator';
 })
 export class RetroAct3Component {
 
+
   respForm = this.formbuilder.group({
     resp1:  ['', [Validators.required, formM3Validator('socios')]],
     resp2:  ['', [Validators.required, formM3Validator('valores y principios cooperativos')]],

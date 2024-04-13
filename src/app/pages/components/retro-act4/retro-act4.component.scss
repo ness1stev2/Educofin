@@ -1,0 +1,41 @@
+.retroalimentacion{
+  margin: 100px 0;
+  padding: 50px;
+  border: 2px solid #3765ad;
+  border-radius: 30px;
+
+  h2{
+    color: #3765ad;
+  }
+
+  #introduccion{
+    font-weight: 500;
+  }
+
+  input[type="text"]{
+    border: none;
+    border-bottom: #3765ad 2px solid;
+    text-transform: lowercase;
+  }
+  p{
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  small{
+    background: #d2d2d2;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .success{
+    background-color: #419941;
+    color: white;
+  }
+}

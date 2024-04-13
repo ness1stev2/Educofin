@@ -16,6 +16,7 @@ import { CrucigramaAct2Component } from './components/crucigrama-act2/crucigrama
 import { Modulo3Component } from './page/modulo3/modulo3.component';
 import { RetroAct3Component } from './components/retro-act3/retro-act3.component';
 import { Modulo4Component } from './page/modulo4/modulo4.component';
+import { RetroAct4Component } from './components/retro-act4/retro-act4.component';
 
 
 
@@ -32,7 +33,8 @@ import { Modulo4Component } from './page/modulo4/modulo4.component';
     CrucigramaAct2Component,
     Modulo3Component,
     RetroAct3Component,
-    Modulo4Component
+    Modulo4Component,
+    RetroAct4Component
   ],
   imports: [
     CommonModule,
