@@ -181,8 +181,6 @@ export class Modulo1Component implements OnInit{
       // Desplázate al inicio de la página
       this.viewportScroller.scrollToPosition([0, 0]);
     });
-
-
   }
 
   public display: string = ""

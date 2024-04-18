@@ -17,6 +17,7 @@ import { Modulo3Component } from './page/modulo3/modulo3.component';
 import { RetroAct3Component } from './components/retro-act3/retro-act3.component';
 import { Modulo4Component } from './page/modulo4/modulo4.component';
 import { RetroAct4Component } from './components/retro-act4/retro-act4.component';
+import { Modulo5Component } from './page/modulo5/modulo5.component';
 
 
 
@@ -34,7 +35,8 @@ import { RetroAct4Component } from './components/retro-act4/retro-act4.component
     Modulo3Component,
     RetroAct3Component,
     Modulo4Component,
-    RetroAct4Component
+    RetroAct4Component,
+    Modulo5Component
   ],
   imports: [
     CommonModule,

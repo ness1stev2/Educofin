@@ -9,6 +9,7 @@ import { Error404PageComponent } from '../shared/pages/error404-page/error404-pa
 import { Modulo2Component } from './page/modulo2/modulo2.component';
 import { Modulo3Component } from './page/modulo3/modulo3.component';
 import { Modulo4Component } from './page/modulo4/modulo4.component';
+import { Modulo5Component } from './page/modulo5/modulo5.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'modulo-cuatro',
         component: Modulo4Component,
+      },
+      {
+        path: 'modulo-cinco',
+        component: Modulo5Component,
       },
       {
         path: 'perfil',
