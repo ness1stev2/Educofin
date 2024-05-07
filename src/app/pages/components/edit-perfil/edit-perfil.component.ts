@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Domicilio } from '../../interfaces/page.interface';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-edit-perfil',
-  templateUrl: './edit-perfil.component.html',
-  styleUrls: ['./edit-perfil.component.scss']
+    selector: 'app-edit-perfil',
+    templateUrl: './edit-perfil.component.html',
+    styleUrls: ['./edit-perfil.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgFor]
 })
 export class EditPerfilComponent {
 

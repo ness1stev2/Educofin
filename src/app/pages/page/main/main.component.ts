@@ -1,15 +1,17 @@
 import { Component, OnInit, computed, inject } from '@angular/core';
 import { Usuario } from '../../interfaces/page.interface';
 import { AuthService } from 'src/app/auth/services/auth.service';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { User } from 'src/app/auth/interfaces';
 
 @Component({
-  selector: 'pages-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+    selector: 'pages-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss'],
+    standalone: true,
+    imports: [RouterLink]
 })
 export class MainComponent implements OnInit{
 

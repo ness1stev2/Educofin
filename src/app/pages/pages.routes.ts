@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { Modulo1Component } from './page/modulo1/modulo1.component';
 import { LayoutPageComponent } from './page/layout-page/layout-page.component';
 import { MainComponent } from './page/main/main.component';
@@ -11,7 +10,7 @@ import { Modulo3Component } from './page/modulo3/modulo3.component';
 import { Modulo4Component } from './page/modulo4/modulo4.component';
 import { Modulo5Component } from './page/modulo5/modulo5.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: LayoutPageComponent,
@@ -54,14 +53,4 @@ const routes: Routes = [
     path: '404',
     component: Error404PageComponent
   },
-]
-
-@NgModule({
-  imports: [
-    RouterModule.forChild( routes )
-  ],
-  exports: [
-    RouterModule
-  ],
-})
-export class PagesRoutingModule { }
+];

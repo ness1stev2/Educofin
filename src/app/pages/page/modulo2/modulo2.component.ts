@@ -1,11 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Validacion } from '../../interfaces/crucigrama.interface';
 import { Router } from '@angular/router';
+import { NgClass } from '@angular/common';
+import { CrucigramaAct2Component } from '../../components/crucigrama-act2/crucigrama-act2.component';
 
 @Component({
-  selector: 'app-modulo2',
-  templateUrl: './modulo2.component.html',
-  styleUrls: ['./modulo2.component.scss']
+    selector: 'app-modulo2',
+    templateUrl: './modulo2.component.html',
+    styleUrls: ['./modulo2.component.scss'],
+    standalone: true,
+    imports: [CrucigramaAct2Component, NgClass]
 })
 
 export class Modulo2Component {

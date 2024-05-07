@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RetroAct3Component } from '../../components/retro-act3/retro-act3.component';
 
 @Component({
-  selector: 'app-modulo3',
-  templateUrl: './modulo3.component.html',
-  styleUrls: ['./modulo3.component.scss']
+    selector: 'app-modulo3',
+    templateUrl: './modulo3.component.html',
+    styleUrls: ['./modulo3.component.scss'],
+    standalone: true,
+    imports: [RetroAct3Component]
 })
 export class Modulo3Component {
 

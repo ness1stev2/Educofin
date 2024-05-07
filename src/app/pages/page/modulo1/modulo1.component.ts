@@ -1,14 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
+import { ViewportScroller, NgStyle, NgClass } from '@angular/common';
 import { filter } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Validacion } from '../../interfaces/crucigrama.interface';
+import { Formm1Component } from '../../components/formm1/formm1.component';
+import { CrucigramaComponent } from '../../components/crucigrama/crucigrama.component';
+import { ActividadM1Component } from '../../components/actividad-m1/actividad-m1.component';
 
 @Component({
-  selector: 'app-modulo1',
-  templateUrl: './modulo1.component.html',
-  styleUrls: ['./modulo1.component.scss']
+    selector: 'app-modulo1',
+    templateUrl: './modulo1.component.html',
+    styleUrls: ['./modulo1.component.scss'],
+    standalone: true,
+    imports: [ActividadM1Component, CrucigramaComponent, NgStyle, Formm1Component, NgClass]
 })
 export class Modulo1Component implements OnInit{
 

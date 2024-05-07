@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { formM3Validator } from '../../validators/form-m3.validator';
+import { NgClass, JsonPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-retro-act3',
-  templateUrl: './retro-act3.component.html',
-  styleUrls: ['./retro-act3.component.scss']
+    selector: 'app-retro-act3',
+    templateUrl: './retro-act3.component.html',
+    styleUrls: ['./retro-act3.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgClass, JsonPipe]
 })
 export class RetroAct3Component {
 

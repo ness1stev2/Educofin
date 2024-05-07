@@ -1,11 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { User } from 'src/app/auth/interfaces';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-perfil',
-  templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.scss']
+    selector: 'app-perfil',
+    templateUrl: './perfil.component.html',
+    styleUrls: ['./perfil.component.scss'],
+    standalone: true,
+    imports: [RouterLink]
 })
 export class PerfilComponent {
 

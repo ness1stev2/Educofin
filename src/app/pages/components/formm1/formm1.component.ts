@@ -1,11 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Preguntas } from '../../interfaces/preguntas.inteface';
+import { NgFor, NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'shared-formm1',
-  templateUrl: './formm1.component.html',
-  styleUrls: ['./formm1.component.scss']
+    selector: 'shared-formm1',
+    templateUrl: './formm1.component.html',
+    styleUrls: ['./formm1.component.scss'],
+    standalone: true,
+    imports: [FormsModule, NgFor, NgClass]
 })
 export class Formm1Component {
 

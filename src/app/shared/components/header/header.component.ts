@@ -1,13 +1,16 @@
 import { Component, HostListener, computed, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Url } from '../../interfaces/url.interface';
 import { User } from 'src/app/auth/interfaces';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'shared-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'shared-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [NgClass, RouterLink, NgFor, NgIf]
 })
 export class HeaderComponent {
 

@@ -1,11 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { letterValidator } from '../../interfaces/custom-validators';
+import { NgStyle, NgFor, NgIf, NgClass } from '@angular/common';
 
 @Component({
-  selector: 'shared-crucigrama',
-  templateUrl: './crucigrama.component.html',
-  styleUrls: ['./crucigrama.component.scss']
+    selector: 'shared-crucigrama',
+    templateUrl: './crucigrama.component.html',
+    styleUrls: ['./crucigrama.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass]
 })
 export class CrucigramaComponent {
 

@@ -1,11 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { letterValidator } from '../../interfaces/custom-validators';
+import { NgStyle, NgFor, NgIf, NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-crucigrama-act2',
-  templateUrl: './crucigrama-act2.component.html',
-  styleUrls: ['./crucigrama-act2.component.scss']
+    selector: 'app-crucigrama-act2',
+    templateUrl: './crucigrama-act2.component.html',
+    styleUrls: ['./crucigrama-act2.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass]
 })
 export class CrucigramaAct2Component {
   myForm2: FormGroup;
