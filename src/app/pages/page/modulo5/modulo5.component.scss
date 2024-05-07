@@ -18,56 +18,290 @@
   }
 
   .inicio {
-    background-image: url(../../../../assets/img-modulo5/1.svg); background-repeat: no-repeat; background-size: cover;
+    background-image: url(../../../../assets/img-modulo5/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    h1{
+      color: #3765ad;
+      font-size: 4rem;
+      text-align: center;
+      @media (max-width: 575px) {
+        font-size: 3rem;
+      }
+    }
   }
 
   .obj-gen {
     padding: 50px 0 20px;
 
-    @media (max-width: 575px) {
-      padding: 5%;
-      height: 326px;
-    }
-
-    .text {
+    .bg{
+      margin: 0 auto;
       max-width: 800px;
-      height: 650px;
       background-image: url(../../../../assets/img-modulo5/4.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      padding: 50px 6% 20px;
+      @media (min-width: 756px){
+        padding: 180px 0;
+      }
+    }
+    .text {
+      padding: 40px 7% 30px;
+      color: white;
     }
   }
 
   .temario {
     padding: 50px 0 20px;
     color: #3066be;
-
-    .text{
+    .bg{
+      margin: 0 auto;
       background-image: url(../../../../assets/img-modulo5/5.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      height: 400px;
+      max-width: 800px;
+      .text{
+        width: 90%;
+        margin: 0 auto;
+        h3{
+          font-size: 3.5rem;
+          text-align: center;
+          @media (max-width: 575px) {
+            padding-top: 15px;
+            font-size: 3rem;
+            margin-bottom: 25px;
+          }
+        }
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+            @media (max-width: 575px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
     }
 
   }
   .introducction {
-    background-image: url(../../../../assets/img-modulo5/6.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     color: #3066be;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 50px 0 20px;
+    .bg{
+      background-image: url(../../../../assets/img-modulo5/6.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      @media (max-width: 575px) {
+        background-position: left;
+        height: 700px;
+      }
+      .text {
+        width:65%;
+        margin: 0 auto;
+        @media (max-width: 575px) {
+          width: 95%;
+          padding-left: 85px;
+          padding-right: 15px;
+        }
+        p{
+          @media (max-width: 575px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
 
-    .text {
+  .que-es{
+    .bg-izquierda{
+      background-image: url(../../../../assets/img-modulo5/Libreta-izquierda.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
 
-      width: 70%;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 70px 30px 170px;
+        @media (max-width: 575px) {
+          padding: 60px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .bg-derecha{
+      background-image: url(../../../../assets/img-modulo5/Libreta-derecha.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 170px 30px 70px;
+        @media (max-width: 575px) {
+          padding: 60px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .ahorro-e-inversion{
+    .bg-izquierda{
+      background-image: url(../../../../assets/img-modulo5/libreta-derecha-pluma.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 20px 30px 240px;
+        @media (max-width: 575px) {
+          padding: 100px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .bg-derecha{
+      background-image: url(../../../../assets/img-modulo5/libreta-izquierda-pluma.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 240px 30px 20px;
+        @media (max-width: 575px) {
+          padding: 60px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .gasto{
+    .bg-izquierda{
+      background-image: url(../../../../assets/img-modulo5/Libreta-izquierda.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 30px 40px 130px;
+        @media (max-width: 575px) {
+          padding: 60px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .bg-derecha{
+      background-image: url(../../../../assets/img-modulo5/Libreta-derecha.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 240px 30px 20px;
+        @media (max-width: 575px) {
+          padding: 60px 20px 30px 20px;
+        }
+
+        p,ul{
+          font-size: 1.2rem;
+          @media (max-width: 575px) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .regla{
+    .bg{
+      background-image: url(../../../../assets/img-modulo5/5.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-width: 800px;
+      margin: 0 auto;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 60px 10px;
+      }
+    }
+  }
+
+  .plan-ahorro{
+    .bg{
+      background-image: url(../../../../assets/img-modulo5/libreta-izquierda-pluma.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-width: 800px;
+      margin: 0 auto;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 60px 10px;
+      }
     }
   }
 }
