@@ -1,17 +1,21 @@
 .modulo5 {
   background-color: #4b939b;
   padding: 60px 0;
+  overflow: hidden;
 
-  p{
+  p {
     font-size: 1.2rem;
+
     @media (max-width: 575px) {
-        font-size: 1rem;
+      font-size: 1rem;
     }
   }
 
-  h2, h3{
+  h2,
+  h3 {
     font-size: 4rem;
     text-align: center;
+
     @media (max-width: 575px) {
       font-size: 2rem;
     }
@@ -22,10 +26,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    h1{
+
+    h1 {
+      transform: rotate(345yoyyoodeg);
       color: #3765ad;
       font-size: 4rem;
       text-align: center;
+
       @media (max-width: 575px) {
         font-size: 3rem;
       }
@@ -35,17 +42,19 @@
   .obj-gen {
     padding: 50px 0 20px;
 
-    .bg{
+    .bg {
       margin: 0 auto;
       max-width: 800px;
       background-image: url(../../../../assets/img-modulo5/4.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      @media (min-width: 756px){
+
+      @media (min-width: 756px) {
         padding: 180px 0;
       }
     }
+
     .text {
       padding: 40px 7% 30px;
       color: white;
@@ -55,7 +64,8 @@
   .temario {
     padding: 50px 0 20px;
     color: #3066be;
-    .bg{
+
+    .bg {
       margin: 0 auto;
       background-image: url(../../../../assets/img-modulo5/5.svg);
       background-repeat: no-repeat;
@@ -63,26 +73,32 @@
       background-position: center;
       height: 400px;
       max-width: 800px;
-      .text{
+
+      .text {
         width: 90%;
         margin: 0 auto;
-        h3{
+
+        h3 {
           font-size: 3.5rem;
           text-align: center;
+
           @media (max-width: 575px) {
             padding-top: 15px;
             font-size: 3rem;
             margin-bottom: 25px;
           }
         }
-        ul{
+
+        ul {
           list-style: none;
           padding: 0;
           margin: 0;
-          li{
+
+          li {
             font-size: 1.5rem;
             margin-bottom: 10px;
             text-align: center;
+
             @media (max-width: 575px) {
               font-size: 1.2rem;
             }
@@ -92,33 +108,41 @@
     }
 
   }
+
   .introducction {
     color: #3066be;
     padding: 50px 0 20px;
-    .bg{
+
+    .bg {
       background-image: url(../../../../assets/img-modulo5/6.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      max-width: 600px;
+      margin: 0 auto;
       height: 500px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+
       @media (max-width: 575px) {
         background-position: left;
         height: 700px;
       }
+
       .text {
-        width:65%;
-        margin: 0 auto;
+        padding-left: 100px;
+        padding-right: 20px;
+
         @media (max-width: 575px) {
           width: 95%;
           padding-left: 85px;
           padding-right: 15px;
         }
-        p{
+
+        p {
           @media (max-width: 575px) {
             font-size: 1.2rem;
           }
@@ -127,46 +151,58 @@
     }
   }
 
-  .que-es{
-    .bg-izquierda{
+  .que-es {
+    .bg-izquierda {
       background-image: url(../../../../assets/img-modulo5/Libreta-izquierda.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      max-width: 850px;
+      margin: 0 auto;
 
-      .text{
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 70px 30px 170px;
+        padding: 60px 70px 30px 150px;
+
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
         }
       }
     }
-    .bg-derecha{
+
+    .bg-derecha {
       background-image: url(../../../../assets/img-modulo5/Libreta-derecha.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      .text{
+      max-width: 800px;
+      margin: 0 auto;
+
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 170px 30px 70px;
+        padding: 60px 150px 20px 70px;
+
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
@@ -175,46 +211,55 @@
     }
   }
 
-  .ahorro-e-inversion{
-    .bg-izquierda{
+  .ahorro-e-inversion {
+    .bg-izquierda {
       background-image: url(../../../../assets/img-modulo5/libreta-derecha-pluma.svg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      max-width: 950px;
+      margin: 0 auto;
 
-      .text{
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 20px 30px 240px;
+        padding: 100px 30px 30px 300px;
+
         @media (max-width: 575px) {
           padding: 100px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
         }
       }
     }
-    .bg-derecha{
+
+    .bg-derecha {
       background-image: url(../../../../assets/img-modulo5/libreta-izquierda-pluma.svg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
-      .text{
+      max-width: 980px;
+      margin: 0 auto;
+
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 240px 30px 20px;
+        padding: 150px 280px 140px 20px;
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
@@ -223,46 +268,55 @@
     }
   }
 
-  .gasto{
-    .bg-izquierda{
+  .gasto {
+    .bg-izquierda {
       background-image: url(../../../../assets/img-modulo5/Libreta-izquierda.svg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      max-width: 850px;
+      margin: 0 auto;
 
-      .text{
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 30px 40px 130px;
+        padding: 60px 70px 30px 150px;
+
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
         }
       }
     }
-    .bg-derecha{
+
+    .bg-derecha {
       background-image: url(../../../../assets/img-modulo5/Libreta-derecha.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      .text{
+
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
         padding: 60px 240px 30px 20px;
+
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
 
-        p,ul{
+        p,
+        ul {
           font-size: 1.2rem;
+
           @media (max-width: 575px) {
             font-size: 1.1rem;
           }
@@ -271,15 +325,16 @@
     }
   }
 
-  .regla{
-    .bg{
+  .regla {
+    .bg {
       background-image: url(../../../../assets/img-modulo5/5.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       max-width: 800px;
       margin: 0 auto;
-      .text{
+
+      .text {
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
@@ -288,19 +343,62 @@
     }
   }
 
-  .plan-ahorro{
-    .bg{
+  .plan-ahorro {
+    .bg {
       background-image: url(../../../../assets/img-modulo5/libreta-izquierda-pluma.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       max-width: 800px;
       margin: 0 auto;
+
+      .text {
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 60px 10px;
+      }
+    }
+  }
+
+  .planificacion{
+    .bg{
+      background-image: url(../../../../assets/img-modulo5/18.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 900px;
+      margin: 0 auto;
+
       .text{
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
         padding: 60px 60px 10px;
+        h3{
+          font-size: 2.2rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .pasos{
+    margin-bottom: 50px;
+    .bg{
+      background-image: url(../../../../assets/img-modulo5/25.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: 600px;
+      margin: 0 auto;
+      .text{
+        color: #3066be;
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 60px 60px 80px 80px;
+        h3{
+          font-size: 2.2rem;
+          text-align: center;
+        }
       }
     }
   }

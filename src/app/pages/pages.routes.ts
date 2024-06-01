@@ -9,6 +9,7 @@ import { Modulo2Component } from './page/modulo2/modulo2.component';
 import { Modulo3Component } from './page/modulo3/modulo3.component';
 import { Modulo4Component } from './page/modulo4/modulo4.component';
 import { Modulo5Component } from './page/modulo5/modulo5.component';
+import { Modulo6Component } from './page/modulo6/modulo6.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +39,10 @@ export const routes: Routes = [
       {
         path: 'modulo-cinco',
         component: Modulo5Component,
+      },
+      {
+        path: 'modulo-seis',
+        component: Modulo6Component,
       },
       {
         path: 'perfil',

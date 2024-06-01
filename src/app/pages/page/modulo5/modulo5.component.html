@@ -3,13 +3,14 @@
   <div class="inicio d-flex flex-column text-center justify-content-center align-items-center text-light">
     <div class="container">
       <div class="titulo">
-        <h1>Modulo 5</h1>
-        <img src="assets/img-modulo5/2.svg" alt="">
+        <h1 class="animate__animated animate__fadeInDown">Modulo 5</h1>
+        <img class="animate__animated animate__zoomInDown animate__delay-2s" src="assets/img-modulo5/2.svg" alt="">
       </div>
     </div>
   </div>
 
-  <div class="obj-gen">
+  @defer (on viewport) {
+  <div class="obj-gen animate__animated animate__bounceInLeft animate__slow">
     <div class="container">
       <div class="bg">
         <!-- <img src="assets/img-modulo5/9.svg" alt=""> -->
@@ -21,12 +22,17 @@
             habilidades para el manejo de su
             economía personal.</p>
         </div>
+
       </div>
-
     </div>
-  </div>
 
-  <div class="temario ">
+  </div>
+  }@placeholder {
+  <div style="height: 620px;"></div>
+  }
+
+  @defer (on viewport) {
+  <div class="temario animate__animated animate__bounceInRight animate__slower">
     <div class="container">
       <div class="bg">
 
@@ -43,14 +49,14 @@
           </ul>
         </div>
       </div>
-
-
-
     </div>
-
-
   </div>
-  <div class="introducction">
+  }@placeholder {
+  <div style="height: 400px;"></div>
+  }
+
+  @defer (on viewport) {
+  <div class="introducction animate__animated animate__fadeInUpBig animate__slower">
     <div class="container">
       <div class="bg">
         <div class="text">
@@ -70,15 +76,18 @@
         </div>
       </div>
     </div>
-
   </div>
+  }@placeholder {
+  <div style="height: 570px;"></div>
+  }
 
   <div class="que-es mb-5">
     <div class="container">
 
       <div class="bg-izquierda mb-5">
 
-        <div class="text">
+        @defer(on viewport){
+        <div class="text animate__animated animate__fadeInTopRight animate__slow">
           <h3>¿QUÉ ES EDUCACIÓN FINANCIERA?</h3>
           <p>Es un proceso de desarrollo de habilidades y actitudes
             que, mediante la asimilación de información
@@ -109,11 +118,16 @@
             Socios en su vida y las mejoras económicas podrán ser
             visibles.</p>
         </div>
+        }@placeholder {
+        <div style="height: 670px;"></div>
+        }
+
 
       </div>
 
       <div class="bg-derecha">
-        <div class="text">
+        @defer(on viewport){
+        <div class="text text animate__animated animate__fadeInTopLeft animate__slow">
           <p>Existe también la seguridad financiera, que varía según las
             necesidades y etapa de la vida en que se encuentre el
             Socio cuando:</p>
@@ -134,6 +148,9 @@
 
           <img src="assets/img-modulo5/8.svg" alt="">
         </div>
+
+        }@placeholder {<div style="height: 670px;"></div>}
+
       </div>
 
     </div>
@@ -143,7 +160,8 @@
     <div class="container">
       <div class="bg-izquierda mb-5">
 
-        <div class="text">
+        @defer(on viewport){
+        <div class="text animate__animated animate__fadeInBottomLeft animate__slow">
 
           <h3>AHORRO E INVERSIÓN</h3>
           <p>Para conseguir la seguridad financiera es primordial
@@ -194,13 +212,12 @@
 
           <!-- <img src="assets/img-modulo5/10.png" width="300" alt="Alcancia de puerquito con una moneda"> -->
         </div>
-
+        }@placeholder {<div style="height: 670px;"></div>}
       </div>
 
-
       <div class="bg-derecha mb-5">
-
-        <div class="text">
+        @defer(on viewport){
+        <div class="text animate__animated animate__fadeInBottomRight animate__slow">
 
           <h3>INGRESO Y GASTO</h3>
           <h3>Ingresos</h3>
@@ -244,14 +261,15 @@
           </p>
 
         </div>
+        }@placeholder {<div style="height: 670px;"></div>}
 
 
       </div>
 
       <div class="gasto mb-5">
         <div class="bg-izquierda">
-          <div class="text">
-
+          @defer(on viewport){
+          <div class="text animate__animated animate__flip animate__slow animate__delay-2s">
             <h3>Gastos</h3>
             <p>Es un egreso o salida de dinero que una persona o empresa
               debe pagar para acreditar su derecho sobre un artículo o al
@@ -279,13 +297,14 @@
             <img src="assets/img-modulo5/14.svg" alt="">
 
           </div>
+          }@placeholder {<div style="height: 670px;"></div>}
         </div>
       </div>
 
       <div class="regla mb-5">
-        <div class="bg">
+        @defer(on viewport){
+        <div class="bg animate__animated animate__zoomInUp animate__slow animate__delay-2s">
           <div class="text">
-
             <strong>Regla 50 – 40 – 10</strong>
             <p>Existe un modelo que menciona los porcentajes
               recomendados para ahorrar y que han demostrado
@@ -299,15 +318,16 @@
               imprevistos, entre otros.</p>
             <p>El 10% son el ahorro, constante e igual, destinado a
               proyectos o necesidades a largo plazo</p>
-
           </div>
         </div>
+        }@placeholder {<div style="height: 670px;"></div>}
       </div>
     </div>
 
     <div class="plan-ahorro">
       <div class="bg-izquierda">
-        <div class="text">
+        @defer(on viewport){
+        <div class="text animate__animated animate__slideInLeft animate__slow animate__delay-2s">
 
           <h3>Plan de ahorro</h3>
           <p>Es un programa para acumular dinero de forma
@@ -335,12 +355,14 @@
           <img src="assets/img-modulo5/17.svg" alt="">
 
         </div>
+        }@placeholder {<div style="height: 670px;"></div>}
       </div>
     </div>
   </div>
 
   <div class="planificacion">
     <div class="bg">
+      @defer(on viewport){
       <div class="text">
         <h3>PLANIFICACIÓN Y PRESUPUESTO INDIVIDUAL/FAMILIAR</h3>
         <h3>¿Qué es un presupuesto?</h3>
@@ -425,11 +447,14 @@
         </ul>
 
       </div>
+
+      }@placeholder {<div style="height: 670px;"></div>}
     </div>
   </div>
 
   <div class="pasos">
     <div class="bg">
+      @defer(on viewport){
       <div class="text">
         <h3>Pasos para elaborar el presupuesto:</h3>
         <ul>
@@ -447,6 +472,7 @@
           </li>
         </ul>
       </div>
+      }@placeholder {<div style="height: 670px;"></div>}
     </div>
   </div>
 

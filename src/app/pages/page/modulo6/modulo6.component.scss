@@ -1,0 +1,230 @@
+.modulo6 {
+
+  span {
+    font-size: 0.8rem;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+
+  .portada {
+    background-image: url(../../../../assets/img-modulo6/2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .title {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(348deg);
+      width: 58%;
+
+      h1 {
+        font-size: 2.5rem;
+
+        @media (min-width: 768px) {
+          font-size: 4rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+
+      span {
+        color: #1666a7;
+        background-color: #abe9ec;
+      }
+    }
+  }
+
+  .obj-gen {
+    background-image: url(../../../../assets/img-modulo6/4.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4b9098;
+    height: auto;
+
+    @media (min-width: 768px) {
+      height: 100vh;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #1666a7;
+    }
+
+    .lib {
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: justify;
+      padding: 4rem;
+    }
+
+    .lib1 {
+      background-image: url(../../../../assets/img-modulo6/5.png);
+    }
+
+    .lib2 {
+      background-image: url(../../../../assets/img-modulo6/6.png);
+    }
+
+    .lib3 {
+      background-image: url(../../../../assets/img-modulo6/7.svg);
+    }
+  }
+
+  .endeudamiento-responsable {
+    background-color: #4b9098;
+
+    .tabla-hoja {
+      background-image: url(../../../../assets/img-modulo6/13.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 12rem 2rem 0;
+
+      @media (min-width: 768px) {
+        padding: 20rem 6rem 0;
+      }
+
+      .marcatextos {
+        background-color: #ecd257;
+        color: #1666a7;
+        display: inline-block;
+        vertical-align: middle;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        margin: 0 auto;
+      }
+
+      .hoja-doblada {
+        background-image: url(../../../../assets/img-modulo6/16.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 2rem 1rem;
+
+        @media (min-width: 768px) {
+          padding: 2rem 5rem;
+          width: 80%;
+        }
+
+      }
+    }
+  }
+
+  .gasto-hormiga {
+    background-color: #4b9098;
+    background-image: url(../../../../assets/img-modulo6/3.svg);
+    padding: 8rem;
+
+    .tabla-hoja-horizontal {
+      background-image: url(../../../../assets/img-modulo6/42.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        padding: 2rem 6rem 2rem 10rem;
+      }
+    }
+  }
+
+  .ahorro-hormiga {
+    background-color: #4b9098;
+
+    .tabla-hoja {
+      background-image: url(../../../../assets/img-modulo6/13.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 12rem 2rem 0;
+
+      @media (min-width: 768px) {
+        padding: 15rem 6rem 7rem;
+      }
+    }
+  }
+
+  .tasas-interes {
+    background-color: #4b9098;
+    background-image: url(../../../../assets/img-modulo6/39.svg);
+    padding: 8rem;
+
+    .tabla-hoja-horizontal {
+      background-image: url(../../../../assets/img-modulo6/42.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        padding: 5rem 6rem 2rem 12rem;
+      }
+    }
+  }
+
+  .tipo-creditos {
+    background-color: #4b9098;
+
+    .tabla-hoja-horizontal {
+      background-image: url(../../../../assets/img-modulo6/42.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+
+      @media (min-width: 768px) {
+        padding: 5rem 6rem 2rem 12rem;
+      }
+
+      p {
+        background-color: #4b9098;
+        color: white;
+        padding: 2rem;
+        border-radius: 2rem;
+      }
+
+    }
+  }
+
+  .simuladores {
+    background-color: #4b9098;
+    padding: 2rem 0;
+
+    .compu {
+      background-image: url(../../../../assets/img-modulo6/36.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 4rem 12rem 13rem 12rem;
+
+      a {
+        background-color: #ecd257;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .inversion-fijo {
+    background-image: url(../../../../assets/img-modulo6/3.svg);
+    .tabla-hoja {
+      background-image: url(../../../../assets/img-modulo6/13.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      padding: 12rem 2rem 0;
+
+      @media (min-width: 768px) {
+        padding: 15rem 6rem 7rem;
+      }
+    }
+  }
+}

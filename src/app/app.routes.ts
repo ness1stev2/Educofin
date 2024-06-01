@@ -18,7 +18,7 @@ export const routes: Routes = [
     canActivate: [ isNotAuthenticatedGuard ],
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
   }, */
-  /* { path: '**', redirectTo: 'auth' }, */
+  /* { path: '**', redirectTo: 'auth' },*/
   { path: '**', redirectTo: 'inicio' },
   {
     path: '404',
