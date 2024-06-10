@@ -1,0 +1,69 @@
+<div class="">
+  <div class="container">
+    <h2>RETROALIMENTACIÓN.</h2>
+
+    <p id="introduccion">
+      Completa la frase, en la parte inferior de la hoja encontrarás las palabras
+      que forman las respuestas.
+    </p>
+
+    <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
+      <p>
+        1.- Proceso de desarrollo de habilidades y
+        actitudes que, mediante la asimilación de
+        información comprensible, con
+        herramientas básicas de administración de
+        recursos y planeación, permiten a los
+        individuos tomar decisiones personales y
+        sociales de carácter económico.
+      </p>
+      <input type="text" name="" id="" alt="educación financiera" formControlName="resp1" style="width: 60px;">
+
+      <p>
+        2.- Consiste en separar o reservar una parte
+        de los ingresos con el propósito de hacer
+        uso en el futuro ya sea para un gasto
+        previsto, imprevisto, emergencia o
+        inversión.
+      </p>
+      <input type="text" name="" id="" alt="educación financiera" formControlName="resp2" style="width: 60px;">
+
+      <p>3.- Es un egreso o salida de dinero que una
+        persona o empresa debe pagar para
+        acreditar su derecho de adquisición sobre
+        un artículo o a recibir un servicio.
+      </p>
+      <input type="text" name="" id="" alt="educación financiera" formControlName="resp3" style="width: 60px;">
+
+      <p>
+        Es un programa para acumular dinero de
+        forma organizada, realista y proyectado a
+        una meta especifica.
+      </p>
+      <input type="text" name="" id="" alt="educación financiera" formControlName="resp4" style="width: 60px;">
+
+      <p>
+        Es la previsión de ingresos y gastos que
+        vamos a tener durante un período de
+        tiempo determinado.
+      </p>
+      <input type="text" name="" id="" alt="educación financiera" formControlName="resp5" style="width: 60px;">
+
+    </form>
+
+    <h3>RESPUESTAS:</h3>
+
+    <div class="row gap-2">
+      <small [ngClass]="{'success': respForm.controls.resp2.valid}">A) AHORRO</small>
+      <small [ngClass]="{'success': respForm.controls.resp5.valid}">B) PRESUPUESTO</small>
+      <small [ngClass]="{'success': respForm.controls.resp3.valid}">C) GASTO</small>
+      <small [ngClass]="{'success': respForm.controls.resp4.valid}">D) PLAN DE AHORRO</small>
+      <small [ngClass]="{'success': respForm.controls.resp1.valid}">E) EDUCACION FINANCIERA</small>
+      <small >F) REGLA 50-40-10</small>
+      <small >G) EGRESO FIJO VARIABLE PORCENTUAL</small>
+      <small >H) EDUCACION COOPERATIVA</small>
+      <small >I) IVA</small>
+    </div>
+
+  </div>
+</div>
