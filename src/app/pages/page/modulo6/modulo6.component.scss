@@ -63,19 +63,21 @@
       background-repeat: no-repeat;
       background-size: cover;
       text-align: justify;
-      padding: 4rem;
     }
 
     .lib1 {
       background-image: url(../../../../assets/img-modulo6/5.png);
+      padding: 4rem 3rem 4rem 6rem;
     }
 
     .lib2 {
       background-image: url(../../../../assets/img-modulo6/6.png);
+      padding: 4rem;
     }
 
     .lib3 {
       background-image: url(../../../../assets/img-modulo6/7.svg);
+      padding: 4rem;
     }
   }
 
@@ -87,10 +89,10 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 12rem 2rem 0;
+      padding: 16rem 1.5rem 5rem;
 
       @media (min-width: 768px) {
-        padding: 20rem 6rem 0;
+        padding: 13rem 6rem 1rem;
       }
 
       .marcatextos {
@@ -113,7 +115,7 @@
         padding: 2rem 1rem;
 
         @media (min-width: 768px) {
-          padding: 2rem 5rem;
+          padding: 2rem;
           width: 80%;
         }
 
@@ -124,13 +126,15 @@
   .gasto-hormiga {
     background-color: #4b9098;
     background-image: url(../../../../assets/img-modulo6/3.svg);
-    padding: 8rem;
+
 
     .tabla-hoja-horizontal {
       background-image: url(../../../../assets/img-modulo6/42.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      max-width: 1300px;
+      padding: 70px 20px;
 
       @media (min-width: 768px) {
         padding: 2rem 6rem 2rem 10rem;
@@ -146,10 +150,12 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 12rem 2rem 0;
+      padding: 14rem 1rem 5rem;
+      max-width: 860px;
+      margin: 0 auto;
 
       @media (min-width: 768px) {
-        padding: 15rem 6rem 7rem;
+        padding: 14rem 1rem 7rem;
       }
     }
   }
@@ -157,16 +163,17 @@
   .tasas-interes {
     background-color: #4b9098;
     background-image: url(../../../../assets/img-modulo6/39.svg);
-    padding: 8rem;
 
     .tabla-hoja-horizontal {
       background-image: url(../../../../assets/img-modulo6/42.svg);
       background-repeat: no-repeat;
-      background-position: left;
+      background-position: center;
       background-size: cover;
+      padding: 5rem 1rem;
 
       @media (min-width: 768px) {
-        padding: 5rem 6rem 2rem 12rem;
+        background-position: left;
+        padding: 5rem 2rem 4rem 11rem;
       }
     }
   }
@@ -177,11 +184,12 @@
     .tabla-hoja-horizontal {
       background-image: url(../../../../assets/img-modulo6/42.svg);
       background-repeat: no-repeat;
-      background-position: left;
+      background-position: center;
       background-size: cover;
 
       @media (min-width: 768px) {
-        padding: 5rem 6rem 2rem 12rem;
+        background-position: left;
+        padding: 5rem 1rem 5rem 12rem;
       }
 
       p {
@@ -203,11 +211,18 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 4rem 12rem 13rem 12rem;
+      padding: 4rem 1rem 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        padding: 4rem 9rem 7rem 9rem;
+      }
+
 
       a {
         background-color: #ecd257;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         margin-bottom: 1rem;
       }
     }
@@ -220,10 +235,13 @@
       background-repeat: no-repeat;
       background-position: top;
       background-size: cover;
-      padding: 12rem 2rem 0;
+      padding: 8rem 1rem 3rem;
+      margin-bottom: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
 
       @media (min-width: 768px) {
-        padding: 15rem 6rem 7rem;
+        padding: 12rem 6rem 3rem;
       }
     }
   }

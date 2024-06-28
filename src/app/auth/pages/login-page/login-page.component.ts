@@ -1,13 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { User } from '../../interfaces';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
+  imports: [NgClass, ReactiveFormsModule],
+  standalone: true,
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {

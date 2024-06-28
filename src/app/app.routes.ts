@@ -16,14 +16,14 @@ export const routes: Routes = [
   /* {
     path: 'auth',
     canActivate: [ isNotAuthenticatedGuard ],
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
+    loadChildren: () => import('./auth/auth.routes').then( m => m.routes),
   }, */
   /* { path: '**', redirectTo: 'auth' },*/
   { path: '**', redirectTo: 'inicio' },
-  {
+  /* {
     path: '404',
     component: Error404PageComponent
   },
-  /* { path: '**', redirectTo: 'auth' } */
+  { path: '**', redirectTo: 'auth' } */
 
 ];

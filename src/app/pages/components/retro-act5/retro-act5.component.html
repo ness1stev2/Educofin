@@ -1,69 +1,128 @@
-<div class="">
+<div style="margin-bottom: 200px;">
   <div class="container">
-    <h2>RETROALIMENTACIÓN.</h2>
+    <h2 style="color: var(--color-primario)" class="fs-1">RETROALIMENTACIÓN.</h2>
 
-    <p id="introduccion">
+    <p id="introduccion" style="color: var(--color-secundario)" class="fs-5">
       Completa la frase, en la parte inferior de la hoja encontrarás las palabras
       que forman las respuestas.
     </p>
 
-    <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
-      <p>
-        1.- Proceso de desarrollo de habilidades y
-        actitudes que, mediante la asimilación de
-        información comprensible, con
-        herramientas básicas de administración de
-        recursos y planeación, permiten a los
-        individuos tomar decisiones personales y
-        sociales de carácter económico.
-      </p>
-      <input type="text" name="" id="" alt="educación financiera" formControlName="resp1" style="width: 60px;">
+    <div class="row">
+      <div class="col-6">
+        <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
 
-      <p>
-        2.- Consiste en separar o reservar una parte
-        de los ingresos con el propósito de hacer
-        uso en el futuro ya sea para un gasto
-        previsto, imprevisto, emergencia o
-        inversión.
-      </p>
-      <input type="text" name="" id="" alt="educación financiera" formControlName="resp2" style="width: 60px;">
+          <div
+            [ngClass]="{'respCor':evaluarRespuesta('resp1') === true, 'respInc' : evaluarRespuesta('resp1') === false, 'select': inputSelect('resp1')}"
+            style="border-radius: 20px; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+            class="py-4 px-5 mb-4">
+            <p>
+              1.- Proceso de desarrollo de habilidades y
+              actitudes que, mediante la asimilación de
+              información comprensible, con
+              herramientas básicas de administración de
+              recursos y planeación, permiten a los
+              individuos tomar decisiones personales y
+              sociales de carácter económico.
+            </p>
+            <input type="text" maxlength="1"  formControlName="resp1"
+              class="rounded-3 text-center border border-2" style="width: 40px;">
+              @if(respForm.controls.resp1.invalid && submitted){
+                <span>Campo requerido</span>
+              }
 
-      <p>3.- Es un egreso o salida de dinero que una
-        persona o empresa debe pagar para
-        acreditar su derecho de adquisición sobre
-        un artículo o a recibir un servicio.
-      </p>
-      <input type="text" name="" id="" alt="educación financiera" formControlName="resp3" style="width: 60px;">
+          </div>
 
-      <p>
-        Es un programa para acumular dinero de
-        forma organizada, realista y proyectado a
-        una meta especifica.
-      </p>
-      <input type="text" name="" id="" alt="educación financiera" formControlName="resp4" style="width: 60px;">
+          <div
+            [ngClass]="{'respCor':evaluarRespuesta('resp2') === true, 'respInc' : evaluarRespuesta('resp2') === false, 'select': inputSelect('resp2')}"
+            style="border-radius: 20px; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+            class="py-4 px-5 mb-4">
+            <p>
+              2.- Consiste en separar o reservar una parte
+              de los ingresos con el propósito de hacer
+              uso en el futuro ya sea para un gasto
+              previsto, imprevisto, emergencia o
+              inversión.
+            </p>
+            <input type="text" maxlength="1"  formControlName="resp2"
+              class="rounded-3 text-center border border-2" style="width: 40px;">
+              @if(respForm.controls.resp2.invalid && submitted){
+                <span>Campo requerido</span>
+              }
+          </div>
 
-      <p>
-        Es la previsión de ingresos y gastos que
-        vamos a tener durante un período de
-        tiempo determinado.
-      </p>
-      <input type="text" name="" id="" alt="educación financiera" formControlName="resp5" style="width: 60px;">
+          <div
+            [ngClass]="{'respCor':evaluarRespuesta('resp3') === true, 'respInc' : evaluarRespuesta('resp3') === false, 'select': inputSelect('resp3')}"
+            style="border-radius: 20px; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+            class="py-4 px-5 mb-4">
+            <p>3.- Es un egreso o salida de dinero que una
+              persona o empresa debe pagar para
+              acreditar su derecho de adquisición sobre
+              un artículo o a recibir un servicio.
+            </p>
+            <input type="text" maxlength="1"  formControlName="resp3"
+              class="rounded-3 text-center border border-2" style="width: 40px;">
+              @if(respForm.controls.resp3.invalid && submitted){
+                <span>Campo requerido</span>
+              }
+          </div>
 
-    </form>
+          <div
+            [ngClass]="{'respCor':evaluarRespuesta('resp4') === true, 'respInc' : evaluarRespuesta('resp4') === false, 'select': inputSelect('resp4')}"
+            style="border-radius: 20px; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+            class="py-4 px-5 mb-4">
+            <p>
+              Es un programa para acumular dinero de
+              forma organizada, realista y proyectado a
+              una meta especifica.
+            </p>
+            <input type="text" maxlength="1"  formControlName="resp4"
+              class="rounded-3 text-center border border-2" style="width: 40px;">
+              @if(respForm.controls.resp4.invalid && submitted){
+                <span>Campo requerido</span>
+              }
+          </div>
 
-    <h3>RESPUESTAS:</h3>
+          <div
+            [ngClass]="{'respCor':evaluarRespuesta('resp5') === true, 'respInc' : evaluarRespuesta('resp5') === false, 'select': inputSelect('resp5')}"
+            style="border-radius: 20px; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);"
+            class="py-4 px-5 mb-4">
+            <p>
+              Es la previsión de ingresos y gastos que
+              vamos a tener durante un período de
+              tiempo determinado.
+            </p>
+            <input type="text" maxlength="1"  formControlName="resp5"
+              class="rounded-3 text-center border border-2" style="width: 40px;">
+              @if(respForm.controls.resp5.invalid && submitted){
+                <span>Campo requerido</span>
+              }
+          </div>
+          <button type="submit" class="rounded-3 border border-1 border-primary px-4 py-2"
+            style="width: 100%;">Verificar</button>
 
-    <div class="row gap-2">
-      <small [ngClass]="{'success': respForm.controls.resp2.valid}">A) AHORRO</small>
-      <small [ngClass]="{'success': respForm.controls.resp5.valid}">B) PRESUPUESTO</small>
-      <small [ngClass]="{'success': respForm.controls.resp3.valid}">C) GASTO</small>
-      <small [ngClass]="{'success': respForm.controls.resp4.valid}">D) PLAN DE AHORRO</small>
-      <small [ngClass]="{'success': respForm.controls.resp1.valid}">E) EDUCACION FINANCIERA</small>
-      <small >F) REGLA 50-40-10</small>
-      <small >G) EGRESO FIJO VARIABLE PORCENTUAL</small>
-      <small >H) EDUCACION COOPERATIVA</small>
-      <small >I) IVA</small>
+        </form>
+      </div>
+      <div class="col-6">
+        <div class="">
+          <h3 class="fs-2">RESPUESTAS:</h3>
+
+          <div class="row gap-2 fs-5">
+            <small [ngClass]="{'respCor': evaluarRespuesta('resp2')}"><strong>A)</strong> AHORRO</small>
+            <small><strong>F)</strong> REGLA 50-40-10</small>
+            <small [ngClass]="{'respCor': evaluarRespuesta('resp5')}"><strong>B)</strong> PRESUPUESTO</small>
+            <small><strong>G)</strong> EGRESO FIJO VARIABLE PORCENTUAL</small>
+            <small [ngClass]="{'respCor': evaluarRespuesta('resp3')}"><strong>C)</strong> GASTO</small>
+            <small><strong>E)</strong> EDUCACION COOPERATIVA</small>
+            <small [ngClass]="{'respCor': evaluarRespuesta('resp4')}"><strong>D)</strong> PLAN DE AHORRO</small>
+            <small><strong>I)</strong> IVA</small>
+            <small [ngClass]="{'respCor': evaluarRespuesta('resp1')}"><strong>H)</strong> EDUCACION
+              FINANCIERA</small>
+          </div>
+        </div>
+
+      </div>
     </div>
+
 
   </div>
 </div>

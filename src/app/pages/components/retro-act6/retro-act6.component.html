@@ -1,45 +1,93 @@
-<div class="container">
+<div class="container mt-5" style="margin-bottom: 200px; max-width: 1100px;">
 
-  <h2>RETROALIMENTACIÓN</h2>
+  <h2 style="color: var(--color-primario)" class="fs-1">RETROALIMENTACIÓN</h2>
 
-  <p>Relaciona las siguientes definiciones con los conceptos plasmados en el recuadro inferior.</p>
+  <p style="color: var(--color-secundario)" class="fs-5">Relaciona las siguientes definiciones con los conceptos
+    plasmados en el recuadro inferior.</p>
 
-  <p>1) Es aquella deuda que una persona administra adecuadamente, que consiste en un préstamo acorde
-    a su capacidad de pago y que ha sido adquirida con el objetivo de alcanzar una meta concreta.</p>
-  <p>2) Son pequeños gastos que se hacen a diario y que, de alguna manera, se podría prescindir de ellos
-    sin problema alguno. Es común no darse cuenta de todas las compras innecesarias que se realizan
-    porque aparentemente suponen un importe muy bajo, pero que, sumado puede ser un monto
-    bastante significativo.</p>
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp6') === true, 'respInc' : evaluarRespuesta('resp6') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>1)</strong> Es aquella deuda que una persona administra adecuadamente, que consiste en un
+      préstamo acorde
+      a su capacidad de pago y que ha sido adquirida con el objetivo de alcanzar una meta concreta.</p>
+  </div>
 
-  <p>3) Consiste en guardar pequeñas cantidades de dinero, pero de forma constante y consciente.
-    Guardando la cantidad que se pretendía gastar.</p>
-  <p>4) Es un porcentaje aplicado a la operación que se realiza y representa el costo del dinero.</p>
-  <p>5) Es un instrumento de ahorro. Se trata de un depósito de dinero que se realiza por un tiempo
-    determinado. Concluido éste, la institución Financiera reembolsa el importe invertido más el interés
-    generado.</p>
-  <p>6) Es una calculadora en línea que permite hacer una estimación de cuotas y plazos para un préstamo.
-    Ayuda a tomar una decisión apropiada al momento de solicitar un crédito, porque se logra determinar
-    su valor mensual en función de la tasa de interés propuesta.</p>
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp2') === true, 'respInc' : evaluarRespuesta('resp2') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>2)</strong> Son pequeños gastos que se hacen a diario y que, de alguna manera, se podría
+      prescindir de ellos
+      sin problema alguno. Es común no darse cuenta de todas las compras innecesarias que se realizan
+      porque aparentemente suponen un importe muy bajo, pero que, sumado puede ser un monto
+      bastante significativo.</p>
+  </div>
 
-  Escribe el número de la respuesta en el inciso
+
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp1') === true, 'respInc' : evaluarRespuesta('resp1') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>3)</strong> Consiste en guardar pequeñas cantidades de dinero, pero de forma constante y
+      consciente.
+      Guardando la cantidad que se pretendía gastar.</p>
+  </div>
+
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp5') === true, 'respInc' : evaluarRespuesta('resp5') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>4)</strong> Es un porcentaje aplicado a la operación que se realiza y representa el costo
+      del dinero.</p>
+  </div>
+
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp3') === true, 'respInc' : evaluarRespuesta('resp3') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>5)</strong> Es un instrumento de ahorro. Se trata de un depósito de dinero que se realiza
+      por un tiempo
+      determinado. Concluido éste, la institución Financiera reembolsa el importe invertido más el interés
+      generado.</p>
+  </div>
+
+  <div [ngClass]="{'respCor':evaluarRespuesta('resp4') === true, 'respInc' : evaluarRespuesta('resp4') === false}"
+    style="border-radius: 20px; box-shadow: -20px 1px 20px 0px rgb(0 0 0 / 0.1), -20px 0px 20px -6px rgb(0 0 0 / 0.1);"
+    class="py-2 px-4 mb-4">
+    <p class="mb-0"><strong>6)</strong> Es una calculadora en línea que permite hacer una estimación de cuotas y plazos
+      para un préstamo.
+      Ayuda a tomar una decisión apropiada al momento de solicitar un crédito, porque se logra determinar
+      su valor mensual en función de la tasa de interés propuesta.</p>
+  </div>
+
+
+  <p style="color: var(--color-secundario)" class="fs-5">Escribe el número de la respuesta en el inciso</p>
 
   <!-- Crea una tabla de 3 x 2 -->
   <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
-    <table>
-      <tr>
-        <td>Ahorro hormiga (<input type="text" name="" id="" alt="4" formControlName="resp1" style="width: 60px;">)</td>
-        <td>Gasto hormiga (<input type="text" name="" id="" alt="2" formControlName="resp2" style="width: 60px;">)</td>
-        <td>Plazo fijo (<input type="text" name="" id="" alt="3" formControlName="resp3" style="width: 60px;">)</td>
-      </tr>
-      <tr>
-        <td>Simulador de crédito (<input type="text" name="" id="" alt="1" formControlName="resp4"
-            style="width: 60px;">)</td>
-        <td>Tasa de interés (<input type="text" name="" id="" alt="5" formControlName="resp5" style="width: 60px;">)
-        </td>
-        <td>Endeudamiento responsable (<input type="text" name="" id="" alt="6" formControlName="resp6"
-            style="width: 60px;">)</td>
-      </tr>
-    </table>
-    <button type="submit" [disabled]="!respForm.valid">Submit</button>
+    <div class="d-flex flex-wrap gap-2">
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp1') === true, 'respInc' : evaluarRespuesta('resp1') === false, 'select': inputSelect('resp1')}">Ahorro hormiga <input type="text" maxlength="1" alt="4" class="border border-2 rounded-pill text-center" formControlName="resp1" style="width: 30px;"></p>
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp2') === true, 'respInc' : evaluarRespuesta('resp2') === false, 'select': inputSelect('resp2')}">Gasto hormiga <input type="text" maxlength="1" alt="2" class="border border-2 rounded-pill text-center" formControlName="resp2" style="width: 30px;"></p>
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp3') === true, 'respInc' : evaluarRespuesta('resp3') === false, 'select': inputSelect('resp3')}">Plazo fijo <input type="text" maxlength="1" alt="3" class="border border-2 rounded-pill text-center" formControlName="resp3" style="width: 30px;"></p>
+
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp4') === true, 'respInc' : evaluarRespuesta('resp4') === false, 'select': inputSelect('resp4')}">Simulador de crédito <input type="text" maxlength="1" alt="1" class="border border-2 rounded-pill text-center" formControlName="resp4" style="width: 30px;"></p>
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp5') === true, 'respInc' : evaluarRespuesta('resp5') === false, 'select': inputSelect('resp5')}">Tasa de interés <input type="text" maxlength="1" alt="5" class="border border-2 rounded-pill text-center" formControlName="resp5" style="width: 30px;">
+      </p>
+      <p class="inciso" [ngClass]="{'respCor':evaluarRespuesta('resp6') === true, 'respInc' : evaluarRespuesta('resp6') === false, 'select': inputSelect('resp6')}">Endeudamiento responsable <input type="text" maxlength="1" alt="6" class="border border-2 rounded-pill text-center" formControlName="resp6"
+          style="width: 30px;"></p>
+
+    </div>
+
+    <button type="submit" class="rounded-3 border border-1 border-primary px-4 py-2"
+      style="width: 100%; max-width: 200px; margin: 0 auto;">Submit</button>
   </form>
+
+  <div [ngClass]="respForm.valid && submitted ? 'd-block' : 'd-none'" class="position-relative" style="width: 100%; height: 100vh;">
+    <div class="position-fixed top-50 start-50 translate-middle" style="background-image: url(../../../../assets/confeti.webp); width: 100%; height: 100vh;">
+      <img src="../../../../assets/aplause.gif" alt="Aplauso gif" width="120px">
+      <h3 class="fs-2"><strong> FELICIDADES COMPLETASTE EXITOSAMENTE EL MODULO 1 </strong></h3>
+      <p class="fs-3">Tu avance ha sido guardado y aparecera en tu perfil</p>
+      <p class="fs-4">Serás redirigido al menú de inicio en: <strong>{{contador}}</strong></p>
+    </div>
+
+  </div>
+
+
 </div>

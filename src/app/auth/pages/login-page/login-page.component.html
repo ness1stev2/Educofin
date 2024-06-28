@@ -10,7 +10,7 @@
         </div>
         <div class="box singup">
             <h2>¿No tienes una cuenta?</h2>
-            <button class="singupBtn" (click)="toggleActive()">Resgistrarme</button>
+            <button class="singupBtn" (click)="toggleActive()">Registrate</button>
         </div>
     </div>
     <!--Contenedor formularios (fondo blanco)-->
@@ -34,7 +34,7 @@
         <!--Formulario Registro-->
         <div class="form singupForm">
             <form id="formulario" [formGroup]="myFormRegister" (ngSubmit)="register()" >
-                <h3>Resgistrarte</h3>
+                <h3>Registrate</h3>
                 <input type="text" placeholder="No. Socio" formControlName="nSocio" required>
                 <input type="text" placeholder="Nombre Completo" formControlName="name" required>
                 <input type="email" placeholder="Correo" formControlName="email" required>

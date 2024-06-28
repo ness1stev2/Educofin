@@ -164,7 +164,7 @@
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 70px 30px 150px;
+        padding: 95px 20px 30px 20px;
 
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
@@ -186,7 +186,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      max-width: 800px;
+      max-width: 750px;
       margin: 0 auto;
 
       .text {
@@ -251,7 +251,7 @@
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 150px 280px 140px 20px;
+        padding: 80px 230px 170px 20px;
         @media (max-width: 575px) {
           padding: 60px 20px 30px 20px;
         }
@@ -366,19 +366,25 @@
       background-image: url(../../../../assets/img-modulo5/18.svg);
       background-repeat: no-repeat;
       background-size: cover;
-      max-width: 900px;
       margin: 0 auto;
 
       .text{
         color: #3066be;
         font-size: 1.2rem;
         text-align: justify;
-        padding: 60px 60px 10px;
         h3{
           font-size: 2.2rem;
           text-align: center;
         }
       }
+    }
+    .bg-1{
+      max-width: 715px;
+      padding: 9rem 7rem 4rem 5rem;
+    }
+    .bg-2{
+      padding: 9rem 5rem 10rem;
+      max-width: 600px;
     }
   }
 
