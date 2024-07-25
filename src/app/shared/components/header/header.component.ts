@@ -54,12 +54,6 @@ export class HeaderComponent {
     this.authService.logout();
   }
 
-  // metodo que cierra la sesion
-  /* onLogout(){
-    this.authService.logout();
-    this.router.navigate(['/auth/sesion'])
-  } */
-
   /* get user(): Usuario | undefined{
     return this.authService.currentUser;
   } */

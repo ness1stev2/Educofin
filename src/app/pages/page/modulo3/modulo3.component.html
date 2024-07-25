@@ -7,33 +7,36 @@
     </div>
   </section>
 
-
-  <section class="objetivo-general">
-    <div class="container">
-      <div class="row justify-content-center align-items-center mb-5">
-        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
-          <img class="obj-gen-img fade-in-left" (window:scroll)="onScrollFadeInLeft()" src="assets/img-modulo3/objetivo-general.svg" alt="cinta objetivo general">
+  @defer(on viewport){
+    <section class="objetivo-general">
+      <div class="container">
+        <div class="row justify-content-center align-items-center mb-5">
+          <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+            <img class="obj-gen-img fade-in-left" (window:scroll)="onScrollFadeInLeft()" src="assets/img-modulo3/objetivo-general.svg" alt="cinta objetivo general">
+          </div>
+          <div class="col-12 col-md-6 pt-5 pt-md-0 d-flex justify-content-center">
+            <img class="fade-in-right" (window:scroll)="onScrollFadeInRight()" src="assets/img-modulo3/og-engranajes.svg" alt="engranajes">
+          </div>
         </div>
-        <div class="col-12 col-md-6 pt-5 pt-md-0 d-flex justify-content-center">
-          <img class="fade-in-right" (window:scroll)="onScrollFadeInRight()" src="assets/img-modulo3/og-engranajes.svg" alt="engranajes">
+
+        <div class="tema ms-md-5 pt-5 text-center text-md-start fade-in-left">
+          <h2>TEMA</h2>
+          <ul>
+            <li>• Elementos que las integran</li>
+            <li>• Legislación y estructura</li>
+            <li>• La Asamblea General</li>
+            <li>• Actividad: completa el mapa conceptual</li>
+            <li>• Gobierno Corporativo: Consejo de Administración</li>
+            <li>• Gobierno Corporativo: Consejo de Vigilancia</li>
+            <li>• Gobierno Corporativo: Dirección General</li>
+            <li>• Retroalimentación</li>
+          </ul>
         </div>
       </div>
-
-      <div class="tema ms-md-5 pt-5 text-center text-md-start fade-in-left">
-        <h2>TEMA</h2>
-        <ul>
-          <li>• Elementos que las integran</li>
-          <li>• Legislación y estructura</li>
-          <li>• La Asamblea General</li>
-          <li>• Actividad: completa el mapa conceptual</li>
-          <li>• Gobierno Corporativo: Consejo de Administración</li>
-          <li>• Gobierno Corporativo: Consejo de Vigilancia</li>
-          <li>• Gobierno Corporativo: Dirección General</li>
-          <li>• Retroalimentación</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
+  } @placeholder {
+    <div class=""></div>
+  }
 
 
   <section class="introduccion">

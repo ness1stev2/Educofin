@@ -1,16 +1,19 @@
 import { JsonPipe, NgClass } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { formM3Validator } from '../../validators/form-m3.validator';
+import { DoneModuleComponent } from '../done-module/done-module.component';
 
 @Component({
   selector: 'app-retro-act6',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, NgClass, JsonPipe],
+  imports: [DoneModuleComponent ,FormsModule, ReactiveFormsModule, NgClass, JsonPipe],
   templateUrl: './retro-act6.component.html',
   styleUrl: '../retro-act5/retro-act5.component.scss'
 })
 export class RetroAct6Component {
+
+  finalizadoP: boolean = false;
 
   private fb = inject(FormBuilder)
   respForm = this.fb.group({
@@ -22,7 +25,7 @@ export class RetroAct6Component {
     resp6: ['', [Validators.required, formM3Validator('1')]],
   })
 
-  submitted = false;
+  public submitted: boolean = false;
 
   inputSelect(input: string) : boolean | undefined {
     return this.respForm.get(input)?.touched && this.respForm.get(input)?.value.length > 0;
@@ -30,6 +33,9 @@ export class RetroAct6Component {
 
   evaluarRespuesta(input: string): boolean | undefined {
     if (this.respForm.get(input)?.valid && this.submitted) {
+      if (this.respForm.valid) {
+        this.finalizadoP = true;
+      }
       return true
     }else if(this.submitted){
       return false;
@@ -39,27 +45,6 @@ export class RetroAct6Component {
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.respForm.value);
-  }
-
-  showModal = false;
-  finalizadoP: boolean = false;
-
-  cerrarPopup() {
-    this.showModal = false;
-    this.finalizadoP = true;
-  }
-
-  public contador: number = 10;
-
-  iniciarContador() {
-    const interval = setInterval(() => {
-      this.contador--;
-
-      if (this.contador === 0) {
-        clearInterval(interval);
-      }
-    }, 1000);
   }
 
 }

@@ -1,78 +1,10 @@
-@media (max-width: 650px) {
-  #mensaje {
-    width: 300px;
-  }
 
-  .col-md-8 {
-    padding: 0 0 0 1%;
-  }
-
-  .casilla {
-    width: 25px;
-    height: 25px;
-    font-size: 11px;
-  }
-
-  .table {
-    background-color: white;
-    width: 300px;
-  }
-}
-
-@media (max-width: 470px) {
-  #mensaje {
-    width: 300px;
-  }
-
-  .col-md-8 {
-    padding: 0 0 0 5%;
-  }
-
-  .casilla {
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
-  }
-
-  .table {
-    background-color: white;
-    width: 280px;
-  }
-}
-
-@media (max-width: 400px) {
-  #mensaje {
-    width: 280px;
-  }
-
-  .col-md-8 {
-    padding: 0 0 0 4%;
-  }
-
-  .casilla {
-    width: 17px;
-    height: 17px;
-    font-size: 10px;
-  }
-
-  .table {
-    width: 280px;
-  }
-
-
-}
 
 * {
-
   font-family: "Century Gothic", Times, sans-serif;
 }
 
 .cover {
-  height: 450px;
-  margin-bottom: 100px;
-  margin-top: 150px;
-  background-image: url(/assets/fondot2.png);
-  background-size: cover;
 
   .container__info {
     max-width: 400px;
@@ -120,11 +52,6 @@
 
 }
 
-.container__cover {
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px;
-}
 
 /*----------------- BOTONES -------------------*/
 
@@ -169,80 +96,19 @@
 
 
 /*/////// Contenedor del titulo del tema /////////////////////*/
-.tema {
-  margin-bottom: 50px;
-}
+
 
 /*Contenedor del texto del tirulo el espacio que abarca*/
 .container__titulo {
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px 0;
-}
-
-/*Estilos del titulo "Temario" */
-.container__titulo h1 {
-  margin: auto;
-  max-width: 800px;
-  font-size: 60px;
-  font-weight: 700;
-  color: var(--color-primario)
-}
-
-/* ////////////// TERMINAN ESTILOS DEL TITULO DEL TEMA //////*/
-
-/*estilos del contenedor PADRE del texto de introduccion*/
-.container__intro {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-/*ESTILOS DEL CONTENEDOR QUE RESGUARDA EL TEXTO */
-.txt__introduccion {
-  border-radius: 20px;
-  width: 1000px;
-  background: #c1ffb1;
-  display: flex;
-
-}
-
-/*estilos del texto de introduccion*/
-.txt__introduccion p {
-  font-size: 20px;
-  text-align: justify;
-  padding: 10px;
-  color: #1B5C35;
-}
-
-
-/**************ESTILOS DE LOS TEMAS DESDE EL TITULO HASTA EL TEXTO-******************/
-
-/*estilos del contenedor PADRE del texto del TEMA*/
-.container__tema {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-/*ESTILOS DEL CONTENEDOR QUE RESGUARDA EL PDF */
-.pdf__tema {
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pdfview {
-  display: flex;
-  width: 900px;
-  height: 100vh;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgb(109 157 197), 0 6px 20px 0 rgb(48 102 190);
+  h1 {
+    margin: auto;
+    max-width: 800px;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--color-primario)
+  }
 }
 
 /*=======================================*/
@@ -264,50 +130,6 @@
   color: var(--color-negro);
 }
 
-/*ESTILOS PARA EL MENSAJE DE ACT APROBADA*/
-.mensajeAct {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: #1B5C35;
-  background: #C4FAB7;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/*ESTILOS PARA EL MENSAJE DE COMLETAR ACTIVIDAD*/
-.mensajeActError {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: rgb(223, 38, 38);
-  background: #fcb6b6ea;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-#crucigrama {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 600px;
-  display: none;
-}
-
-#btnContinuar {
-  display: none;
-  width: 100px;
-  height: 40px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  margin: 0 auto;
-  background-color: var(--color-primario);
-  border: 0;
-  border-radius: 20px;
-  color: white;
-  font-size: 15px;
-  margin-bottom: 150px;
-}
-
 /*BOTON "COMENZAR" DE LA ACTIVIDAD CRUCIGRAMA*/
 .container__actividad input[type="button"] {
   padding: 10px 30px;
@@ -321,29 +143,6 @@
   box-shadow: 1px 1px 30px -5px #20202049;
   cursor: pointer;
 }
-
-/*CONTENEDOR DEL CRUCIGRAMA*/
-.container__crucigrama {
-  width: 1000px;
-  background: #c1ffb1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-/*id del container del cruigrama, con estilos para ocultarlo*/
-#actividad1 {
-  width: 98%;
-  display: none;
-}
-
-/*iframe crucigrama */
-.container__crucigrama iframe {
-  width: 96%;
-  height: 700px;
-}
-
 
 .sin-vinetas {
   list-style: none;
@@ -412,15 +211,6 @@
   max-width: 800px;
   padding: 0 20px;
 }
-
-#evaluacionM1 {
-  display: flex;
-}
-
-
-
-/* TERMINAN ESTILOS DE LA AUTOEVALUACION */
-/*============================================================*/
 
 
 /* ========================= DISEÑO RESPONSIVO =======================*/
@@ -824,3 +614,874 @@
 }
 
 /* ========================= TERMINA EL DISEÑO RESPONSIVO =============*/
+
+
+
+
+
+
+section {
+  padding: 10px 30px;
+
+}
+
+
+$base-image-path: '../../../../assets/';
+
+@mixin custom-background($image-name, $background-position: unset, $max-width: none) {
+  @if $background-position !=unset {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: $background-position;
+  }
+
+  @else {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @if $max-width !=none {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  background-image: url(#{$base-image-path}#{$image-name});
+}
+
+
+.modulo1 {
+  background-color: #1e9fa5;
+  padding: 100px 0;
+
+  .modulo1-content {
+    img {
+      margin: 30px 0;
+      width: 80%;
+      height: 40px;
+    }
+  }
+
+  img {
+    height: 300px;
+  }
+
+  h2 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: white;
+  }
+
+  p {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+
+  p:nth-child(3) {
+    background-color: white;
+    color: #1e9fa5;
+    padding: 0 40px;
+  }
+}
+
+.objetivo_general {
+  background-color: #1e9fa5;
+  color: white;
+  padding: 100px 0;
+
+  img {
+    height: 260px;
+    max-width: 570px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    color: inherit;
+    font-size: 15px;
+    max-width: 450px;
+    padding: 0 15px;
+  }
+}
+
+.tema {
+  background-color: #80ded9;
+  padding: 80px 0 30px;
+
+  .bgpapel {
+    @include custom-background("hojaCuaderno.png", center, 950px);
+    padding: 120px 40px;
+    width: 85%;
+    margin: 0 auto;
+    color: black;
+
+    ul {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 0;
+
+      li {
+        color: var(--color-primario);
+      }
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+  }
+}
+
+.gradient2 {
+  height: 150px;
+  background: rgb(128, 222, 217);
+  background: linear-gradient(180deg, rgba(128, 222, 217, 1) 0%, rgba(177, 215, 216, 1) 30%, rgba(245, 206, 214, 1) 100%);
+}
+
+.gradient {
+  height: 150px;
+  background: rgb(245, 206, 214);
+  background: linear-gradient(180deg, rgba(245, 206, 214, 1) 0%, rgba(219, 200, 208, 1) 15%, rgba(30, 159, 165, 1) 100%);
+}
+
+.introduccion {
+  background-color: rgb(245 206 214);
+  padding: 50px 30px;
+
+  p {
+    white-space: pre-line;
+  }
+
+  img {
+    width: -webkit-fill-available;
+    max-width: 450px;
+    position: relative;
+    right: -15px;
+  }
+
+  .int-content {
+    color: #376bb9;
+    margin: 0 auto;
+    max-width: 1400px;
+
+    h2 {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: black;
+      text-align: justify;
+    }
+  }
+}
+
+.que_es_cooperativismo {
+  background-color: #1e9fa5;
+
+  p {
+    font-size: 18px;
+    text-align: justify
+  }
+
+  .hojasup {
+    @include custom-background("hojasup.png", center);
+    padding: 60px 0px;
+
+    h2 {
+      font-size: 22px;
+      padding: 40px 18px 0;
+    }
+
+    p {
+      padding: 0 20px;
+    }
+  }
+
+  .hojaback {
+    @include custom-background("hojaback.png", center, 590px);
+    margin: 50px 0;
+
+    p {
+      padding: 0 15px 0 25px;
+    }
+  }
+}
+
+.edades {
+  background-color: #B3DEE5;
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .edad-antigua {
+    @include custom-background("hoja-edad-antigua.png", top, 837px);
+
+    .antigua-text {
+      padding: 145px 15px 35px 15px
+    }
+  }
+
+  .edad-media {
+    @include custom-background("hoja-edad-media.png", top, 837px);
+
+    .media-text {
+      padding: 130px 10px 110px 15px;
+    }
+  }
+
+  .edad-moderna {
+    @include custom-background("hoja-edad-moderna.png", top, 837px);
+
+    .moderna-text {
+      padding: 130px 10px 75px 15px;
+    }
+  }
+}
+
+.linea_tiempo {
+  background-color: #B3DEE5;
+  color: #376bb9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  p {
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .linea-abajo-turqueza,
+  .linea-abajo-azul {
+    background-repeat: no-repeat;
+    width: -webkit-fill-available;
+
+  }
+
+  .linea-abajo-turqueza {
+    background-image: url(../../../../assets/flecha-turqueza-abajo.svg);
+    height: 200px;
+  }
+
+  .linea-abajo-azul {
+    background-image: url(../../../../assets/flecha-azul-abajo.svg);
+    height: 200px;
+  }
+
+  .anio-1844,
+  .anio-1864,
+  .anio-1877,
+  .anio-1895,
+  .anio-1899,
+  .anio-1900 {
+    width: 337px;
+    height: 100px;
+
+  }
+
+  .anio-1844 {
+    @include custom-background("1844.svg", unset);
+  }
+
+  .anio-1864 {
+    @include custom-background("1864.svg", unset);
+  }
+
+  .anio-1877 {
+    @include custom-background("1877.svg", unset);
+  }
+
+  .anio-1895 {
+    @include custom-background("1877.svg", unset);
+  }
+
+  .anio-1899 {
+    @include custom-background("1877.svg", unset);
+  }
+
+  .anio-1900 {
+    @include custom-background("1877.svg", unset);
+  }
+
+}
+
+.info-adicional {
+  @include custom-background("back-info-adicional.jpg", center);
+
+  .title-info {
+    margin: 30px auto;
+    @include custom-background("title-info-add.svg", center);
+    width: 330px;
+    padding: 10px;
+  }
+
+  .info-add-hoja {
+    @include custom-background("info-add-hoja.svg", center, 695px);
+    margin-bottom: 60px;
+    padding: 25px 50px 10px 25px;
+    .text-content {
+      h2 {
+        font-size: 2.3rem;
+      }
+
+      p {
+        font-weight: bold;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.coop_america {
+  background-color: #1e9fa5;
+  @include custom-background("mundo.svg", center);
+  overflow: hidden;
+
+  p{
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .title-coop-america {
+    @include custom-background("cinta-coop-america.svg", center, 400px);
+    margin: 25px auto;
+    font-size: 1.4rem;
+  }
+
+  .hoja1 {
+    @include custom-background("hoja-izq.svg", center);
+    p {
+      padding: 30px 20px;
+      text-align: justify;
+    }
+  }
+
+  .hoja2 {
+    @include custom-background("hoja-der.svg", center);
+    p {
+      padding: 20px 25px;
+      text-align: justify;
+    }
+  }
+
+  .hoja3 {
+    @include custom-background("hoja-abajo.svg", center, 550px);
+    p {
+      padding: 30px 17px;
+      text-align: justify;
+    }
+  }
+
+  .flecha-derecha,
+  .fecha-abajo {
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 100px;
+  }
+
+  .flecha-derecha {
+    background-image: url(../../../../assets/flecha-derecha.svg);
+  }
+
+  .fecha-abajo {
+    background-image: url(../../../../assets/flecha-abajo.svg);
+    margin: 0 auto;
+  }
+
+  .arcoiris {
+    @include custom-background("arcoiris.svg");
+    width: 100vw;
+    height: 128px;
+    position: relative;
+    right: 30px;
+    top: 11px;
+  }
+}
+
+.coop_mexico {
+  @include custom-background("hoja-naranja.svg");
+  padding: 80px 15px;
+
+  p{
+    text-align: justify;
+  }
+
+  .img-piramides,
+  .img-templos {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inf-add-mx,
+  .card-inf-prehispanica,
+  .card-precolombino,
+  .card-colonial {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .inf-add-mx {
+    @include custom-background("info-add-mx.svg");
+    background-image: url(../../../../assets/info-add-mx.svg);
+    font-size: 1.4rem;
+  }
+
+  .card-inf-prehispanica {
+    @include custom-background("hoja-inf-mx.svg", unset, 550px);
+    padding: 50px 20px 1px;
+  }
+
+  .card-precolombino {
+    @include custom-background("hoja-cuad-inf-mx.svg", unset, 376px);
+    padding: 50px 30px 10px;
+  }
+
+  .card-colonial {
+    @include custom-background("hoja-azul-inf-mx.svg", unset, 376px);
+    padding: 50px 25px 0;
+  }
+
+}
+
+.elias_calles {
+  @include custom-background("hoja-naranja-vert.svg");
+  p{
+    text-align: justify
+  }
+
+  .hoja-cuaderno {
+    @include custom-background("hoja-pluraco-cuad.svg", unset, 725px);
+    padding: 60px 20px 20px;
+  }
+
+  .epoca-pos {
+    @include custom-background("pres-hoja-azul.svg");
+
+    padding: 25px 15px;
+    color: white;
+  }
+
+}
+
+.cronologia {
+  background-color: #80ded9;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  table tbody {
+    tr:not(:last-child) td {
+      margin-bottom: 10px;
+    }
+
+    .espace {
+      margin-bottom: 5px;
+      display: flex;
+
+      .año {
+        color: white;
+        background-color: #6d9dc5;
+        border-radius: 20px 0 0 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+      }
+
+      .desc {
+        background-color: white;
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.simbolos {
+  background-color: #1e9fa5;
+  p{
+    text-align: justify;
+  }
+
+  .bandera-top {
+    max-width: 170px;
+    margin: 0 auto;
+  }
+
+  .simbolos-title {
+    @include custom-background("cinta-simbolos.svg", unset, 306px);
+    padding: 40px 0;
+    font-size: 40px;
+  }
+
+  .bandera {
+    @include custom-background("cinta-labandera.svg", unset, 306px);
+    padding: 80px 0 53px;
+    font-size: 40px;
+  }
+
+  .hoja-cuad-bandera {
+    @include custom-background("hoja-cuad-bandera.svg", unset, 620px);
+    padding: 60px 15px;
+    font-weight: bolder;
+
+  }
+
+  .hoja-bottom-bandera {
+    @include custom-background("hoja-bottom-bandera.svg", center);
+    padding: 150px 15px 100px;
+    font-weight: bold;
+    text-align: justify;
+
+    ul {
+      margin: 30px 0;
+
+      li {
+        padding: 10px;
+        color: white;
+        width: fit-content;
+      }
+    }
+  }
+
+  .bandera-bottom {
+    max-width: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.sig-pinos {
+  background-color: #1e9fa5;
+
+
+
+  .hoja-colores,
+  .los-pinos {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hoja-colores {
+    @include custom-background("hoja-bottom-bandera.svg", center, 615px);
+    padding: 50px;
+    font-weight: bold;
+  }
+
+
+  .los-pinos {
+    @include custom-background("hoja-back-lgbt.svg", center);
+
+    .text-desc {
+      padding: 50px 40px 80px 40px;
+      background-color: white;
+      p{
+        text-align: justify;
+      }
+    }
+  }
+}
+
+
+/* Extra pequeño (XS): */
+@media (min-width: 575.98px) {
+
+  .info-adicional {
+    background-position-x: -360px;
+
+    .title-info {
+      width: 440px;
+      padding: 20px;
+    }
+
+    .info-add-hoja {
+
+      .text-content {
+        padding: 0px 60px 0 20px;
+
+        p {
+          margin-top: 35px;
+          font-size: 18px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .que_es_cooperativismo {
+
+    .hojasup {
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .modulo1 img {
+    height: 360px;
+  }
+
+  .objetivo__general_text {
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 80%;
+      text-align: justify;
+    }
+
+    .int-content {
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: justify;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* Pequeño (SM):  */
+@media (min-width: 767.98px) {
+
+  .info-adicional {
+    background-position-x: -200px;
+
+    .info-add-hoja {
+      .text-content {
+        padding: 0px 50px 0 20px;
+      }
+    }
+  }
+
+  .edades {
+    .edad-antigua {
+      background-position-x: unset;
+
+      .antigua-text {
+        padding: 110px 10px 30px 85px;
+      }
+    }
+
+    .edad-media {
+      background-position-x: unset;
+
+      .media-text {
+        padding: 70px 10px 65px 45px;
+      }
+    }
+
+    .edad-moderna {
+      background-position-x: unset;
+
+      .moderna-text {
+        padding: 60px 10px 20px 60px;
+      }
+    }
+  }
+
+  .objetivo_general img {
+    width: 80%;
+    height: 400px;
+  }
+
+  .tema {
+    padding: 50px 0;
+
+    .bgpapel {
+      background-position-x: 0;
+      padding: 45px 110px;
+
+      h2 {
+        font-size: 35px;
+      }
+
+      ul {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .que_es_cooperativismo {
+    .hojaback {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .hojasup {
+      max-height: 660px;
+
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        padding: 0 35px;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .introduccion {
+    .int-content {
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 20px;
+        padding: 0 80px;
+        text-align: justify;
+      }
+    }
+  }
+
+}
+
+/* Mediano (MD): */
+@media (min-width: 991.98px) {
+
+  .linea_tiempo {
+
+    .linea-abajo-turqueza,
+    .linea-abajo-azul {
+      height: 300px;
+    }
+  }
+
+  .tema {
+    .bgpapel {
+      padding: 110px 110px;
+
+      h2 {
+        font-size: 60px;
+      }
+
+      ul {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .que_es_cooperativismo .hojaback {
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: justify;
+    }
+  }
+
+  .que_es_cooperativismo .hojasup {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .objetivo_general {
+
+    h2 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .modulo1 {
+    img {
+      height: 400px;
+    }
+
+    h2 {
+      font-size: 80px;
+    }
+
+    p {
+      font-size: 35px;
+    }
+  }
+
+}
+
+/* Grande (LG): */
+@media (min-width: 1199.98px) {
+  .que_es_cooperativismo {
+    .hojasup {
+      padding: 130px 20px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .introduccion {
+    .int-content {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .objetivo_general {
+    h2 {
+      font-size: 52px;
+    }
+
+    p {
+      font-size: 21px;
+    }
+  }
+
+
+}
+
+/* Extra grande (XL): */
+@media (min-width: 1200px) {
+  .que_es_cooperativismo{
+    .hojasup{
+      padding: 70px 20px;
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .info-adicional {
+    background-position-x: unset;
+  }
+}

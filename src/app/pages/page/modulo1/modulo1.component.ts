@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ViewportScroller, NgStyle, NgClass } from '@angular/common';
 import { filter } from 'rxjs';
@@ -6,16 +6,47 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 import { Validacion } from '../../interfaces/crucigrama.interface';
 import { Formm1Component } from '../../components/formm1/formm1.component';
 import { CrucigramaComponent } from '../../components/crucigrama/crucigrama.component';
-import { ActividadM1Component } from '../../components/actividad-m1/actividad-m1.component';
 
 @Component({
     selector: 'app-modulo1',
     templateUrl: './modulo1.component.html',
     styleUrls: ['./modulo1.component.scss'],
     standalone: true,
-    imports: [ActividadM1Component, CrucigramaComponent, NgStyle, Formm1Component, NgClass]
+    imports: [CrucigramaComponent, NgStyle, Formm1Component, NgClass]
 })
-export class Modulo1Component implements OnInit{
+export class Modulo1Component implements OnInit, AfterViewInit{
+
+  constructor(private router: Router,
+    private viewportScroller: ViewportScroller,
+    private authService: AuthService,
+    private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    this.setupIntersectionObserver();
+  }
+
+  private setupIntersectionObserver(): void {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Solo agrega las clases de animación si el elemento está intersectando
+            entry.target.classList.add("animate__animated");
+            // Encuentra la clase de animación específica y la agrega
+            const animationClasses = (entry.target as HTMLElement).dataset["animate"]?.split(" ") || [];
+            entry.target.classList.add(...animationClasses);
+
+            // Opcional: Desconecta el observador una vez que la animación se ha aplicado
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    ); // Ajusta el threshold según sea necesario
+
+    const elements = this.el.nativeElement.querySelectorAll('.animate-on-scroll');
+    elements.forEach((element: Element) => observer.observe(element));
+  }
 
   validacion: Validacion = {
     validaciones: [
@@ -175,9 +206,6 @@ export class Modulo1Component implements OnInit{
   ]
 
 
-  constructor(private router: Router,
-    private viewportScroller: ViewportScroller,
-    private authService: AuthService) {}
 
 
 
@@ -201,7 +229,6 @@ export class Modulo1Component implements OnInit{
   }
   finalizadoEvent(finalizado: boolean){
     this.finalizadoP = finalizado;
-    /* console.log(this.finalizadoP); */
     this.iniciarContador();
   }
 

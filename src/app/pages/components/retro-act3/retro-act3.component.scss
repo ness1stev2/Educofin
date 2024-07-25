@@ -5,11 +5,6 @@
     font-weight: 500;
   }
 
-  input[type="text"]{
-    border: none;
-    border-bottom: black 1px solid;
-    text-transform: lowercase;
-  }
   p{
     font-size: 1.1rem;
     margin: 10px 0;
@@ -30,5 +25,25 @@
   .success{
     background-color: #419941;
     color: white;
+  }
+
+  input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: #0056b3;
+    }
+  }
+  input[type="text"]{
+    padding: 0 10px;
+    color: #3765ae;
+    font-weight: 700;
+    margin: 5px 0;
+    border: 2px solid #3765ae;
+    border-radius: 10px;
   }
 }

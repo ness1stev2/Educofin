@@ -29,6 +29,7 @@ export class LoginPageComponent {
   public myFormRegister: FormGroup = this.fb.group({
 
     name:    ['',  Validators.required ],
+    apellidos:    ['',  Validators.required ],
     nSocio:    ['', [ Validators.required, Validators.maxLength(6) ]],
     email:    ['', [ Validators.required, Validators.email ]],
     password: ['', [ Validators.required, Validators.minLength(6) ]],
@@ -37,7 +38,7 @@ export class LoginPageComponent {
 
   register(){
     const user: User = this.myFormRegister.value;
-
+    console.log(user)
 
     this.authService.register(user)
       .subscribe({

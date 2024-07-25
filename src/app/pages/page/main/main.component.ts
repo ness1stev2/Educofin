@@ -15,7 +15,9 @@ import { User } from 'src/app/auth/interfaces';
 })
 export class MainComponent implements OnInit{
 
-  public usuario:User = this.authService.user;
+
+  public usuario: User = this.authService.user;
+  public user = computed(() => this.authService.currentUser())
 
   private router = inject( Router);
   private vpScroller = inject ( ViewportScroller )
@@ -28,8 +30,6 @@ export class MainComponent implements OnInit{
       this.vpScroller.scrollToPosition([0, 0]);
   });}
 
-  /* get user(): Usuario | undefined{
-    return this.authService.currentUser
-  } */
+
 
 }

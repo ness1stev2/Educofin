@@ -35,8 +35,9 @@
         <div class="form singupForm">
             <form id="formulario" [formGroup]="myFormRegister" (ngSubmit)="register()" >
                 <h3>Registrate</h3>
+                <input type="text" placeholder="Nombres" formControlName="name" required>
+                <input type="text" placeholder="Apellidos" formControlName="apellidos" required>
                 <input type="text" placeholder="No. Socio" formControlName="nSocio" required>
-                <input type="text" placeholder="Nombre Completo" formControlName="name" required>
                 <input type="email" placeholder="Correo" formControlName="email" required>
                 <input type="password" placeholder="Contraseña" id="passwordUser" formControlName="password" required>
                 <input type="submit" value="Registrarme" id="btn-login" [disabled]="myFormRegister.invalid">

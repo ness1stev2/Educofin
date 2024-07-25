@@ -4,15 +4,15 @@ import { AuthStatus } from './auth/interfaces';
 import { AuthService } from './auth/services/auth.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: true,
-    imports: [RouterOutlet]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styles: ``,
+  standalone: true,
+  imports: [RouterOutlet]
 })
 
-export class AppComponent {
-  /* private authService = inject( AuthService );
+/* export class AppComponent {
+  private authService = inject( AuthService );
   private router = inject( Router )
 
   public finishedAuthCheck = computed<boolean>(() => {
@@ -41,23 +41,23 @@ export class AppComponent {
         this.router.navigateByUrl('/auth/sesion');
         return;
     }
-  }); */
+  });
 
-}
+} */
 
-/* export class AppComponent {
-  private authService = inject( AuthService );
-  private router = inject( Router )
+export class AppComponent {
+  /* private authService = inject(AuthService);
+  private router = inject(Router)
 
   public finishedAuthCheck = computed<boolean>(() => {
-    if( this.authService.authStatus() === AuthStatus.checking ) {
+    if (this.authService.authStatus() === AuthStatus.checking) {
       return false;
     }
     return true
   })
 
-  public authStatusChangedEffect = effect( () => {
-    switch( this.authService.authStatus()){
+  public authStatusChangedEffect = effect(() => {
+    switch (this.authService.authStatus()) {
       case AuthStatus.checking:
         return;
 
@@ -69,6 +69,6 @@ export class AppComponent {
         this.router.navigateByUrl('/auth/sesion');
         return;
     }
-  });
+  }); */
 
-} */
+}

@@ -1,53 +1,72 @@
 <div class="retroalimentacion">
-  <div class="container">
-    <h2>RETROALIMENTACIÓN.</h2>
+  <div class="container" style="border: 5px solid #3765ae; border-radius: 10px; padding: 40px;">
+    <h2 style="color: #3765ae;">RETROALIMENTACIÓN.</h2>
+
+    <hr>
 
     <p id="introduccion">
       Completa la frase, en la parte inferior de la hoja encontrarás las palabras
       que forman las respuestas.
     </p>
 
+    <hr>
+
     <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
 
-      <p>Estado del formulario: <b>{{respForm.status }}</b> </p>
-      <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p>
+      <!-- <p>Estado del formulario: <b>{{respForm.status }}</b> </p> -->
+      <!-- <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p> -->
 
 
-      <p>Una Sociedad Cooperativa se diferencia de una empresa tradicional por su forma de organización y administración,
+      <p>Una Sociedad Cooperativa se diferencia de una empresa tradicional por su forma de organización y
+        administración,
         se
-        integra por personas físicas llamadas <input type="text" name="" id="" alt="socios" formControlName="resp1" style="width: 60px;">, con base
+        integra por personas físicas llamadas <input type="text" alt="socios" formControlName="resp1"
+          style="width: 80px;">, con base
         en intereses
         comunes y en los
         principios de solidaridad, esfuerzo propio y ayuda mutua, se componen como elementos intrínsecos de la Sociedad
         Cooperativa,
-        así como los <input type="text" name="" id="" alt="valores y principios cooperativos" formControlName="resp2"> por los
+        así como los <input type="text" alt="valores y principios cooperativos" formControlName="resp2"
+          style="width: 280px;"> por los
         que se rigen y
         constituyen la base filosófica del Movimiento Cooperativo,
-        apoyados en <input type="text" name="" id="" alt="reglas y normas" formControlName="resp3">, que son los Estatutos que
+        apoyados en <input type="text" alt="reglas y normas" formControlName="resp3" style="width: 150px;">, que son los
+        Estatutos que
         estriban el
         desarrollo y crecimiento desde
-        la toma de decisiones solidarias, donde cada miembro tiene voz, así como voto en la <input type="text" name=""
-          id="" alt="asamblea general" formControlName="resp4">, con el
-        propósito de satisfacer necesidades colectivas que son administradas y vigiladas por su <input type="text" name=""
-          id="" alt="gobierno corporativo" formControlName="resp5">. <br><br>
-        La <input type="text" name="" id="" alt="ley general de sociedades cooperativas" formControlName="resp6"> tiene por objeto regular la
+        la toma de decisiones solidarias, donde cada miembro tiene voz, así como voto en la <input type="text"
+          alt="asamblea general" formControlName="resp4" style="width: 165px;">, con el
+        propósito de satisfacer necesidades colectivas que son administradas y vigiladas por su <input type="text"
+          alt="gobierno corporativo" formControlName="resp5" style="width: 190px;">. <br><br>
+        La <input type="text" alt="ley general de sociedades cooperativas" formControlName="resp6"
+          style="width: 330px;"> tiene por objeto
+        regular la
         constitución, organización, funcionamiento y extinción de las
         Sociedades Cooperativas y sus Organismos en que libremente se agrupen, así como los derechos de los Socios.
         <br><br>
-        <input type="text" name="" id="" alt="lrascap" formControlName="resp7"> regula las operaciones de las Sociedades Cooperativas de Ahorro y
+        <input type="text" alt="lrascap" formControlName="resp7" style="width: 80px;"> regula las operaciones de las
+        Sociedades Cooperativas
+        de Ahorro y
         Préstamo; protegiendo los
         intereses de sus Socios ahorradores; y establece los términos en que el Estado ejercerá las facultades de
         supervisión, regulación
         y sanción, en términos de la Ley. <br><br>
-        El Consejo de <input type="text" name="" id="" alt="administracion" formControlName="resp8"> es el Órgano Ejecutivo de la Asamblea General
+        El Consejo de <input type="text" alt="administracion" formControlName="resp8" style="width: 140px;"> es el
+        Órgano Ejecutivo de la
+        Asamblea General
         que tendrá la representación de
         la Sociedad Cooperativa. <br><br>
-        El Consejo de <input type="text" name="" id="" alt="vigilancia" formControlName="resp9"> es el Órgano encargado de supervisar el
+        El Consejo de <input type="text" alt="vigilancia" formControlName="resp9" style="width: 100px;"> es el Órgano
+        encargado de supervisar
+        el
         funcionamiento interno de la Sociedad
         Cooperativa, así como el cumplimiento de sus estatutos y demás normatividad que le es aplicable. <br><br>
-        El <input type="text" name="" id="" alt="director" formControlName="resp10"> o Gerente General es la persona contratada por el Consejo de
+        El <input type="text" alt="director" formControlName="resp10" style="width: 90px;"> o Gerente General es la
+        persona contratada por el
+        Consejo de
         Administración para que en
-        forma profesional y especializada ejecute los acuerdos tomados por este Órgano de Gobierno y la Asamblea General,
+        forma profesional y especializada ejecute los acuerdos tomados por este Órgano de Gobierno y la Asamblea
+        General,
         así
         como los planes y estrategias de la Sociedad.
       </p>
@@ -57,16 +76,16 @@
     <h3>RESPUESTAS:</h3>
 
     <div class="row gap-2">
-      <small [ngClass]="{'success': respForm.controls.resp1.valid}" >Socios</small>
-      <small [ngClass]="{'success': respForm.controls.resp7.valid}" >LRASCAP</small>
+      <small [ngClass]="{'success': respForm.controls.resp1.valid}">Socios</small>
+      <small [ngClass]="{'success': respForm.controls.resp7.valid}">LRASCAP</small>
       <small [ngClass]="{'success': respForm.controls.resp10.valid}">Director</small>
-      <small [ngClass]="{'success': respForm.controls.resp9.valid}" >Vigilancia</small>
-      <small [ngClass]="{'success': respForm.controls.resp8.valid}" >Administracion</small>
-      <small [ngClass]="{'success': respForm.controls.resp3.valid}" >Reglas y Normas</small>
-      <small [ngClass]="{'success': respForm.controls.resp4.valid}" >Asamblea General</small>
-      <small [ngClass]="{'success': respForm.controls.resp5.valid}" >gobierno corporativo</small>
-      <small [ngClass]="{'success': respForm.controls.resp2.valid}" >Valores y Principios Cooperativos</small>
-      <small [ngClass]="{'success': respForm.controls.resp6.valid}" >Ley General de Sociedades Cooperativas</small>
+      <small [ngClass]="{'success': respForm.controls.resp9.valid}">Vigilancia</small>
+      <small [ngClass]="{'success': respForm.controls.resp8.valid}">Administracion</small>
+      <small [ngClass]="{'success': respForm.controls.resp3.valid}">Reglas y Normas</small>
+      <small [ngClass]="{'success': respForm.controls.resp4.valid}">Asamblea General</small>
+      <small [ngClass]="{'success': respForm.controls.resp5.valid}">gobierno corporativo</small>
+      <small [ngClass]="{'success': respForm.controls.resp2.valid}">Valores y Principios Cooperativos</small>
+      <small [ngClass]="{'success': respForm.controls.resp6.valid}">Ley General de Sociedades Cooperativas</small>
 
     </div>
   </div>

@@ -103,7 +103,7 @@
         </form>
       </div>
       <div class="col-6">
-        <div class="">
+        <div class="position-sticky" style="top: 110px;">
           <h3 class="fs-2">RESPUESTAS:</h3>
 
           <div class="row gap-2 fs-5">
@@ -125,4 +125,7 @@
 
 
   </div>
+  @defer (when finalizadoP) {
+    <done-module noModulo="5"/>
+  }
 </div>
