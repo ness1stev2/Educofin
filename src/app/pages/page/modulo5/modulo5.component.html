@@ -3,15 +3,15 @@
   <div class="inicio d-flex flex-column text-center justify-content-center align-items-center text-light">
     <div class="titulo">
       <div class="container">
-        <h1 class="animate__animated animate__fadeInDown">Modulo 5</h1>
-        <img class="animate__animated animate__zoomInDown animate__delay-2s" src="assets/img-modulo5/2.svg" alt="">
+        <h1 class="animate-on-scroll" data-animate="animate__fadeInDown">Modulo 5</h1>
+        <img class="animate-on-scroll" data-animate="animate__zoomInDown" style="opacity: 1;" src="assets/img-modulo5/2.svg" alt="">
       </div>
     </div>
   </div>
 
-  @defer (on viewport) {
-  <div class="obj-gen animate__animated animate__bounceInLeft animate__slow">
-    <div class="bg">
+
+  <div class="obj-gen">
+    <div class="bg animate-on-scroll" data-animate="animate__bounceInLeft" style="opacity: 1;">
       <div class="container">
         <!-- <img src="assets/img-modulo5/9.svg" alt=""> -->
         <div class="text d-flex flex-column justify-content-center align-items-center text-center">
@@ -27,13 +27,9 @@
     </div>
 
   </div>
-  }@placeholder {
-  <div style="height: 620px;"></div>
-  }
 
-  @defer (on viewport) {
-  <div class="temario animate__animated animate__bounceInRight animate__slower">
-    <div class="bg">
+  <div class="temario">
+    <div class="bg animate-on-scroll" data-animate="animate__bounceInRight" style="opacity: 1;">
       <div class="container">
 
         <div class="text text-start">
@@ -51,12 +47,8 @@
       </div>
     </div>
   </div>
-  }@placeholder {
-  <div style="height: 400px;"></div>
-  }
 
-  @defer (on viewport) {
-  <div class="introducction animate__animated animate__fadeInUpBig animate__slower">
+  <div class="introducction animate-on-scroll" data-animate="animate__fadeInUpBig">
     <div class="bg">
       <div class="container">
         <div class="text">
@@ -77,17 +69,13 @@
       </div>
     </div>
   </div>
-  }@placeholder {
-  <div style="height: 570px;"></div>
-  }
 
   <div class="que-es mb-5">
 
     <div class="bg-izquierda mb-5">
         <div class="container">
 
-        @defer(on viewport){
-        <div class="text animate__animated animate__fadeInTopRight animate__slow">
+        <div class="text animate-on-scroll" data-animate="animate__fadeInTopRight">
           <h3>¿QUÉ ES EDUCACIÓN FINANCIERA?</h3>
           <p>Es un proceso de desarrollo de habilidades y actitudes
             que, mediante la asimilación de información
@@ -118,16 +106,12 @@
             Socios en su vida y las mejoras económicas podrán ser
             visibles.</p>
         </div>
-        }@placeholder {
-        <div style="height: 670px;"></div>
-        }
-
 
       </div>
 
       <div class="bg-derecha">
-        @defer(on viewport){
-        <div class="text text animate__animated animate__fadeInTopLeft animate__slow">
+
+        <div class="text text animate-on-scroll" data-animate="animate__fadeInTopLeft">
           <p>Existe también la seguridad financiera, que varía según las
             necesidades y etapa de la vida en que se encuentre el
             Socio cuando:</p>
@@ -149,8 +133,6 @@
           <img src="assets/img-modulo5/8.svg" alt="">
         </div>
 
-        }@placeholder {<div style="height: 670px;"></div>}
-
       </div>
 
     </div>
@@ -160,8 +142,7 @@
     <div class="container">
       <div class="bg-izquierda mb-5">
 
-        @defer(on viewport){
-        <div class="text animate__animated animate__fadeInBottomLeft animate__slow">
+        <div class="text animate-on-scroll" data-animate="animate__fadeInBottomLeft">
 
           <h3>AHORRO E INVERSIÓN</h3>
           <p>Para conseguir la seguridad financiera es primordial
@@ -212,12 +193,12 @@
 
           <!-- <img src="assets/img-modulo5/10.png" width="300" alt="Alcancia de puerquito con una moneda"> -->
         </div>
-        }@placeholder {<div style="height: 670px;"></div>}
+
       </div>
 
       <div class="bg-derecha mb-5">
-        @defer(on viewport){
-        <div class="text animate__animated animate__fadeInBottomRight animate__slow">
+
+        <div class="text animate-on-scroll" data-animate="animate__fadeInBottomRight">
 
           <h3>INGRESO Y GASTO</h3>
           <h3>Ingresos</h3>
@@ -261,17 +242,16 @@
           </p>
 
         </div>
-        }@placeholder {<div style="height: 670px;"></div>}
 
 
       </div>
 
       <div class="gasto mb-5">
         <div class="bg-izquierda">
-          @defer(on viewport){
-          <div class="text animate__animated animate__flip animate__slow animate__delay-2s">
-            <h3>Gastos</h3>
-            <p>Es un egreso o salida de dinero que una persona o empresa
+
+          <div class="text">
+            <h3 class="animate-on-scroll" data-animate="animate__fadeInUp">Gastos</h3>
+            <p class="animate-on-scroll" data-animate="animate__fadeInUp">Es un egreso o salida de dinero que una persona o empresa
               debe pagar para acreditar su derecho sobre un artículo o al
               recibir un servicio. Los gastos también pueden ser fijos,
               variables y ocasionales. Unos meses se gasta menos y al final
@@ -279,7 +259,7 @@
               y se recurre al acumulado de meses anteriores para
               costearlos.</p>
 
-            <p>Los problemas surgen cuando hay varios meses seguidos en
+            <p class="animate-on-scroll" data-animate="animate__fadeInUp">Los problemas surgen cuando hay varios meses seguidos en
               los que los gastos superan a los ingresos. Entonces se agotan
               los excedentes y no hay más remedio que hacer uso de
               alternativas, que en ocasiones deterioran aún más la
@@ -287,23 +267,21 @@
               con altas tasas de interés, empeños y remate de bienes
               personales.</p>
 
-            <p>Es aconsejable que el gasto no supere del 90% del ingreso,
+            <p class="animate-on-scroll" data-animate="animate__fadeInUp">Es aconsejable que el gasto no supere del 90% del ingreso,
               para poder ahorrar como mínimo, el 10% restante cada
               mes.</p>
 
-            <p>A continuación, para completar la información anterior te
+            <p class="animate-on-scroll" data-animate="animate__fadeInUp">A continuación, para completar la información anterior te
               damos un tip para ahorrar según los gastos.</p>
 
-            <img src="assets/img-modulo5/14.svg" alt="">
+            <img class="animate-on-scroll" data-animate="animate__fadeInUp" src="assets/img-modulo5/14.svg" alt="">
 
           </div>
-          }@placeholder {<div style="height: 670px;"></div>}
         </div>
       </div>
 
       <div class="regla mb-5">
-        @defer(on viewport){
-        <div class="bg animate__animated animate__zoomInUp animate__slow animate__delay-2s">
+        <div class="bg animate-on-scroll" data-animate="animate__zoomInUp" style="opacity: 1;">
           <div class="text">
             <strong>Regla 50 – 40 – 10</strong>
             <p>Existe un modelo que menciona los porcentajes
@@ -320,52 +298,48 @@
               proyectos o necesidades a largo plazo</p>
           </div>
         </div>
-        }@placeholder {<div style="height: 670px;"></div>}
       </div>
     </div>
 
     <div class="plan-ahorro">
       <div class="bg-izquierda">
-        @defer(on viewport){
-        <div class="text animate__animated animate__slideInLeft animate__slow animate__delay-2s">
+        <div class="text">
 
-          <h3>Plan de ahorro</h3>
-          <p>Es un programa para acumular dinero de forma
+          <h3 class="animate-on-scroll" data-animate="animate__fadeInUp">Plan de ahorro</h3>
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">Es un programa para acumular dinero de forma
             organizada, realista y proyectado a una meta especifica.</p>
 
-          <p>El primer paso, es establecer prioridades y colocarse metas
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">El primer paso, es establecer prioridades y colocarse metas
             de ahorro en un tiempo determinado. Cada persona
             establece cuál es su objetivo a cumplir, por ejemplo: una
             casa, un viaje, una nueva televisión, una moto, un auto,
             entre otros.</p>
 
-          <p>El segundo paso, es preguntarse y establecer cómo cumplir
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">El segundo paso, es preguntarse y establecer cómo cumplir
             esta meta.</p>
 
-          <p>Por último, para calcular cuánto debe ahorrar cada mes
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">Por último, para calcular cuánto debe ahorrar cada mes
             para lograr sus metas, esto se logrará dividiendo el costo
             total de esta entre los meses en que se desea cumplir.</p>
 
-          <p>Por ejemplo, si el precio del viaje es de $5,800 para alcanzar
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">Por ejemplo, si el precio del viaje es de $5,800 para alcanzar
             la meta en 10 meses, el ahorro mensual deberá ser de $580
             pesos. </p>
 
-          <p>Ahorro por mes = Costo total / tiempo estipulado en meses.</p>
+          <p class="animate-on-scroll" data-animate="animate__fadeInUp">Ahorro por mes = Costo total / tiempo estipulado en meses.</p>
 
-          <img src="assets/img-modulo5/17.svg" alt="">
+          <img class="animate-on-scroll" data-animate="animate__fadeInUp" src="assets/img-modulo5/17.svg" alt="">
 
         </div>
-        }@placeholder {<div style="height: 670px;"></div>}
       </div>
     </div>
   </div>
 
   <div class="planificacion">
-    @defer(on viewport){
     <div class="row">
-      <h3>PLANIFICACIÓN Y PRESUPUESTO INDIVIDUAL/FAMILIAR</h3>
+      <h3 class="animate-on-scroll" data-animate="animate__fadeInDown">PLANIFICACIÓN Y PRESUPUESTO INDIVIDUAL/FAMILIAR</h3>
       <div class="col-12 col-xl-6">
-        <div class="bg bg-1">
+        <div class="bg bg-1 animate-on-scroll" data-animate="animate__fadeInLeft">
           <div class="text">
             <h3>¿Qué es un presupuesto?</h3>
             <p>
@@ -417,7 +391,7 @@
         </div>
       </div>
       <div class="col-12 col-xl-6">
-        <div class="bg bg-2">
+        <div class="bg bg-2 animate-on-scroll" data-animate="animate__fadeInRight">
           <div class="text">
             <h3>¿Cómo elaborar un presupuesto?</h3>
 
@@ -461,14 +435,10 @@
       </div>
     </div>
 
-
-
-    }@placeholder {<div style="height: 670px;"></div>}
   </div>
 
   <div class="pasos">
-    <div class="bg">
-      @defer(on viewport){
+    <div class="bg animate-on-scroll" data-animate="animate__fadeInUp">
       <div class="text">
         <h3>Pasos para elaborar el presupuesto:</h3>
         <ul>
@@ -486,7 +456,6 @@
           </li>
         </ul>
       </div>
-      }@placeholder {<div style="height: 670px;"></div>}
     </div>
   </div>
 

@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, AfterViewInit, ElementRef } from '@angular/core';
 import { Validacion } from '../../interfaces/crucigrama.interface';
 import { Router } from '@angular/router';
-import { NgClass } from '@angular/common';
+import { NgClass,  } from '@angular/common';
 import { CrucigramaAct2Component } from '../../components/crucigrama-act2/crucigrama-act2.component';
+import { AnimationService } from '../../service/Animation.service';
 
 @Component({
     selector: 'app-modulo2',
@@ -12,9 +13,13 @@ import { CrucigramaAct2Component } from '../../components/crucigrama-act2/crucig
     imports: [CrucigramaAct2Component, NgClass]
 })
 
-export class Modulo2Component {
+export class Modulo2Component implements AfterViewInit {
 
-  constructor(private router: Router,) { }
+  constructor(
+    private animationService: AnimationService,
+    private router: Router,
+    private el: ElementRef,
+  ) { }
 
   @Output() finalizado = new  EventEmitter<boolean>();
   public finalizadoP: Boolean = false;
@@ -231,119 +236,12 @@ export class Modulo2Component {
     this.router.navigate(['/']); // Cambia '/otra-pagina' por la ruta de la página a la que deseas redirigir
   }
 
-  animatedElements: Element[] = [];
-  flashElements: Element[] = [];
-  backInDownElements: Element[] = [];
-  pulseElements: Element[] = [];
-  backInLeftElements: Element[] = [];
-  backInRightElements: Element[] = [];
-  fadeInDownElements: Element[] = [];
-  backInUpElements: Element[] = [];
-  flipElements: Element[] = [];
-  rotateOutElements: Element[] = [];
+  ngAfterViewInit(): void {
+    this.animationService.setupIntersectionObserver(this.el);
+  }
 
   ngOnInit() {
-    this.animatedElements = Array.from(document.querySelectorAll('.animated-element'));
-    this.flashElements = Array.from(document.querySelectorAll('.flash-element'));
-    this.backInDownElements = Array.from(document.querySelectorAll('.backInDown-element'));
-    this.pulseElements = Array.from(document.querySelectorAll('.pulse-element'));
-    this.backInLeftElements = Array.from(document.querySelectorAll('.backInLeft-element'));
-    this.backInRightElements = Array.from(document.querySelectorAll('.backInRight-element'));
-    this.fadeInDownElements = Array.from(document.querySelectorAll('.fadeInDown-element'));
-    this.backInUpElements = Array.from(document.querySelectorAll('.backInUp-element'));
-    this.flipElements = Array.from(document.querySelectorAll('.flip-element'));
-    this.rotateOutElements = Array.from(document.querySelectorAll('.rotateOut-element'));
-  }
-
-  isElementInViewport(element: Element) {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-    // Calcular la posición vertical en la que se activará la animación (10% del viewport)
-    const activationPoint = windowHeight * 0.80;
-
-    // Comprobar si el elemento está dentro del 10% superior del viewport
-    return rect.top <= activationPoint;
-  }
-
-  onScrollAnimated() {
-    this.animatedElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('animated');
-      }
-    });
-  }
-
-  onScrollFlash() {
-    this.flashElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('flash');
-      }
-    });
-  }
-
-  onScrollBackInDown() {
-    this.backInDownElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('backInDown');
-      }
-    });
-  }
-
-  onScrollpulse() {
-    this.pulseElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('pulse');
-      }
-    });
-  }
-
-  onScrollBackInLeft() {
-    this.backInLeftElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('backInLeft');
-      }
-    });
-  }
-
-  onScrollBackInRight() {
-    this.backInRightElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('backInRight');
-      }
-    });
-  }
-
-  onScrollFadeInDown() {
-    this.fadeInDownElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('fadeInDown');
-      }
-    });
-  }
-
-  onScrollBackInUp() {
-    this.backInUpElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('backInUp');
-      }
-    });
-  }
-
-  onScrollFlip() {
-    this.flipElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('flip');
-      }
-    });
-  }
-
-  onScrollRotateOut() {
-    this.rotateOutElements.forEach((element) => {
-      if (this.isElementInViewport(element)) {
-        element.classList.add('rotateOut');
-      }
-    });
+    this.animationService.scrollToTopOnNavigation();
   }
 
 }

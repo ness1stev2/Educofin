@@ -9,39 +9,39 @@
 
     <form [formGroup]="respForm" (ngSubmit)="onSubmit()">
 
-      <p>Estado del formulario: <b>{{respForm.status }}</b> </p>
-      <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p>
+      <!-- <p>Estado del formulario: <b>{{respForm.status }}</b> </p>
+      <p>Valores del formulario: <b>{{respForm.value | json }}</b> </p> -->
 
 
       <p>Ante la necesidad de apoyar a la comunidad, tras observar la necesidad de mejorar las condiciones
         de vida y de combatir la usura, el <input type="text" name="" id="" alt="socios" formControlName="resp1"
-          style="width: 60px;">(1914-2011) con
+          style="width: 405px;"> (1914-2011) con
         visión y compromiso inicio un gran proyecto, enseñando la importancia del ahorro y ayuda mutua,
         dando como resultado a una de las mejores Cooperativas del país. <br><br>
 
-        A través de la Cultura del <input type="text" name="" id="" alt="valores y principios cooperativos" formControlName="resp2">,
-        se busca que las personas tomen conciencia de la importancia de hacer buen uso de sus finanzas. <input type="text" name="" id=""alt="reglas y normas" formControlName="resp3">
+        A través de la Cultura del <input type="text" name="" id="" alt="valores y principios cooperativos" formControlName="resp2" style="width: 85px;">,
+        se busca que las personas tomen conciencia de la importancia de hacer buen uso de sus finanzas. <input type="text" name="" id=""alt="reglas y normas" formControlName="resp3" style="width: 90px;">
         no solo es tener la capacidad de asegurar la calidad de vida en aspectos de bienestar, educación, recreación, vivienda,
         sino también anticiparse a una crisis de pérdida de empleo, iliquidez, o calamidad de entrada, implica una disciplina de
         aporte periódico, generalmente mensual, el cual da derechos como socio permitirá acceder a promociones y servicios.
         <br><br>
 
-        <input type="text" name="" id="" alt="asamblea general" formControlName="resp4"> es una operación financiera en la que se
+        <input type="text" name="" id="" alt="asamblea general" formControlName="resp4" style="width: 90px;"> es una operación financiera en la que se
         presta una cantidad de dinero y se genera un compromiso a pagar la cantidad solicitada en un plazo definido.
         <br><br>
 
-        La <input type="text" name="" id="" alt="gobierno corporativo" formControlName="resp5"> es un factor importante de Caja Popular San Pablo, da la capacidad
+        La <input type="text" name="" id="" alt="gobierno corporativo" formControlName="resp5" style="width: 155px;"> es un factor importante de Caja Popular San Pablo, da la capacidad
         de interrelacionar y equilibrar las fuerzas para proteger los intereses de los Socios, contribuyendo a
         la calidad de vida.
         <br><br>
 
-        Definimos la <input type="text" name="" id="" alt="ley general de sociedades cooperativas" formControlName="resp6"> como un
+        Definimos la <input type="text" name="" id="" alt="ley general de sociedades cooperativas" formControlName="resp6" style="width: 140px;"> como un
         conjunto de criterios o fórmulas, con las que se rige la conducta humana. Pueden ser éstas de carácter voluntario o pueden
         ser obligatorias.
         <br><br>
 
       </p>
-      <button type="submit" [disabled]="!respForm.valid">Submit</button>
+      <input type="submit" [disabled]="!respForm.valid" value="Validar respuestas">
     </form>
 
     <h3>RESPUESTAS:</h3>
@@ -57,3 +57,7 @@
 
   </div>
 </div>
+
+@defer (when finalizado()) {
+  <done-module noModulo="4"/>
+}

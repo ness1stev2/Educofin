@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { formM3Validator } from '../../validators/form-m3.validator';
 import { NgClass, JsonPipe } from '@angular/common';
+import { DoneModuleComponent } from "../done-module/done-module.component";
 
 @Component({
     selector: 'app-retro-act3',
     templateUrl: './retro-act3.component.html',
     styleUrls: ['./retro-act3.component.scss'],
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, NgClass, JsonPipe]
+    imports: [FormsModule, ReactiveFormsModule, NgClass, JsonPipe, DoneModuleComponent]
 })
 export class RetroAct3Component {
 
+  finalizado = signal<boolean>(false);
 
   respForm = this.formbuilder.group({
     resp1:  ['', [Validators.required, formM3Validator('socios')]],
@@ -27,10 +29,15 @@ export class RetroAct3Component {
   })
 
   onSubmit() {
-    console.log(this.respForm.value);
+    if(this.respForm.valid) {
+      console.log('Formulario válido');
+      this.finalizado.set(true);
+    }else{
+      console.log('Formulario inválido');
+    }
   }
 
-  
-  
+
+
   constructor(private formbuilder: FormBuilder) { }
 }

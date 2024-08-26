@@ -15,6 +15,12 @@
   /* Define la variable --color-fondo y asigna el valor del color */
 }
 
+::selection {
+  background-color: #3066be; /* Color de fondo de la selección */
+  color: white; /* Color del texto seleccionado */
+}
+
+
 body::-webkit-scrollbar {
   width: 10px;
 }

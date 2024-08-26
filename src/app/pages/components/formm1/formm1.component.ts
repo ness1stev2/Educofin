@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Preguntas } from '../../interfaces/preguntas.inteface';
 import { NgFor, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DoneModuleComponent } from "../done-module/done-module.component";
 
 
 @Component({
@@ -9,11 +10,12 @@ import { FormsModule } from '@angular/forms';
     templateUrl: './formm1.component.html',
     styleUrls: ['./formm1.component.scss'],
     standalone: true,
-    imports: [FormsModule, NgFor, NgClass]
+    imports: [FormsModule, NgFor, NgClass, DoneModuleComponent]
 })
 export class Formm1Component {
 
-  @Output() finalizado = new  EventEmitter<boolean>();
+  // @Output() finalizado = new  EventEmitter<boolean>();
+  public finalizadoP: Boolean = false;
   respInc: boolean = false;
   respCor: boolean = false;
   error: number[] = [];
@@ -85,7 +87,7 @@ export class Formm1Component {
 
       // si el numero de aciertos es igual al numero de preguntas entonces:
       if (aciertos === this.preguntas.length) {
-        this.finalizado.emit(true);
+        this.finalizadoP = true;
       }else{
         this.showModal = true;
       }
@@ -93,10 +95,8 @@ export class Formm1Component {
 
   }
 
-
   cerrarPopup() {
     this.showModal = false;
   }
-
 
 }

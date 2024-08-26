@@ -1,11 +1,12 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { ViewportScroller, NgStyle, NgClass } from '@angular/common';
+import { Router } from '@angular/router';
+import { NgStyle, NgClass } from '@angular/common';
 import { filter } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Validacion } from '../../interfaces/crucigrama.interface';
 import { Formm1Component } from '../../components/formm1/formm1.component';
 import { CrucigramaComponent } from '../../components/crucigrama/crucigrama.component';
+import { AnimationService } from '../../service/Animation.service';
 
 @Component({
     selector: 'app-modulo1',
@@ -16,36 +17,19 @@ import { CrucigramaComponent } from '../../components/crucigrama/crucigrama.comp
 })
 export class Modulo1Component implements OnInit, AfterViewInit{
 
-  constructor(private router: Router,
-    private viewportScroller: ViewportScroller,
+  constructor(
+    private router: Router,
+    private animationService: AnimationService,
+    private el: ElementRef,
     private authService: AuthService,
-    private el: ElementRef) {}
+  ) {}
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    this.animationService.setupIntersectionObserver(this.el);
   }
 
-  private setupIntersectionObserver(): void {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Solo agrega las clases de animación si el elemento está intersectando
-            entry.target.classList.add("animate__animated");
-            // Encuentra la clase de animación específica y la agrega
-            const animationClasses = (entry.target as HTMLElement).dataset["animate"]?.split(" ") || [];
-            entry.target.classList.add(...animationClasses);
-
-            // Opcional: Desconecta el observador una vez que la animación se ha aplicado
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 },
-    ); // Ajusta el threshold según sea necesario
-
-    const elements = this.el.nativeElement.querySelectorAll('.animate-on-scroll');
-    elements.forEach((element: Element) => observer.observe(element));
+  ngOnInit() {
+    this.animationService.scrollToTopOnNavigation();
   }
 
   validacion: Validacion = {
@@ -207,15 +191,6 @@ export class Modulo1Component implements OnInit, AfterViewInit{
 
 
 
-
-
-  ngOnInit() {
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
-      // Desplázate al inicio de la página
-      this.viewportScroller.scrollToPosition([0, 0]);
-    });
-  }
-
   public display: string = ""
   public display2: string = ""
   public finalizadoP: Boolean = false;
@@ -227,10 +202,10 @@ export class Modulo1Component implements OnInit, AfterViewInit{
   receiveValue(value: boolean) {
     this.receivedValue = value;
   }
-  finalizadoEvent(finalizado: boolean){
+  /* finalizadoEvent(finalizado: boolean){
     this.finalizadoP = finalizado;
     this.iniciarContador();
-  }
+  } */
 
   changeStyles(flex:string):void {
     // Cambiar los estilos al hacer clic en el botón
@@ -240,7 +215,7 @@ export class Modulo1Component implements OnInit, AfterViewInit{
 
   }
 
-  iniciarContador() {
+  /* iniciarContador() {
     const interval = setInterval(() => {
       this.contador--;
 
@@ -258,6 +233,6 @@ export class Modulo1Component implements OnInit, AfterViewInit{
 
   redirigirAotraPagina() {
     this.router.navigate(['/']); // Cambia '/otra-pagina' por la ruta de la página a la que deseas redirigir
-  }
+  } */
 
 }

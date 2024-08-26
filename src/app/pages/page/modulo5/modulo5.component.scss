@@ -3,6 +3,10 @@
   padding: 60px 0;
   overflow: hidden;
 
+  .animate-on-scroll{
+    opacity: 0;
+  }
+
   p {
     font-size: 1.2rem;
 

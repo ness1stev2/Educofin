@@ -2,13 +2,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { letterValidator } from '../../interfaces/custom-validators';
 import { NgStyle, NgFor, NgIf, NgClass } from '@angular/common';
+import { DoneModuleComponent } from "../done-module/done-module.component";
 
 @Component({
     selector: 'app-crucigrama-act2',
     templateUrl: './crucigrama-act2.component.html',
     styleUrls: ['./crucigrama-act2.component.scss'],
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass]
+    imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass, DoneModuleComponent]
 })
 export class CrucigramaAct2Component {
   myForm2: FormGroup;
@@ -16,7 +17,7 @@ export class CrucigramaAct2Component {
   @Input()
   display: string = '';
 
-  @Output() finalizado = new  EventEmitter<boolean>();
+  public finalizadoP: boolean = false;
 
   showModal = false;
   showModalfinished = false;
@@ -121,8 +122,7 @@ export class CrucigramaAct2Component {
       // Realiza alguna acción aquí si el formulario es válido
       console.log('Formulario válido. Se puede enviar.');
       this.mostrarRetro.emit(true);
-      this.showModalfinished = true;
-      this.finalizado.emit(true);
+      this.finalizadoP = true;
     } else {
       console.log('Formulario inválido. No se puede enviar.');
       this.showModal = true;

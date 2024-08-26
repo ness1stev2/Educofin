@@ -27,41 +27,41 @@
         principios de solidaridad, esfuerzo propio y ayuda mutua, se componen como elementos intrínsecos de la Sociedad
         Cooperativa,
         así como los <input type="text" alt="valores y principios cooperativos" formControlName="resp2"
-          style="width: 280px;"> por los
+          style="width: 305px;"> por los
         que se rigen y
         constituyen la base filosófica del Movimiento Cooperativo,
-        apoyados en <input type="text" alt="reglas y normas" formControlName="resp3" style="width: 150px;">, que son los
+        apoyados en <input type="text" alt="reglas y normas" formControlName="resp3" style="width: 165px;">, que son los
         Estatutos que
         estriban el
         desarrollo y crecimiento desde
         la toma de decisiones solidarias, donde cada miembro tiene voz, así como voto en la <input type="text"
           alt="asamblea general" formControlName="resp4" style="width: 165px;">, con el
         propósito de satisfacer necesidades colectivas que son administradas y vigiladas por su <input type="text"
-          alt="gobierno corporativo" formControlName="resp5" style="width: 190px;">. <br><br>
+          alt="gobierno corporativo" formControlName="resp5" style="width: 200px;">. <br><br>
         La <input type="text" alt="ley general de sociedades cooperativas" formControlName="resp6"
-          style="width: 330px;"> tiene por objeto
+          style="width: 370px;"> tiene por objeto
         regular la
         constitución, organización, funcionamiento y extinción de las
         Sociedades Cooperativas y sus Organismos en que libremente se agrupen, así como los derechos de los Socios.
         <br><br>
-        <input type="text" alt="lrascap" formControlName="resp7" style="width: 80px;"> regula las operaciones de las
+        <input type="text" alt="lrascap" formControlName="resp7" style="width: 105px;"> regula las operaciones de las
         Sociedades Cooperativas
         de Ahorro y
         Préstamo; protegiendo los
         intereses de sus Socios ahorradores; y establece los términos en que el Estado ejercerá las facultades de
         supervisión, regulación
         y sanción, en términos de la Ley. <br><br>
-        El Consejo de <input type="text" alt="administracion" formControlName="resp8" style="width: 140px;"> es el
+        El Consejo de <input type="text" alt="administracion" formControlName="resp8" style="width: 155px;"> es el
         Órgano Ejecutivo de la
         Asamblea General
         que tendrá la representación de
         la Sociedad Cooperativa. <br><br>
-        El Consejo de <input type="text" alt="vigilancia" formControlName="resp9" style="width: 100px;"> es el Órgano
+        El Consejo de <input type="text" alt="vigilancia" formControlName="resp9" style="width: 110px;"> es el Órgano
         encargado de supervisar
         el
         funcionamiento interno de la Sociedad
         Cooperativa, así como el cumplimiento de sus estatutos y demás normatividad que le es aplicable. <br><br>
-        El <input type="text" alt="director" formControlName="resp10" style="width: 90px;"> o Gerente General es la
+        El <input type="text" alt="director" formControlName="resp10" style="width: 95px;"> o Gerente General es la
         persona contratada por el
         Consejo de
         Administración para que en
@@ -70,7 +70,7 @@
         así
         como los planes y estrategias de la Sociedad.
       </p>
-      <button type="submit" [disabled]="!respForm.valid">Submit</button>
+      <input type="submit" [disabled]="!respForm.valid" value="Validar respuestas">
     </form>
 
     <h3>RESPUESTAS:</h3>
@@ -90,3 +90,7 @@
     </div>
   </div>
 </div>
+
+@defer (when finalizado()) {
+  <done-module noModulo="3"/>
+}
