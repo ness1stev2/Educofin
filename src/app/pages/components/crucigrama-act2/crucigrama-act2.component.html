@@ -12,13 +12,19 @@
           <!-- if -->
           <ng-container *ngIf="enable.includes(fila + '_' + columna)">
             <input [formControlName]="fila + '_' + columna" class="casilla" type="text" maxlength="1"
-              id="fila{{fila}}C{{columna}}">
+              id="fila{{fila}}C{{columna}}" [ngClass]="{
+                'respCor': submitted && evaluarRespuesta(fila + '_' + columna) === true,
+                'respInc': submitted && evaluarRespuesta(fila + '_' + columna) === false
+              }">
           </ng-container>
           <ng-container *ngIf="placeholders[fila + '_' + columna] as placeholder">
             <div class="input-placeholder">
               <small>{{placeholder}}</small>
               <input class="casilla" type="text" maxlength="1" id="fila{{fila}}C{{columna}}"
-                [formControlName]="fila + '_' + columna" (blur)="checkInputValue($event)">
+                [formControlName]="fila + '_' + columna" [ngClass]="{
+                  'respCor': submitted && evaluarRespuesta(fila + '_' + columna) === true,
+                  'respInc': submitted && evaluarRespuesta(fila + '_' + columna) === false
+                }">
             </div>
           </ng-container>
         </td>
@@ -55,5 +61,5 @@
 </div>
 
 @defer (when finalizadoP) {
-  <done-module noModulo="2"/>
+<done-module noModulo="2" />
 }

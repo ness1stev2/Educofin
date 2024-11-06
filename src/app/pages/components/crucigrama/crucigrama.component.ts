@@ -13,6 +13,8 @@ import { NgStyle, NgFor, NgIf, NgClass } from '@angular/common';
 export class CrucigramaComponent {
 
   myForm: FormGroup;
+  finalizadoP: boolean = false;
+  public submitted: boolean = false;
 
   @Input()
   display: string = '';
@@ -108,6 +110,7 @@ export class CrucigramaComponent {
   }
 
   onSave(): void {
+    this.submitted = true
     if (this.myForm.valid) {
       // Realiza alguna acción aquí si el formulario es válido
       console.log('Formulario válido. Se puede enviar.');
@@ -127,13 +130,17 @@ export class CrucigramaComponent {
   @Input() enable: string[] = [];
 
 
-  checkInputValue(event: any) {
-    const inputElement = event.target;
-    if (!inputElement.value) {
-      inputElement.classList.remove('has-value');
-    } else {
-      inputElement.classList.add('has-value');
+  evaluarRespuesta(input: string): boolean {
+    console.log('Valor recibido en evaluarRespuesta:', input);
+    if (this.myForm.get(input)?.valid && this.submitted) {
+      if (this.myForm.valid) {
+        this.finalizadoP = true;
+      }
+      return true;
+    } else if (this.submitted) {
+      return false;
     }
-  }
+    return false; // Cambia undefined por false
+}
 
 }

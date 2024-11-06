@@ -5,11 +5,11 @@ import { NgStyle, NgFor, NgIf, NgClass } from '@angular/common';
 import { DoneModuleComponent } from "../done-module/done-module.component";
 
 @Component({
-    selector: 'app-crucigrama-act2',
-    templateUrl: './crucigrama-act2.component.html',
-    styleUrls: ['./crucigrama-act2.component.scss'],
-    standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass, DoneModuleComponent]
+  selector: 'app-crucigrama-act2',
+  templateUrl: './crucigrama-act2.component.html',
+  styleUrls: ['./crucigrama-act2.component.scss'],
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, NgStyle, NgFor, NgIf, NgClass, DoneModuleComponent]
 })
 export class CrucigramaAct2Component {
   myForm2: FormGroup;
@@ -18,6 +18,7 @@ export class CrucigramaAct2Component {
   display: string = '';
 
   public finalizadoP: boolean = false;
+  public submitted: boolean = false;
 
   showModal = false;
   showModalfinished = false;
@@ -118,6 +119,7 @@ export class CrucigramaAct2Component {
   }
 
   onSave(): void {
+    this.submitted = true
     if (this.myForm2.valid) {
       // Realiza alguna acción aquí si el formulario es válido
       console.log('Formulario válido. Se puede enviar.');
@@ -131,18 +133,22 @@ export class CrucigramaAct2Component {
     console.log(this.myForm2.value)
   }
 
-  @Input() filas!: number[] ;
+  @Input() filas!: number[];
   @Input() columnas!: number[];
   @Input() placeholders!: { [key: string]: number };
   @Input() enable: string[] = [];
 
 
-  checkInputValue(event: any) {
-    const inputElement = event.target;
-    if (!inputElement.value) {
-      inputElement.classList.remove('has-value');
-    } else {
-      inputElement.classList.add('has-value');
+  evaluarRespuesta(input: string): boolean {
+    console.log('Valor recibido en evaluarRespuesta:', input);
+    if (this.myForm2.get(input)?.valid && this.submitted) {
+      if (this.myForm2.valid) {
+        this.finalizadoP = true;
+      }
+      return true;
+    } else if (this.submitted) {
+      return false;
     }
+    return false; // Cambia undefined por false
   }
 }
